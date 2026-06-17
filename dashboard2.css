@@ -2009,3 +2009,8 @@ body {
     object-fit: cover; /* Prevents the image from stretching */
     border: 2px solid #eaeaea; /* Optional: adds a subtle border */
 }
+
+
+.logo{
+  width: 138px;
+}
