@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Fullscreen Mobile Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="flights.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <nav class="navbar" id="myNavbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./asset/stackly-logo (1).webp" alt="Stackly Logo">
+            </a>
+        </div>
+
+        <button class="hamburger" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="flights.html" class="nav-link"><i class="fas fa-plane-departure"></i> Flights</a></li>
+            <li><a href="destination.html" class="nav-link active"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
+            <li><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="get-started-btn">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+<footer class="footer" id="footer">
+        <div class="footer-container">
+
+            <div class="footer-top">
+                <div class="footer-brand scroll-anim" style="transition-delay: 0.1s;">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./asset/stackly-logo (1).webp" alt="Stackly Travel Logo">
+                        </a>
+                    </div>
+                    <p class="brand-desc">
+                        "Crafting memories that last a lifetime. From flight bookings to luxury stays, we take care of
+                        every detail so you can just pack and explore."
+                    </p>
+                    <div class="social-icons">
+                        <a href="404page.html" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404page.html" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404page.html" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404page.html" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-wrapper scroll-anim" style="transition-delay: 0.2s;">
+                    <h4 class="footer-heading">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                        <li><a href="flights.html"><i class="fa-solid fa-angle-right"></i> Flights</a></li>
+                        <li><a href="destination.html"><i class="fa-solid fa-angle-right"></i>Destination</a></li>
+                        <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Blog</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-support scroll-anim" style="transition-delay: 0.3s;">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="support-info">
+                        <li>
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>support@stackly.travel</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Salem City, Tamil Nadu</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Mon - Fri: 9 AM - 6 PM</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-globe"></i>
+                            <span>www.stackly.travel</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter scroll-anim" style="transition-delay: 0.4s;">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="newsletter-desc">
+                        "Your next great escape starts here! Subscribe for handpicked destinations, flash flight deals,
+                        and travel inspiration."
+                    </p>
+                    <form class="footer-newsletter-form" id="newsletterForm" novalidate>
+                        <div class="newsletter-input-group" id="nlInputGroup">
+                            <input type="email" id="nlEmailInput" class="newsletter-input"
+                                placeholder="Enter your email" required>
+                            <button type="submit" class="newsletter-btn" id="nlBtn">JOIN</button>
+                        </div>
+                        <div id="nlMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Stackly Learning. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="404page.html">Terms & Conditions</a>
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Cookie Policy</a>
+                    <a href="404page.html">Refund Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

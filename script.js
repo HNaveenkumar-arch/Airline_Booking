@@ -30,3 +30,116 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+            /* ----------------------------------------------------
+               1. STICKY DESTINATION CARDS OBSERVER
+            ---------------------------------------------------- */
+            const destCards = document.querySelectorAll('.dest-card');
+            const stickyImg = document.getElementById('sticky-img');
+
+            // Check if elements exist before running
+            if (destCards.length > 0 && stickyImg) {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.5
+                };
+
+                const destObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const newImgSrc = entry.target.getAttribute('data-img');
+
+                            if (stickyImg.src !== newImgSrc) {
+                                stickyImg.style.opacity = 0.2;
+                                stickyImg.style.transform = "scale(1.05)";
+
+                                setTimeout(() => {
+                                    stickyImg.src = newImgSrc;
+                                    stickyImg.style.opacity = 1;
+                                    stickyImg.style.transform = "scale(1)";
+                                }, 300);
+                            }
+
+                            destCards.forEach(card => card.classList.remove('active-card'));
+                            entry.target.classList.add('active-card');
+                        }
+                    });
+                }, observerOptions);
+
+                destCards.forEach(card => destObserver.observe(card));
+            }
+
+            /* ----------------------------------------------------
+               2. SCROLL REVEAL ANIMATION (FOOTER & OTHERS)
+            ---------------------------------------------------- */
+            const animatedElements = document.querySelectorAll('.scroll-anim, .scroll-reveal');
+
+            if (animatedElements.length > 0) {
+                const scrollObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                animatedElements.forEach(el => scrollObserver.observe(el));
+            }
+
+            /* ----------------------------------------------------
+               3. NEWSLETTER FORM VALIDATION & ALERT
+            ---------------------------------------------------- */
+            const form = document.getElementById('newsletterForm');
+            const emailInput = document.getElementById('nlEmailInput');
+            const inputGroup = document.getElementById('nlInputGroup');
+            const messageBox = document.getElementById('nlMessage');
+
+            // Check if form exists before running
+            if (form && emailInput && inputGroup && messageBox) {
+                // Input Focus glow effect
+                emailInput.addEventListener('focus', () => inputGroup.classList.add('focused'));
+                emailInput.addEventListener('blur', () => inputGroup.classList.remove('focused'));
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const emailValue = emailInput.value.trim();
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    // Clear previous states
+                    inputGroup.classList.remove('error-border', 'success-border');
+                    messageBox.classList.remove('error-text', 'success-text', 'show');
+
+                    if (emailValue === "") {
+                        showError("Email address cannot be empty.");
+                    } else if (!emailRegex.test(emailValue)) {
+                        showError("Please enter a valid email address.");
+                    } else {
+                        showSuccess("Thank you! You have successfully subscribed.");
+                        emailInput.value = ""; // Clear input after success
+
+                        // Alert Message
+
+
+                        window.location.href = '404page.html'
+                    }
+                });
+
+                function showError(message) {
+                    inputGroup.classList.add('error-border');
+                    messageBox.textContent = message;
+                    messageBox.className = "form-message error-text show";
+                }
+
+                function showSuccess(message) {
+                    inputGroup.classList.add('success-border');
+                    messageBox.textContent = message;
+                    messageBox.className = "form-message success-text show";
+                }
+            }
+
+        }); 

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Create Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Changed to Orange Theme */
+            --primary-orange: #f97316;
+            --hover-orange: #ea580c;
+            --error-red: #dc2626;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            /* Changed to White Theme for container */
+            --bg-container: rgba(255, 255, 255, 0.95);
+            --input-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .video-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .back-home-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--bg-container);
+            color: var(--primary-orange);
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .back-home-btn:hover {
+            background: var(--primary-orange);
+            color: white;
+            transform: translateX(-3px);
+            box-shadow: 0 6px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .register-container {
+            background-color: var(--bg-container);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+
+            width: 90%;
+            max-width: 450px;
+            margin: 40px auto;
+            padding: 35px 30px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .register-container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: var(--primary-orange);
+            font-size: 28px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .header p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+
+        .role-selector {
+            display: flex;
+            background: rgba(229, 231, 235, 0.7);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 1px solid #d1d5db;
+        }
+
+        .role-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .role-btn.active {
+            background: var(--primary-orange);
+            color: white;
+            box-shadow: 0 2px 5px rgba(249, 115, 22, 0.3);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px 15px;
+            background-color: var(--input-bg);
+            border: 1.5px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .input-box input:focus {
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+        }
+
+        .input-box input.invalid {
+            border-color: var(--error-red);
+        }
+
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear {
+            display: none;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .eye-icon:hover {
+            color: var(--primary-orange);
+        }
+
+        .error-msg {
+            color: var(--error-red);
+            font-size: 11px;
+            margin-top: 4px;
+            display: none;
+            font-weight: 500;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(249, 115, 22, 0.2);
+            margin-top: 5px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--hover-orange);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 10px rgba(249, 115, 22, 0.3);
+        }
+
+        .social-login {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-login p {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .social-login p::before,
+        .social-login p::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 25%;
+            height: 1px;
+            background: #cbd5e1;
+        }
+
+        .social-login p::before {
+            left: 0;
+        }
+
+        .social-login p::after {
+            right: 0;
+        }
+
+        .logo {
+            width: 138px;
+        }
+
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid #cbd5e1;
+            background: var(--input-bg);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-orange);
+            color: white;
+            border-color: var(--primary-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .go-to-login {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .go-to-login a {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .go-to-login a:hover {
+            text-decoration: underline;
+        }
+        .role{
+            text-align: start;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 480px) {
+            .register-container {
+                padding: 25px 20px;
+                margin: 60px auto 20px auto;
+                width: 95%;
+            }
+            .back-home-btn {
+            position: relative;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .back-home-btn {
+                top: 15px;
+                left: 15px;
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="video-wrapper">
+        <video autoplay loop muted playsinline>
+            <source src="./asset/as.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <a href="index.html" class="back-home-btn">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+    </a>
+
+    <div class="register-container" id="registerBox">
+
+        <div class="header">
+            <a href="index.html">
+                <img src="./asset/stackly-logo (1).webp" alt="logo" class="logo"></a>
+            <p>Create a New Account</p>
+            <p class="role">Select the Role</p>
+        </div>
+
+        <div class="role-selector">
+            <button class="role-btn active" onclick="setRole('admin', this)">
+                <i class="fa-solid fa-user-tie"></i> Admin
+            </button>
+            <button class="role-btn" onclick="setRole('customer', this)">
+                <i class="fa-solid fa-user"></i> Customer
+            </button>
+        </div>
+
+        <form id="registerForm" onsubmit="validateForm(event)">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <div class="input-box">
+                    <input type="text" id="fullname" placeholder="Enter your full name">
+                </div>
+                <div class="error-msg" id="nameError">Name must contain only letters (min 3 chars)</div>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <div class="input-box">
+                    <input type="text" id="email" placeholder="Enter your email">
+                </div>
+                <div class="error-msg" id="emailError">Invalid email address format</div>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="Create a password">
+                    <i class="fa-regular fa-eye eye-icon" id="eyeIcon1"
+                        onclick="toggleVisibility('password', 'eyeIcon1')"></i>
+                </div>
+                <div class="error-msg" id="passwordError">Password must be at least 6 characters</div>
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <div class="input-box">
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                    <i class="fa-regular fa-eye eye-icon" id="eyeIcon2"
+                        onclick="toggleVisibility('confirmPassword', 'eyeIcon2')"></i>
+                </div>
+                <div class="error-msg" id="confirmError">Passwords do not match</div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="registerBtnText">Create Admin Account</button>
+        </form>
+
+        <div class="social-login">
+            <p>Or sign up with</p>
+            <div class="icons-container">
+                <a href="#" class="social-icon"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="go-to-login">
+            Already have an account? <a href="login.html">Go to Login</a>
+        </div>
+
+    </div>
+
+    <script>
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById('registerBox').classList.add('show');
+            }, 100);
+        };
+
+        let currentRole = 'admin'; // Changed default to admin
+        function setRole(role, btnElement) {
+            currentRole = role;
+
+            let buttons = document.querySelectorAll('.role-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            const registerBtnText = document.getElementById('registerBtnText');
+            if (role === 'admin') {
+                registerBtnText.innerText = 'Create Admin Account';
+            } else if (role === 'customer') {
+                registerBtnText.innerText = 'Create Customer Account';
+            }
+        }
+
+        function toggleVisibility(inputId, iconId) {
+            const pwdInput = document.getElementById(inputId);
+            const eyeIcon = document.getElementById(iconId);
+
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                pwdInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        }
+
+        function validateForm(e) {
+            e.preventDefault();
+
+            let isValid = true;
+
+            const nameInput = document.getElementById('fullname');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const confirmInput = document.getElementById('confirmPassword');
+
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const confirmError = document.getElementById('confirmError');
+
+            const nameRegex = /^[a-zA-Z\s]+$/;
+
+            if (nameInput.value.trim().length < 3) {
+                nameInput.classList.add('invalid');
+                nameError.innerText = "Name must be at least 3 characters";
+                nameError.style.display = 'block';
+                isValid = false;
+            } else if (!nameRegex.test(nameInput.value)) {
+                nameInput.classList.add('invalid');
+                nameError.innerText = "Name must contain only letters (No numbers or symbols)";
+                nameError.style.display = 'block';
+                isValid = false;
+            } else {
+                nameInput.classList.remove('invalid');
+                nameError.style.display = 'none';
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                emailInput.classList.add('invalid');
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailInput.classList.remove('invalid');
+                emailError.style.display = 'none';
+            }
+
+            if (passwordInput.value.length < 6) {
+                passwordInput.classList.add('invalid');
+                passwordError.style.display = 'block';
+                isValid = false;
+            } else {
+                passwordInput.classList.remove('invalid');
+                passwordError.style.display = 'none';
+            }
+
+            if (confirmInput.value === "" || confirmInput.value !== passwordInput.value) {
+                confirmInput.classList.add('invalid');
+                confirmError.style.display = 'block';
+                isValid = false;
+            } else {
+                confirmInput.classList.remove('invalid');
+                confirmError.style.display = 'none';
+            }
+
+            if (isValid) {
+                // Successful registration logic can go here
+                window.location.href = 'login.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fixed Fullscreen Mobile Navbar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="common.css">
 </head>
@@ -25,10 +25,10 @@
 
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#" class="nav-link"><i class="fas fa-plane-departure"></i> Flights</a></li>
-            <li><a href="#" class="nav-link"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
-            <li><a href="#" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
-            <li><a href="#" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="flights.html" class="nav-link"><i class="fas fa-plane-departure"></i> Flights</a></li>
+            <li><a href="destination.html" class="nav-link"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
+            <li><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
 
         <div class="nav-actions">
@@ -38,641 +38,1337 @@
     </nav>
 
     <section class="hero-section">
-    <div class="bg-slider">
-        <div class="slide slide-1"></div>
-        <div class="slide slide-2"></div>
-        <div class="slide slide-3"></div>
-    </div>
-    <div class="hero-overlay"></div>
+        <div class="bg-slider">
+            <div class="slide slide-1"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+        </div>
+        <div class="hero-overlay"></div>
 
-    <div class="hero-container">
-        <div class="hero-content scroll-reveal">
-            <h1>Fly Smarter, Travel Better <i class="fas fa-plane floating-plane"></i></h1>
-            <p>Search and book flights to your dream destinations with unbeatable prices. Your premium journey starts right here.</p>
-            <a href="#" class="btn-gradient">Explore Now</a>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <h3>150+</h3>
-                    <span>Countries</span>
-                </div>
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <span>Airlines</span>
-                </div>
-                <div class="stat-item">
-                    <h3>1M+</h3>
-                    <span>Happy Travelers</span>
+        <div class="hero-container">
+            <div class="hero-content scroll-reveal">
+                <h1>Fly Smarter, Travel Better <i class="fas fa-plane floating-plane"></i></h1>
+                <p>Search and book flights to your dream destinations with unbeatable prices. Your premium journey
+                    starts right here.</p>
+                <a href="404page.html" class="btn-gradient">Explore Now</a>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>150+</h3>
+                        <span>Countries</span>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <span>Airlines</span>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1M+</h3>
+                        <span>Happy Travelers</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="hero-card-wrapper scroll-reveal">
-            <div class="glass-flight-card">
-                <h3>Book Your Flight</h3>
-                <form id="flightForm">
-                    <div class="input-wrapper">
-                        <div class="input-group" id="group-from">
-                            <i class="fas fa-plane-departure"></i>
-                            <input type="text" id="from-input" placeholder="Leaving from (e.g., Chennai)">
-                        </div>
-                        <div class="error-text" id="error-from">Please enter your departure city.</div>
-                    </div>
-
-                    <div class="input-wrapper">
-                        <div class="input-group" id="group-to">
-                            <i class="fas fa-plane-arrival"></i>
-                            <input type="text" id="to-input" placeholder="Going to (e.g., Dubai)">
-                        </div>
-                        <div class="error-text" id="error-to">Please enter your destination.</div>
-                    </div>
-
-                    <div class="date-group">
-                        <div class="date-wrapper">
-                            <div class="input-group" id="group-depart">
-                                <i class="fas fa-calendar-alt"></i>
-                                <input type="text" id="depart-input" placeholder="From Date (Depart)">
+            <div class="hero-card-wrapper scroll-reveal">
+                <div class="glass-flight-card">
+                    <h3>Book Your Flight</h3>
+                    <form id="flightForm">
+                        <div class="input-wrapper">
+                            <div class="input-group" id="group-from">
+                                <i class="fas fa-plane-departure"></i>
+                                <input type="text" id="from-input" placeholder="Leaving from (e.g., Chennai)">
                             </div>
-                            <div class="error-text" id="error-depart">Please select a departure date.</div>
+                            <div class="error-text" id="error-from">Please enter your departure city.</div>
                         </div>
-                        <div class="date-wrapper">
-                            <div class="input-group" id="group-return">
-                                <i class="fas fa-calendar-check"></i>
-                                <input type="text" id="return-input" placeholder="To Date (Return)">
+
+                        <div class="input-wrapper">
+                            <div class="input-group" id="group-to">
+                                <i class="fas fa-plane-arrival"></i>
+                                <input type="text" id="to-input" placeholder="Going to (e.g., Dubai)">
                             </div>
-                            <div class="error-text" id="error-return">Please select a return date.</div>
+                            <div class="error-text" id="error-to">Please enter your destination.</div>
+                        </div>
+
+                        <div class="date-group">
+                            <div class="date-wrapper">
+                                <div class="input-group" id="group-depart">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="text" id="depart-input" placeholder="From Date (Depart)">
+                                </div>
+                                <div class="error-text" id="error-depart">Please select a departure date.</div>
+                            </div>
+                            <div class="date-wrapper">
+                                <div class="input-group" id="group-return">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <input type="text" id="return-input" placeholder="To Date (Return)">
+                                </div>
+                                <div class="error-text" id="error-return">Please select a return date.</div>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <div class="input-group">
+                                <i class="fas fa-user-friends"></i>
+                                <select id="passenger-input">
+                                    <option value="1">1 Passenger</option>
+                                    <option value="2">2 Passengers</option>
+                                    <option value="3">3+ Passengers</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-gradient full-width">Search Flights</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="moving-destinations-section">
+        <div class="destinations-header scroll-reveal">
+            <h2>Popular Destinations</h2>
+            <p>Explore our top-rated locations and book your next premium getaway.</p>
+        </div>
+
+        <div class="slider-container scroll-reveal">
+            <div class="slider-track">
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v5.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Paris</h3>
+                            <p>Experience the city of love with our exclusive premium flight packages.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v7.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Dubai</h3>
+                            <p>Discover luxury shopping, ultramodern architecture, and a lively nightlife scene.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v8.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Tokyo</h3>
+                            <p>Immerse yourself in a city where the traditional meets the ultra-modern.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v9.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Maldives</h3>
+                            <p>Relax in private overwater villas surrounded by crystal-clear blue waters.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v10.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Singapore</h3>
+                            <p>Explore lush gardens, incredible street food, and stunning cityscapes.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v11.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>New York</h3>
+                            <p>Take a bite out of the Big Apple with iconic landmarks and endless energy.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v5.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Paris</h3>
+                            <p>Experience the city of love with our exclusive premium flight packages.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v7.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Dubai</h3>
+                            <p>Discover luxury shopping, ultramodern architecture, and a lively nightlife scene.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v8.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Tokyo</h3>
+                            <p>Immerse yourself in a city where the traditional meets the ultra-modern.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v9.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Maldives</h3>
+                            <p>Relax in private overwater villas surrounded by crystal-clear blue waters.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v10.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>Singapore</h3>
+                            <p>Explore lush gardens, incredible street food, and stunning cityscapes.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-bg" style="background-image: url('./asset/v11.webp');">
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <h3>New York</h3>
+                            <p>Take a bite out of the Big Apple with iconic landmarks and endless energy.</p>
+                            <a href="404page.html" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="features-section">
+        <div class="features-header scroll-reveal">
+            <h2 class="gradient-heading">Why Travelers Choose Us</h2>
+            <p>Experience the ultimate journey with our premium services.</p>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="flip-card scroll-reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-tags"></i>
+                        <h3>Best Prices</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>We guarantee unbeatable prices and exclusive deals for all your premium travel destinations
+                            worldwide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card scroll-reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safe Travel</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Your safety is our priority. We partner with highly rated airlines following strict safety
+                            protocols.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card scroll-reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-plane"></i>
+                        <h3>Premium Airlines</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Fly with the world's best airlines, offering luxurious seating, fine dining, and superior
+                            comfort.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card scroll-reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Our dedicated customer support team is available around the clock to assist you with any
+                            queries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card scroll-reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>Global Coverage</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Access thousands of flights across 150+ countries. The world is at your fingertips.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card scroll-reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-undo-alt"></i>
+                        <h3>Easy Cancellations</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Plans change? Enjoy hassle-free, flexible cancellation policies on premium bookings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card scroll-reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Seamless Booking</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Experience a smooth, lag-free booking process on any device in just a few taps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card scroll-reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-crown"></i>
+                        <h3>Exclusive Perks</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Unlock VIP lounge access, extra baggage allowance, and priority boarding.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="airlines-section">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Trusted By <span class="text-gradient">Top Airlines</span></h2>
+                <p class="section-subtitle">We partner with the world's leading carriers to bring you the best
+                    experience.</p>
+            </div>
+
+            <div class="marquee-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="marquee-track">
+
+                    <div class="airline-card">
+                        <i class="fa-solid fa-plane-departure plane-icon"></i>
+                        <h3>Emirates</h3>
+                    </div>
+                    <div class="airline-card">
+                        <i class="fa-solid fa-plane-up plane-icon"></i>
+                        <h3>Qatar Airways</h3>
+                    </div>
+                    <div class="airline-card">
+                        <i class="fa-solid fa-plane plane-icon"></i>
+                        <h3>Singapore Airlines</h3>
+                    </div>
+                    <div class="airline-card">
+                        <i class="fa-solid fa-plane-arrival plane-icon"></i>
+                        <h3>Cathay Pacific</h3>
+                    </div>
+                    <div class="airline-card">
+                        <i class="fa-solid fa-jet-fighter-up plane-icon"></i>
+                        <h3>ANA All Nippon</h3>
+                    </div>
+
+                    <div class="airline-card">
+                        <i class="fa-solid fa-plane-departure plane-icon"></i>
+                        <h3>Emirates</h3>
+                    </div>
+                    <div class="airline-card">
+                        <i class="fa-solid fa-plane-up plane-icon"></i>
+                        <h3>Qatar Airways</h3>
+                    </div>
+                    <div class="airline-card">
+                        <i class="fa-solid fa-plane plane-icon"></i>
+                        <h3>Singapore Airlines</h3>
+                    </div>
+                    <div class="airline-card">
+                        <i class="fa-solid fa-plane-arrival plane-icon"></i>
+                        <h3>Cathay Pacific</h3>
+                    </div>
+                    <div class="airline-card">
+                        <i class="fa-solid fa-jet-fighter-up plane-icon"></i>
+                        <h3>ANA All Nippon</h3>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="destinations-section">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Explore Your <span class="text-gradient">Dream Destinations</span></h2>
+                <p class="section-subtitle">Discover breathtaking locations curated just for you.</p>
+            </div>
+
+            <div class="sticky-container">
+
+                <div class="sticky-left">
+                    <div class="sticky-image-box">
+                        <img src="./asset/v4.webp" id="sticky-img" alt="Destination Preview">
+                        <div class="image-overlay-gradient"></div>
+                    </div>
+                </div>
+
+                <div class="scroll-right">
+
+                    <div class="dest-card active-card" data-img="./asset/v4.webp">
+                        <img src="./asset/w21.webp" class="mobile-card-img" alt="Europe">
+                        <div class="dest-card-content">
+                            <span class="dest-badge">01. Cultural</span>
+                            <h3>Europe Escapes</h3>
+                            <p>Wander through the historic streets of Paris, Rome, and Prague. Experience centuries of
+                                art, architecture, and culinary perfection.</p>
+                            <a href="404page.html" class="dest-link">Explore Europe <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <div class="input-wrapper">
-                        <div class="input-group">
-                            <i class="fas fa-user-friends"></i>
-                            <select id="passenger-input">
-                                <option value="1">1 Passenger</option>
-                                <option value="2">2 Passengers</option>
-                                <option value="3">3+ Passengers</option>
-                            </select>
+                    <div class="dest-card" data-img="./asset/v12.webp">
+                        <img src="./asset/w8.webp" class="mobile-card-img" alt="Tropical">
+                        <div class="dest-card-content">
+                            <span class="dest-badge">02. Relaxing</span>
+                            <h3>Tropical Islands</h3>
+                            <p>Escape to crystal clear waters and white sandy beaches. Maldives, Bora Bora, and Bali
+                                await your arrival for ultimate relaxation.</p>
+                            <a href="404page.html" class="dest-link">View Islands <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    
-                    <button type="submit" class="btn-gradient full-width">Search Flights</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
 
-
-<section class="moving-destinations-section">
-    <div class="destinations-header scroll-reveal">
-        <h2>Popular Destinations</h2>
-        <p>Explore our top-rated locations and book your next premium getaway.</p>
-    </div>
-
-    <div class="slider-container scroll-reveal">
-        <div class="slider-track">
-            
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e90760020c6?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Paris</h3>
-                        <p>Experience the city of love with our exclusive premium flight packages.</p>
-                        <a href="#" class="btn-card">Book Now</a>
+                    <div class="dest-card" data-img="./asset/v13.webp">
+                        <img src="./asset/q8.webp" class="mobile-card-img" alt="Desert">
+                        <div class="dest-card-content">
+                            <span class="dest-badge">03. Adventure</span>
+                            <h3>Desert Adventures</h3>
+                            <p>Feel the thrill of dune bashing in Dubai or watch the sunset over the vast Sahara. A
+                                magical experience under the starry night sky.</p>
+                            <a href="404page.html" class="dest-link">Start Adventure <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Dubai</h3>
-                        <p>Discover luxury shopping, ultramodern architecture, and a lively nightlife scene.</p>
-                        <a href="#" class="btn-card">Book Now</a>
+                    <div class="dest-card"
+                        data-img="https://images.unsplash.com/photo-1478265409131-1f65c88f965c?q=80&w=800&auto=format&fit=crop">
+                        <img src="./asset/v6.webp" class="mobile-card-img" alt="Winter">
+                        <div class="dest-card-content">
+                            <span class="dest-badge">04. Snowy</span>
+                            <h3>Winter Getaways</h3>
+                            <p>Hit the slopes in the Swiss Alps or witness the breathtaking Northern Lights in Norway.
+                                Embrace the magic of the winter wonderland.</p>
+                            <a href="404page.html" class="dest-link">Discover Winter <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Tokyo</h3>
-                        <p>Immerse yourself in a city where the traditional meets the ultra-modern.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Maldives</h3>
-                        <p>Relax in private overwater villas surrounded by crystal-clear blue waters.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Singapore</h3>
-                        <p>Explore lush gardens, incredible street food, and stunning cityscapes.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>New York</h3>
-                        <p>Take a bite out of the Big Apple with iconic landmarks and endless energy.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e90760020c6?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Paris</h3>
-                        <p>Experience the city of love with our exclusive premium flight packages.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Dubai</h3>
-                        <p>Discover luxury shopping, ultramodern architecture, and a lively nightlife scene.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Tokyo</h3>
-                        <p>Immerse yourself in a city where the traditional meets the ultra-modern.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Maldives</h3>
-                        <p>Relax in private overwater villas surrounded by crystal-clear blue waters.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>Singapore</h3>
-                        <p>Explore lush gardens, incredible street food, and stunning cityscapes.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-card">
-                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=600&auto=format&fit=crop');"></div>
-                <div class="hover-overlay">
-                    <div class="hover-content">
-                        <h3>New York</h3>
-                        <p>Take a bite out of the Big Apple with iconic landmarks and endless energy.</p>
-                        <a href="#" class="btn-card">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<section class="features-section">
-    <div class="features-header scroll-reveal">
-        <h2 class="gradient-heading">Why Travelers Choose Us</h2>
-        <p>Experience the ultimate journey with our premium services.</p>
-    </div>
-
-    <div class="features-grid">
-        
-        <div class="flip-card scroll-reveal">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <i class="fas fa-tags"></i>
-                    <h3>Best Prices</h3>
-                </div>
-                <div class="flip-card-back">
-                    <p>We guarantee unbeatable prices and exclusive deals for all your premium travel destinations worldwide.</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="flip-card scroll-reveal">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Safe Travel</h3>
-                </div>
-                <div class="flip-card-back">
-                    <p>Your safety is our priority. We partner with highly rated airlines following strict safety protocols.</p>
-                </div>
-            </div>
+
+    <section class="experiences-section">
+        <div class="section-header scroll-reveal">
+            <h2 class="text-gradient">Exclusive Experiences</h2>
+            <p class="section-subtitle">Curated journeys designed perfectly for your unique travel style</p>
         </div>
 
-        <div class="flip-card scroll-reveal">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <i class="fas fa-plane"></i>
-                    <h3>Premium Airlines</h3>
+        <div class="bento-grid">
+            <div class="bento-card luxury-card">
+                <div class="bento-bg" style="background-image: url('./asset/w9.webp');">
                 </div>
-                <div class="flip-card-back">
-                    <p>Fly with the world's best airlines, offering luxurious seating, fine dining, and superior comfort.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card scroll-reveal">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <i class="fas fa-headset"></i>
-                    <h3>24/7 Support</h3>
-                </div>
-                <div class="flip-card-back">
-                    <p>Our dedicated customer support team is available around the clock to assist you with any queries.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card scroll-reveal">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3>Global Coverage</h3>
-                </div>
-                <div class="flip-card-back">
-                    <p>Access thousands of flights across 150+ countries. The world is at your fingertips.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card scroll-reveal">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <i class="fas fa-undo-alt"></i>
-                    <h3>Easy Cancellations</h3>
-                </div>
-                <div class="flip-card-back">
-                    <p>Plans change? Enjoy hassle-free, flexible cancellation policies on premium bookings.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card scroll-reveal">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Seamless Booking</h3>
-                </div>
-                <div class="flip-card-back">
-                    <p>Experience a smooth, lag-free booking process on any device in just a few taps.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card scroll-reveal">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <i class="fas fa-crown"></i>
-                    <h3>Exclusive Perks</h3>
-                </div>
-                <div class="flip-card-back">
-                    <p>Unlock VIP lounge access, extra baggage allowance, and priority boarding.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<section class="airlines-section">
-    <div class="container">
-        
-        <div class="section-header text-center" data-aos="fade-up">
-            <h2 class="section-title">Trusted By <span class="text-gradient">Top Airlines</span></h2>
-            <p class="section-subtitle">We partner with the world's leading carriers to bring you the best experience.</p>
-        </div>
-
-        <div class="marquee-container" data-aos="fade-up" data-aos-delay="100">
-            <div class="marquee-track">
-                
-                <div class="airline-card">
-                    <i class="fa-solid fa-plane-departure plane-icon"></i>
-                    <h3>Emirates</h3>
-                </div>
-                <div class="airline-card">
-                    <i class="fa-solid fa-plane-up plane-icon"></i>
-                    <h3>Qatar Airways</h3>
-                </div>
-                <div class="airline-card">
-                    <i class="fa-solid fa-plane plane-icon"></i>
-                    <h3>Singapore Airlines</h3>
-                </div>
-                <div class="airline-card">
-                    <i class="fa-solid fa-plane-arrival plane-icon"></i>
-                    <h3>Cathay Pacific</h3>
-                </div>
-                <div class="airline-card">
-                    <i class="fa-solid fa-jet-fighter-up plane-icon"></i>
-                    <h3>ANA All Nippon</h3>
-                </div>
-
-                <div class="airline-card">
-                    <i class="fa-solid fa-plane-departure plane-icon"></i>
-                    <h3>Emirates</h3>
-                </div>
-                <div class="airline-card">
-                    <i class="fa-solid fa-plane-up plane-icon"></i>
-                    <h3>Qatar Airways</h3>
-                </div>
-                <div class="airline-card">
-                    <i class="fa-solid fa-plane plane-icon"></i>
-                    <h3>Singapore Airlines</h3>
-                </div>
-                <div class="airline-card">
-                    <i class="fa-solid fa-plane-arrival plane-icon"></i>
-                    <h3>Cathay Pacific</h3>
-                </div>
-                <div class="airline-card">
-                    <i class="fa-solid fa-jet-fighter-up plane-icon"></i>
-                    <h3>ANA All Nippon</h3>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- ========================================== -->
-<!-- 5️⃣ DREAM DESTINATIONS (STICKY SCROLL)       -->
-<!-- ========================================== -->
-<section class="destinations-section">
-    <div class="container">
-        
-        <div class="section-header text-center" data-aos="fade-up">
-            <h2 class="section-title">Explore Your <span class="text-gradient">Dream Destinations</span></h2>
-            <p class="section-subtitle">Discover breathtaking locations curated just for you.</p>
-        </div>
-
-        <div class="sticky-container">
-            
-            <!-- LEFT SIDE: Sticky Image Wrapper -->
-            <div class="sticky-left">
-                <div class="sticky-image-box">
-                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop" id="sticky-img" alt="Destination Preview">
-                    <div class="image-overlay-gradient"></div>
+                <div class="bento-overlay"></div>
+                <div class="bento-content">
+                    <div class="bento-title-wrapper">
+                        <i class="fas fa-crown bento-icon"></i>
+                        <h3>Luxury Trips</h3>
+                    </div>
+                    <div class="bento-slide-up">
+                        <p>Experience world-class hospitality, private jets, and VIP treatments in the most exotic
+                            locations.</p>
+                        <a href="404page.html" class="bento-btn">Explore Luxury <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
 
-            <!-- RIGHT SIDE: Scrolling Cards -->
-            <div class="scroll-right">
-                
-                <!-- Card 1 (🔥 Added 'active-card' here by default) -->
-                <div class="dest-card active-card" data-img="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop">
-                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop" class="mobile-card-img" alt="Europe">
-                    <div class="dest-card-content">
-                        <span class="dest-badge">01. Cultural</span>
-                        <h3>Europe Escapes</h3>
-                        <p>Wander through the historic streets of Paris, Rome, and Prague. Experience centuries of art, architecture, and culinary perfection.</p>
-                        <a href="#" class="dest-link">Explore Europe <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="bento-card">
+                <div class="bento-bg" style="background-image: url('./asset/v14.webp');">
+                </div>
+                <div class="bento-overlay"></div>
+                <div class="bento-content">
+                    <div class="bento-title-wrapper">
+                        <i class="fas fa-users bento-icon"></i>
+                        <h3>Family Vacations</h3>
+                    </div>
+                    <div class="bento-slide-up">
+                        <p>Create unforgettable memories with kid-friendly resorts and fun activities.</p>
+                        <a href="404page.html" class="bento-btn">Plan Family Trip</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="bento-bg" style="background-image: url('./asset/v15.webp');">
+                </div>
+                <div class="bento-overlay"></div>
+                <div class="bento-content">
+                    <div class="bento-title-wrapper">
+                        <i class="fas fa-heart bento-icon"></i>
+                        <h3>Honeymoon</h3>
+                    </div>
+                    <div class="bento-slide-up">
+                        <p>Romantic getaways, private villas, and beautiful sunset dinners for couples.</p>
+                        <a href="404page.html" class="bento-btn">Romantic Escapes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="bento-bg" style="background-image: url('./asset/v16.webp');">
+                </div>
+                <div class="bento-overlay"></div>
+                <div class="bento-content">
+                    <div class="bento-title-wrapper">
+                        <i class="fas fa-mountain bento-icon"></i>
+                        <h3>Adventure Tours</h3>
+                    </div>
+                    <div class="bento-slide-up">
+                        <p>Thrill-seeking experiences like trekking, scuba diving, and wild safaris.</p>
+                        <a href="404page.html" class="bento-btn">Find Adventures</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="bento-bg" style="background-image: url('./asset/v17.webp');">
+                </div>
+                <div class="bento-overlay"></div>
+                <div class="bento-content">
+                    <div class="bento-title-wrapper">
+                        <i class="fas fa-walking bento-icon"></i>
+                        <h3>Solo Travel</h3>
+                    </div>
+                    <div class="bento-slide-up">
+                        <p>Discover yourself with safe, guided, and budget-friendly solo backpacks.</p>
+                        <a href="404page.html" class="bento-btn">Go Solo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="flight-classes-section">
+        <div class="section-header scroll-reveal">
+            <h2 class="text-gradient">Choose Your Comfort</h2>
+            <p class="section-subtitle">Experience our world-class cabins designed for every type of traveler</p>
+        </div>
+
+        <div class="classes-grid">
+            <div class="class-flip-card scroll-reveal">
+                <div class="class-flip-inner">
+
+                    <div class="class-flip-front" style="background-image: url('./asset/v10.webp');">
+                        <div class="front-overlay"></div>
+                        <div class="front-content">
+                            <i class="fas fa-chair class-icon"></i>
+                            <h3>Economy</h3>
+                            <p>Smart & Affordable</p>
+                        </div>
+                    </div>
+                    <div class="class-flip-back economy-back">
+                        <h3>Economy Features</h3>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-check"></i> Standard Legroom</li>
+                            <li><i class="fas fa-wifi"></i> Basic Wi-Fi Access</li>
+                            <li><i class="fas fa-plug"></i> USB Charging Ports</li>
+                            <li><i class="fas fa-utensils"></i> Complimentary Snacks</li>
+                        </ul>
+                        <a href="404page.html" class="class-btn outline-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-flip-card scroll-reveal" style="transition-delay: 0.2s;">
+                <div class="class-flip-inner">
+
+                    <div class="class-flip-front" style="background-image: url('./asset/v2.webp');">
+                        <div class="front-overlay"></div>
+                        <div class="front-content">
+                            <i class="fas fa-briefcase class-icon"></i>
+                            <h3>Business</h3>
+                            <p>Premium Comfort</p>
+                        </div>
+                    </div>
+                    <div class="class-flip-back business-back">
+                        <h3>Business Features</h3>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-bed"></i> Lie-Flat Seats</li>
+                            <li><i class="fas fa-wifi"></i> High-Speed Wi-Fi</li>
+                            <li><i class="fas fa-glass-cheers"></i> Lounge Access</li>
+                            <li><i class="fas fa-concierge-bell"></i> Priority Boarding</li>
+                        </ul>
+                        <a href="404page.html" class="class-btn white-btn">Explore Business</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-flip-card scroll-reveal" style="transition-delay: 0.4s;">
+                <div class="class-flip-inner">
+
+                    <div class="class-flip-front" style="background-image: url('./asset/v1.webp');">
+                        <div class="front-overlay"></div>
+                        <div class="front-content">
+                            <i class="fas fa-gem class-icon"></i>
+                            <h3>First Class</h3>
+                            <p>Ultimate Luxury</p>
+                        </div>
+                    </div>
+                    <div class="class-flip-back first-class-back">
+                        <h3>First Class Features</h3>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-door-closed"></i> Private Suites</li>
+                            <li><i class="fas fa-utensils"></i> Dine on Demand</li>
+                            <li><i class="fas fa-spa"></i> Spa & Shower Access</li>
+                            <li><i class="fas fa-car"></i> Chauffeur Service</li>
+                        </ul>
+                        <a href="404page.html" class="class-btn gradient-btn">Experience Luxury</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="popular-routes-section">
+        <div class="routes-header scroll-reveal">
+            <h2 class="text-gradient">Trending Global Routes</h2>
+            <p class="section-subtitle light-subtitle">Discover our most booked flights with exclusive premium offers
+            </p>
+        </div>
+
+        <div class="routes-scroll-container">
+            <div class="routes-track">
+
+                <div class="route-card scroll-reveal">
+                    <div class="route-bg" style="background-image: url('./asset/v4.webp');">
+                    </div>
+                    <div class="route-overlay"></div>
+                    <div class="route-content">
+                        <span class="route-badge">Bestseller</span>
+                        <div class="route-cities">
+                            <div class="city">
+                                <h4>MAA</h4>
+                                <p>Chennai</p>
+                            </div>
+                            <div class="flight-path">
+                                <span class="path-line"></span>
+                                <i class="fas fa-plane path-icon"></i>
+                                <span class="path-line"></span>
+                            </div>
+                            <div class="city text-right">
+                                <h4>DXB</h4>
+                                <p>Dubai</p>
+                            </div>
+                        </div>
+
+                        <div class="route-info">
+                            <span class="info-item"><i class="far fa-clock"></i> 4h 15m</span>
+                            <span class="info-item"><i class="fas fa-exchange-alt"></i> Direct</span>
+                            <span class="info-item"><i class="fas fa-plane-departure"></i> Emirates</span>
+                        </div>
+
+                        <div class="route-footer">
+                            <div class="price-box">
+                                <span class="price-label">Starting at</span>
+                                <span class="route-price">$299</span>
+                            </div>
+                            <a href="404page.html" class="route-btn"><i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="dest-card" data-img="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=800&auto=format&fit=crop">
-                    <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=600&auto=format&fit=crop" class="mobile-card-img" alt="Tropical">
-                    <div class="dest-card-content">
-                        <span class="dest-badge">02. Relaxing</span>
-                        <h3>Tropical Islands</h3>
-                        <p>Escape to crystal clear waters and white sandy beaches. Maldives, Bora Bora, and Bali await your arrival for ultimate relaxation.</p>
-                        <a href="#" class="dest-link">View Islands <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="route-card scroll-reveal">
+                    <div class="route-bg" style="background-image: url('./asset/v7.webp');">
+                    </div>
+                    <div class="route-overlay"></div>
+                    <div class="route-content">
+                        <span class="route-badge popular">Popular</span>
+                        <div class="route-cities">
+                            <div class="city">
+                                <h4>DEL</h4>
+                                <p>Delhi</p>
+                            </div>
+                            <div class="flight-path">
+                                <span class="path-line"></span>
+                                <i class="fas fa-plane path-icon"></i>
+                                <span class="path-line"></span>
+                            </div>
+                            <div class="city text-right">
+                                <h4>SIN</h4>
+                                <p>Singapore</p>
+                            </div>
+                        </div>
+
+                        <div class="route-info">
+                            <span class="info-item"><i class="far fa-clock"></i> 5h 50m</span>
+                            <span class="info-item"><i class="fas fa-exchange-alt"></i> Direct</span>
+                            <span class="info-item"><i class="fas fa-plane-departure"></i> Singapore Air</span>
+                        </div>
+
+                        <div class="route-footer">
+                            <div class="price-box">
+                                <span class="price-label">Starting at</span>
+                                <span class="route-price">$349</span>
+                            </div>
+                            <a href="404page.html" class="route-btn"><i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="dest-card" data-img="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=800&auto=format&fit=crop">
-                    <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=600&auto=format&fit=crop" class="mobile-card-img" alt="Desert">
-                    <div class="dest-card-content">
-                        <span class="dest-badge">03. Adventure</span>
-                        <h3>Desert Adventures</h3>
-                        <p>Feel the thrill of dune bashing in Dubai or watch the sunset over the vast Sahara. A magical experience under the starry night sky.</p>
-                        <a href="#" class="dest-link">Start Adventure <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="route-card scroll-reveal">
+                    <div class="route-bg" style="background-image: url('./asset/v15.webp');">
+                    </div>
+                    <div class="route-overlay"></div>
+                    <div class="route-content">
+                        <span class="route-badge luxury">Premium</span>
+                        <div class="route-cities">
+                            <div class="city">
+                                <h4>BLR</h4>
+                                <p>Bangalore</p>
+                            </div>
+                            <div class="flight-path">
+                                <span class="path-line"></span>
+                                <i class="fas fa-plane path-icon"></i>
+                                <span class="path-line"></span>
+                            </div>
+                            <div class="city text-right">
+                                <h4>LHR</h4>
+                                <p>London</p>
+                            </div>
+                        </div>
+
+                        <div class="route-info">
+                            <span class="info-item"><i class="far fa-clock"></i> 11h 20m</span>
+                            <span class="info-item"><i class="fas fa-exchange-alt"></i> 1 Stop</span>
+                            <span class="info-item"><i class="fas fa-plane-departure"></i> British Airways</span>
+                        </div>
+
+                        <div class="route-footer">
+                            <div class="price-box">
+                                <span class="price-label">Starting at</span>
+                                <span class="route-price">$599</span>
+                            </div>
+                            <a href="404page.html" class="route-btn"><i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="dest-card" data-img="https://images.unsplash.com/photo-1478265409131-1f65c88f965c?q=80&w=800&auto=format&fit=crop">
-                    <img src="https://images.unsplash.com/photo-1478265409131-1f65c88f965c?q=80&w=600&auto=format&fit=crop" class="mobile-card-img" alt="Winter">
-                    <div class="dest-card-content">
-                        <span class="dest-badge">04. Snowy</span>
-                        <h3>Winter Getaways</h3>
-                        <p>Hit the slopes in the Swiss Alps or witness the breathtaking Northern Lights in Norway. Embrace the magic of the winter wonderland.</p>
-                        <a href="#" class="dest-link">Discover Winter <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="route-card scroll-reveal">
+                    <div class="route-bg" style="background-image: url('./asset/v13.webp');">
+                    </div>
+                    <div class="route-overlay"></div>
+                    <div class="route-content">
+                        <span class="route-badge romantic">Couples</span>
+                        <div class="route-cities">
+                            <div class="city">
+                                <h4>BOM</h4>
+                                <p>Mumbai</p>
+                            </div>
+                            <div class="flight-path">
+                                <span class="path-line"></span>
+                                <i class="fas fa-plane path-icon"></i>
+                                <span class="path-line"></span>
+                            </div>
+                            <div class="city text-right">
+                                <h4>CDG</h4>
+                                <p>Paris</p>
+                            </div>
+                        </div>
+
+                        <div class="route-info">
+                            <span class="info-item"><i class="far fa-clock"></i> 9h 45m</span>
+                            <span class="info-item"><i class="fas fa-exchange-alt"></i> Direct</span>
+                            <span class="info-item"><i class="fas fa-plane-departure"></i> Air France</span>
+                        </div>
+
+                        <div class="route-footer">
+                            <div class="price-box">
+                                <span class="price-label">Starting at</span>
+                                <span class="route-price">$649</span>
+                            </div>
+                            <a href="404page.html" class="route-btn"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card scroll-reveal">
+                    <div class="route-bg" style="background-image: url('./asset/w21.webp');">
+                    </div>
+                    <div class="route-overlay"></div>
+                    <div class="route-content">
+                        <span class="route-badge tropical">Trending</span>
+                        <div class="route-cities">
+                            <div class="city">
+                                <h4>COK</h4>
+                                <p>Kochi</p>
+                            </div>
+                            <div class="flight-path">
+                                <span class="path-line"></span>
+                                <i class="fas fa-plane path-icon"></i>
+                                <span class="path-line"></span>
+                            </div>
+                            <div class="city text-right">
+                                <h4>MLE</h4>
+                                <p>Maldives</p>
+                            </div>
+                        </div>
+
+                        <div class="route-info">
+                            <span class="info-item"><i class="far fa-clock"></i> 1h 30m</span>
+                            <span class="info-item"><i class="fas fa-exchange-alt"></i> Direct</span>
+                            <span class="info-item"><i class="fas fa-plane-departure"></i> IndiGo</span>
+                        </div>
+
+                        <div class="route-footer">
+                            <div class="price-box">
+                                <span class="price-label">Starting at</span>
+                                <span class="route-price">$189</span>
+                            </div>
+                            <a href="404page.html" class="route-btn"><i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+
+    <section class="testimonials-section">
+        <div class="section-header scroll-reveal">
+            <h2 class="text-gradient">Traveler Stories</h2>
+            <p class="section-subtitle">Read what our happy customers have to say about their unforgettable journeys</p>
+        </div>
+
+        <div class="marquee-wrapper scroll-reveal">
+            <div class="testimonial-track">
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"The booking process was incredibly smooth, and the First Class experience
+                        was truly out of this world. Highly recommended!"</p>
+                    <div class="user-info">
+                        <img src="./asset/s3.webp" alt="Sarah J." class="user-img">
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>Solo Traveler</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"Our family vacation to the Maldives was perfectly planned. The customer
+                        support team was there for us 24/7."</p>
+                    <div class="user-info">
+                        <img src="./asset/s1.webp" alt="Michael D." class="user-img">
+                        <div>
+                            <h4>Michael David</h4>
+                            <span>Family Trip</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Best honeymoon package ever! The private villa they arranged for us was
+                        beyond our wildest dreams. Thank you!"</p>
+                    <div class="user-info">
+                        <img src="./asset/r5.webp" alt="Priya K." class="user-img">
+                        <div>
+                            <h4>Priya Kumar</h4>
+                            <span>Honeymooner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"I fly business class often for work, and this airline offers the most
+                        comfortable lie-flat seats and premium lounge access."</p>
+                    <div class="user-info">
+                        <img src="./asset/v19.webp" alt="David L." class="user-img">
+                        <div>
+                            <h4>David Lee</h4>
+                            <span>Business Executive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"The booking process was incredibly smooth, and the First Class experience
+                        was truly out of this world. Highly recommended!"</p>
+                    <div class="user-info">
+                        <img src="./asset/s3.webp" alt="Sarah J." class="user-img">
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>Solo Traveler</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"Our family vacation to the Maldives was perfectly planned. The customer
+                        support team was there for us 24/7."</p>
+                    <div class="user-info">
+                        <img src="./asset/s1.webp" alt="Michael D." class="user-img">
+                        <div>
+                            <h4>Michael David</h4>
+                            <span>Family Trip</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Best honeymoon package ever! The private villa they arranged for us was
+                        beyond our wildest dreams. Thank you!"</p>
+                    <div class="user-info">
+                        <img src="./asset/r5.webp" alt="Priya K." class="user-img">
+                        <div>
+                            <h4>Priya Kumar</h4>
+                            <span>Honeymooner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"I fly business class often for work, and this airline offers the most
+                        comfortable lie-flat seats and premium lounge access."</p>
+                    <div class="user-info">
+                        <img src="./asset/v19.webp" alt="David L." class="user-img">
+                        <div>
+                            <h4>David Lee</h4>
+                            <span>Business Executive</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="editorial-blog-section">
+        <div class="section-header scroll-reveal">
+            <h2 class="text-gradient">Traveler Journals</h2>
+            <p class="section-subtitle">Read captivating stories and expert guides from around the globe</p>
+        </div>
+
+        <div class="editorial-container">
+
+            <div class="editorial-row scroll-reveal">
+                <div class="ed-image-wrap">
+                    <div class="ed-image-inner" style="background-image: url('./asset/q7.webp');">
+                    </div>
+                </div>
+                <div class="ed-content-card">
+                    <span class="ed-category">Best Beaches</span>
+                    <h3 class="ed-title">Top 10 Exotic Beaches to Visit This Summer Before They Get Crowded</h3>
+                    <p class="ed-excerpt">Discover pristine white sands and crystal clear waters from the Caribbean to
+                        Southeast Asia in our ultimate summer beach guide.</p>
+                    <div class="ed-meta">
+                        <div class="ed-author">
+                            <img src="./asset/w2.webp" alt="Author">
+                            <span>By Jessica M.</span>
+                        </div>
+                        <a href="404page.html" class="ed-read-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editorial-row reversed scroll-reveal">
+                <div class="ed-image-wrap">
+                    <div class="ed-image-inner" style="background-image: url('./asset/w16.webp');">
+                    </div>
+                </div>
+                <div class="ed-content-card">
+                    <span class="ed-category budget">Budget Travel</span>
+                    <h3 class="ed-title">Backpacking on a Budget: The Ultimate Europe Edition</h3>
+                    <p class="ed-excerpt">Learn how to travel across Europe for under $50 a day with our expert train
+                        tricks, cheap eats, and hostel hacks.</p>
+                    <div class="ed-meta">
+                        <div class="ed-author">
+                            <img src="./asset/w4.webp" alt="Author">
+                            <span>By Mark T.</span>
+                        </div>
+                        <a href="404page.html" class="ed-read-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editorial-row scroll-reveal">
+                <div class="ed-image-wrap">
+                    <div class="ed-image-inner" style="background-image: url('./asset/v15.webp');">
+                    </div>
+                </div>
+                <div class="ed-content-card">
+                    <span class="ed-category visa">Visa Tips</span>
+                    <h3 class="ed-title">The Ultimate Guide to Hassle-Free Visas for Global Nomads</h3>
+                    <p class="ed-excerpt">Everything you need to know about evisas, documentation, and clearing
+                        interviews without stress.</p>
+                    <div class="ed-meta">
+                        <div class="ed-author">
+                            <img src="./asset/w3.webp" alt="Author">
+                            <span>By Priya K.</span>
+                        </div>
+                        <a href="404page.html" class="ed-read-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="cta-section">
+        <div class="cta-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="aurora-light orb-1"></div>
+        <div class="aurora-light orb-2"></div>
+        <div class="aurora-light orb-3"></div>
+
+        <div class="stars-container">
+            <div class="star s1"></div>
+            <div class="star s2"></div>
+            <div class="star s3"></div>
+            <div class="star s4"></div>
+            <div class="star s5"></div>
+            <div class="star s6"></div>
+        </div>
+
+        <div class="cta-container scroll-reveal">
+            <div class="cta-glowing-card">
+
+                <div class="cta-icon-wrapper">
+                    <i class="fas fa-paper-plane floating-plane-icon"></i>
+                </div>
+
+                <h2>Ready For Your Next Journey?</h2>
+                <p>Join thousands of happy travelers who explore the world with our premium, hassle-free booking
+                    experience.</p>
+
+                <a href="404page.html" class="cta-shine-btn">
+                    <span>Start Exploring</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+            <div class="footer-top">
+                <div class="footer-brand scroll-anim" style="transition-delay: 0.1s;">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./asset/stackly-logo (1).webp" alt="Stackly Travel Logo">
+                        </a>
+                    </div>
+                    <p class="brand-desc">
+                        "Crafting memories that last a lifetime. From flight bookings to luxury stays, we take care of
+                        every detail so you can just pack and explore."
+                    </p>
+                    <div class="social-icons">
+                        <a href="404page.html" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404page.html" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404page.html" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404page.html" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-wrapper scroll-anim" style="transition-delay: 0.2s;">
+                    <h4 class="footer-heading">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                        <li><a href="flights.html"><i class="fa-solid fa-angle-right"></i> Flights</a></li>
+                        <li><a href="destination.html"><i class="fa-solid fa-angle-right"></i>Destination</a></li>
+                        <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Blog</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-support scroll-anim" style="transition-delay: 0.3s;">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="support-info">
+                        <li>
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>support@stackly.travel</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Salem City, Tamil Nadu</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Mon - Fri: 9 AM - 6 PM</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-globe"></i>
+                            <span>www.stackly.travel</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter scroll-anim" style="transition-delay: 0.4s;">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="newsletter-desc">
+                        "Your next great escape starts here! Subscribe for handpicked destinations, flash flight deals,
+                        and travel inspiration."
+                    </p>
+                    <form class="footer-newsletter-form" id="newsletterForm" novalidate>
+                        <div class="newsletter-input-group" id="nlInputGroup">
+                            <input type="email" id="nlEmailInput" class="newsletter-input"
+                                placeholder="Enter your email" required>
+                            <button type="submit" class="newsletter-btn" id="nlBtn">JOIN</button>
+                        </div>
+                        <div id="nlMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Stackly Learning. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="404page.html">Terms & Conditions</a>
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Cookie Policy</a>
+                    <a href="404page.html">Refund Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
 
 
     <script src="script.js"></script>
     <script>
-   document.addEventListener("DOMContentLoaded", () => {
-    // --- 1. Scroll Reveal Animation ---
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15 
-    };
+        document.addEventListener("DOMContentLoaded", () => {
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
 
-    const revealElements = document.querySelectorAll('.scroll-reveal');
-    revealElements.forEach(el => observer.observe(el));
-
-    // --- 2. Form Validation & Date Logic ---
-    const form = document.getElementById('flightForm');
-    const fromInput = document.getElementById('from-input');
-    const toInput = document.getElementById('to-input');
-    const departInput = document.getElementById('depart-input');
-    const returnInput = document.getElementById('return-input');
-
-    const today = new Date().toISOString().split('T')[0];
-
-    // Convert Text to Date Input on Focus (to show "From" & "To" placeholders)
-    function setupDateInput(input) {
-        input.addEventListener('focus', function() {
-            this.type = 'date';
-            this.setAttribute('min', today); // Restrict past dates
-        });
-        input.addEventListener('blur', function() {
-            if (!this.value) {
-                this.type = 'text'; // Revert to text to show placeholder
-            }
-        });
-    }
-
-    setupDateInput(departInput);
-    setupDateInput(returnInput);
-
-    // Helper functions for errors
-    function showError(inputId, message) {
-        const errorElement = document.getElementById(`error-${inputId}`);
-        const groupElement = document.getElementById(`group-${inputId}`);
-        
-        errorElement.textContent = message;
-        errorElement.classList.add('show');
-        groupElement.classList.add('error-border');
-    }
-
-    function clearErrors() {
-        document.querySelectorAll('.error-text').forEach(el => el.classList.remove('show'));
-        document.querySelectorAll('.input-group').forEach(el => el.classList.remove('error-border'));
-    }
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); 
-        clearErrors();
-        let isValid = true;
-
-        // Validate "Leaving From"
-        if (fromInput.value.trim() === '') {
-            showError('from', 'Departure city is required.');
-            isValid = false;
-        }
-
-        // Validate "Going To"
-        if (toInput.value.trim() === '') {
-            showError('to', 'Destination city is required.');
-            isValid = false;
-        } else if (toInput.value.trim().toLowerCase() === fromInput.value.trim().toLowerCase() && toInput.value.trim() !== '') {
-            showError('to', 'Departure and Destination cannot be the same.');
-            isValid = false;
-        }
-
-        // Validate "Departure Date"
-        if (departInput.value === '') {
-            showError('depart', 'Please select a departure date.');
-            isValid = false;
-        }
-
-        // Validate "Return Date"
-        if (returnInput.value === '') {
-            showError('return', 'Please select a return date.');
-            isValid = false;
-        } else if (departInput.value !== '') {
-            // Check if return date is before departure date
-            if (new Date(returnInput.value) < new Date(departInput.value)) {
-                showError('return', 'Return date must be after departure.');
-                isValid = false;
-            }
-        }
-
-        // If everything is valid
-        if (isValid) {
-            window.location.href='404page.html'
-        }
-    });
-
-    // Clear specific error on input typing/changing
-    [fromInput, toInput].forEach(input => {
-        input.addEventListener('input', clearErrorsOnChange);
-    });
-    [departInput, returnInput].forEach(input => {
-        input.addEventListener('change', clearErrorsOnChange);
-    });
-
-    function clearErrorsOnChange(e) {
-        const id = e.target.id.split('-')[0];
-        document.getElementById(`error-${id}`).classList.remove('show');
-        document.getElementById(`group-${id}`).classList.remove('error-border');
-    }
-});
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const destCards = document.querySelectorAll('.dest-card');
-        const stickyImg = document.getElementById('sticky-img');
-
-        // Observer Options (Triggers when card is 50% visible)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5 
-        };
-
-        const destObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Get image URL
-                    const newImgSrc = entry.target.getAttribute('data-img');
-                    
-                    // Smooth image transition
-                    if(stickyImg.src !== newImgSrc) {
-                        stickyImg.style.opacity = 0.2; 
-                        stickyImg.style.transform = "scale(1.05)"; 
-                        
-                        setTimeout(() => {
-                            stickyImg.src = newImgSrc;
-                            stickyImg.style.opacity = 1; 
-                            stickyImg.style.transform = "scale(1)";
-                        }, 300);
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
                     }
+                });
+            }, observerOptions);
 
-                    // Remove active class from all, add to current
-                    destCards.forEach(card => card.classList.remove('active-card'));
-                    entry.target.classList.add('active-card');
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            revealElements.forEach(el => observer.observe(el));
+
+            const form = document.getElementById('flightForm');
+            const fromInput = document.getElementById('from-input');
+            const toInput = document.getElementById('to-input');
+            const departInput = document.getElementById('depart-input');
+            const returnInput = document.getElementById('return-input');
+
+            const today = new Date().toISOString().split('T')[0];
+
+            function setupDateInput(input) {
+                input.addEventListener('focus', function () {
+                    this.type = 'date';
+                    this.setAttribute('min', today);
+                });
+                input.addEventListener('blur', function () {
+                    if (!this.value) {
+                        this.type = 'text';
+                    }
+                });
+            }
+
+            setupDateInput(departInput);
+            setupDateInput(returnInput);
+
+            function showError(inputId, message) {
+                const errorElement = document.getElementById(`error-${inputId}`);
+                const groupElement = document.getElementById(`group-${inputId}`);
+
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+                groupElement.classList.add('error-border');
+            }
+
+            function clearErrors() {
+                document.querySelectorAll('.error-text').forEach(el => el.classList.remove('show'));
+                document.querySelectorAll('.input-group').forEach(el => el.classList.remove('error-border'));
+            }
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                clearErrors();
+                let isValid = true;
+
+                if (fromInput.value.trim() === '') {
+                    showError('from', 'Departure city is required.');
+                    isValid = false;
+                }
+
+                if (toInput.value.trim() === '') {
+                    showError('to', 'Destination city is required.');
+                    isValid = false;
+                } else if (toInput.value.trim().toLowerCase() === fromInput.value.trim().toLowerCase() && toInput.value.trim() !== '') {
+                    showError('to', 'Departure and Destination cannot be the same.');
+                    isValid = false;
+                }
+
+                if (departInput.value === '') {
+                    showError('depart', 'Please select a departure date.');
+                    isValid = false;
+                }
+
+                if (returnInput.value === '') {
+                    showError('return', 'Please select a return date.');
+                    isValid = false;
+                } else if (departInput.value !== '') {
+                    if (new Date(returnInput.value) < new Date(departInput.value)) {
+                        showError('return', 'Return date must be after departure.');
+                        isValid = false;
+                    }
+                }
+
+                if (isValid) {
+                    window.location.href = '404page.html'
                 }
             });
-        }, observerOptions);
 
-        // Start observing each card
-        destCards.forEach(card => destObserver.observe(card));
-    });
-</script>
+            [fromInput, toInput].forEach(input => {
+                input.addEventListener('input', clearErrorsOnChange);
+            });
+            [departInput, returnInput].forEach(input => {
+                input.addEventListener('change', clearErrorsOnChange);
+            });
+
+            function clearErrorsOnChange(e) {
+                const id = e.target.id.split('-')[0];
+                document.getElementById(`error-${id}`).classList.remove('show');
+                document.getElementById(`group-${id}`).classList.remove('error-border');
+            }
+        });
+    </script>
 
 </body>
 

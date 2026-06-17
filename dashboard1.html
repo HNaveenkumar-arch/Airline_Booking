@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Airline Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="dashboard1.css">
+</head>
+
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="./asset/stackly-logo (1).webp" alt="logo" class="logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a class="nav-item active" onclick="switchTab('view-overview', this, 'Overview')"><i
+                        class="fas fa-home"></i> Overview</a></li>
+            <li><a class="nav-item" onclick="switchTab('view-flights', this, 'Flights Management')"><i
+                        class="fas fa-plane"></i> Flights Management</a></li>
+            <li><a class="nav-item" onclick="switchTab('view-bookings', this, 'Bookings Management')"><i
+                        class="fas fa-ticket-alt"></i> Bookings Management</a></li>
+            <li><a class="nav-item" onclick="switchTab('view-airlines', this, 'Airlines')"><i
+                        class="fas fa-building"></i> Airlines</a></li>
+            <li><a class="nav-item" onclick="switchTab('view-settings', this, 'Settings')"><i class="fas fa-cog"></i>
+                    Settings</a></li>
+        </ul>
+
+        <ul class="nav-links bottom-links">
+            <li><a href="index.html" class="nav-item danger-link"><i class="fas fa-arrow-left"></i> Back To Home</a>
+            </li>
+            <li><a href="login.html" class="nav-item danger-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content" id="mainContent">
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="menu-toggle" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="dashboard-badge"><i class="fas fa-user-tie"></i> Admin Dashboard</div>
+
+                <h2 id="dynamic-page-title" class="page-title">Overview</h2>
+            </div>
+
+            <div class="header-right">
+                <div class="profile">
+                    <img src="./asset/s1.webp" alt="Admin Profile" class="permanent-profile-pic">
+                    <div class="profile-info">
+                        <h4 class="user-name">Loading...</h4>
+                        <p class="user-email-display" style="font-size: 12px; color: var(--text-gray);">
+                            admin@stackly.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-body" id="dashboardBody">
+
+            <div id="view-overview" class="content-section active-section">
+                <div class="welcome-card anim-item">
+                    <h2>Welcome back, <span class="user-name">Admin</span>!</h2>
+                    <p>Manage fleet operations, monitor active bookings, and oversee airline partners.</p>
+                    <div class="dash-email-display">
+                        <i class="fas fa-shield-alt"></i> System Administrator
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card anim-item">
+                        <div class="stat-icon"><i class="fas fa-plane-departure"></i></div>
+                        <div class="stat-details">
+                            <p>Active Flights</p>
+                            <h3>124</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card anim-item">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-details">
+                            <p>Daily Passengers</p>
+                            <h3>14,500</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card anim-item">
+                        <div class="stat-icon"><i class="fas fa-ticket-alt"></i></div>
+                        <div class="stat-details">
+                            <p>New Bookings</p>
+                            <h3>892</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="admin-analytics-section anim-item">
+                    <h3 class="section-title">Revenue & Traffic Analytics</h3>
+                    <div class="analytics-card">
+                        <div class="chart-header">
+                            <div>
+                                <h4>Monthly Revenue</h4>
+                                <p style="color: var(--text-gray); font-size: 13px;">Overview of the last 6 months</p>
+                            </div>
+                            <h3 style="color: var(--primary-orange);">$245,890</h3>
+                        </div>
+
+                        <div class="css-chart-container">
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar" style="height: 40%;"><span class="tooltip">$40k</span></div>
+                                <span class="chart-label">Jan</span>
+                            </div>
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar" style="height: 65%;"><span class="tooltip">$65k</span></div>
+                                <span class="chart-label">Feb</span>
+                            </div>
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar" style="height: 50%;"><span class="tooltip">$50k</span></div>
+                                <span class="chart-label">Mar</span>
+                            </div>
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar" style="height: 85%;"><span class="tooltip">$85k</span></div>
+                                <span class="chart-label">Apr</span>
+                            </div>
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar" style="height: 70%;"><span class="tooltip">$70k</span></div>
+                                <span class="chart-label">May</span>
+                            </div>
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar" style="height: 90%;"><span class="tooltip">$90k</span></div>
+                                <span class="chart-label">Jun</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="admin-routes-section anim-item">
+                    <h3 class="section-title">Top Performing Routes (Occupancy)</h3>
+                    <div class="routes-grid">
+
+                        <div class="route-prog-card">
+                            <div class="route-prog-header">
+                                <div>
+                                    <h4><i class="fas fa-plane" style="color: var(--primary-orange);"></i> MAA <i
+                                            class="fas fa-arrow-right"
+                                            style="font-size:12px; margin:0 5px; color:#ccc;"></i> DXB</h4>
+                                    <p>Chennai to Dubai</p>
+                                </div>
+                                <div class="prog-percentage">92%</div>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 92%;"></div>
+                            </div>
+                            <p style="font-size: 12px; margin-top: 8px; color: var(--text-gray);">14 Flights this week
+                            </p>
+                        </div>
+
+                        <div class="route-prog-card">
+                            <div class="route-prog-header">
+                                <div>
+                                    <h4><i class="fas fa-plane" style="color: var(--primary-orange);"></i> DEL <i
+                                            class="fas fa-arrow-right"
+                                            style="font-size:12px; margin:0 5px; color:#ccc;"></i> LHR</h4>
+                                    <p>New Delhi to London</p>
+                                </div>
+                                <div class="prog-percentage">85%</div>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 85%;"></div>
+                            </div>
+                            <p style="font-size: 12px; margin-top: 8px; color: var(--text-gray);">8 Flights this week
+                            </p>
+                        </div>
+
+                        <div class="route-prog-card">
+                            <div class="route-prog-header">
+                                <div>
+                                    <h4><i class="fas fa-plane" style="color: var(--primary-orange);"></i> BOM <i
+                                            class="fas fa-arrow-right"
+                                            style="font-size:12px; margin:0 5px; color:#ccc;"></i> SIN</h4>
+                                    <p>Mumbai to Singapore</p>
+                                </div>
+                                <div class="prog-percentage">78%</div>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 78%; background: #f59e0b;"></div>
+                            </div>
+                            <p style="font-size: 12px; margin-top: 8px; color: var(--text-gray);">10 Flights this week
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="admin-alerts-section anim-item">
+                    <h3 class="section-title">System Alerts & Notifications</h3>
+                    <div class="alerts-container">
+
+                        <div class="alert-item alert-danger">
+                            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="alert-content">
+                                <h4>Weather Warning at DXB</h4>
+                                <p>Heavy fog reported at Dubai International. Expect delays for inbound flights.</p>
+                                <span class="alert-time">10 mins ago</span>
+                            </div>
+                            <button class="btn-text" style="color: var(--danger-red);"
+                                onclick="window.location.href='404page.html'">Take Action</button>
+                        </div>
+
+                        <div class="alert-item alert-warning">
+                            <div class="alert-icon"><i class="fas fa-tools"></i></div>
+                            <div class="alert-content">
+                                <h4>Maintenance Due</h4>
+                                <p>Aircraft VT-INX requires routine engine check in 48 hours.</p>
+                                <span class="alert-time">2 hours ago</span>
+                            </div>
+                            <button class="btn-text" style="color: #d97706;"
+                                onclick="window.location.href='404page.html'">Schedule</button>
+                        </div>
+
+                        <div class="alert-item alert-success">
+                            <div class="alert-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="alert-content">
+                                <h4>System Update Complete</h4>
+                                <p>Payment gateway integration v2.4 has been deployed successfully.</p>
+                                <span class="alert-time">Yesterday</span>
+                            </div>
+                            <button class="btn-text" style="color: #166534;"
+                                onclick="window.location.href='404page.html'">View Log</button>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <div id="view-flights" class="content-section">
+                <h3 style="margin-bottom: 20px; color: var(--text-dark);" class="anim-item">Live Flight Status</h3>
+                <div class="grid-layout">
+
+                    <div class="flight-card anim-item">
+                        <div class="flight-header">
+                            <span class="flight-no"><i class="fas fa-plane"></i> AI-204</span>
+                            <span class="status-badge status-ontime">On Time</span>
+                        </div>
+                        <div class="flight-route">
+                            <div class="route-point">
+                                <h4>MAA</h4>
+                                <p>10:30 AM</p>
+                            </div>
+                            <i class="fas fa-plane route-plane"></i>
+                            <div class="route-point">
+                                <h4>DEL</h4>
+                                <p>01:15 PM</p>
+                            </div>
+                        </div>
+                        <button class="btn-primary" style="margin-top: 20px;"
+                            onclick="window.location.href='404page.html'">Manage Flight</button>
+                    </div>
+
+                    <div class="flight-card anim-item">
+                        <div class="flight-header">
+                            <span class="flight-no"><i class="fas fa-plane"></i> IN-882</span>
+                            <span class="status-badge status-delayed">Delayed</span>
+                        </div>
+                        <div class="flight-route">
+                            <div class="route-point">
+                                <h4>BLR</h4>
+                                <p>14:00 PM</p>
+                            </div>
+                            <i class="fas fa-plane route-plane"></i>
+                            <div class="route-point">
+                                <h4>BOM</h4>
+                                <p>15:45 PM</p>
+                            </div>
+                        </div>
+                        <button class="btn-primary" style="margin-top: 20px;"
+                            onclick="window.location.href='404page.html'">Manage Flight</button>
+                    </div>
+                </div>
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Fleet Status Overview</h3>
+                <div class="flip-grid anim-item">
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+
+                            <div class="flip-card-front">
+                                <i class="fas fa-plane"
+                                    style="font-size: 40px; color: var(--primary-orange); margin-bottom: 15px;"></i>
+                                <h4>Boeing 737 MAX</h4>
+                                <p>Reg: VT-S12</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Status: Active</h4>
+                                <ul style="list-style: none; padding: 0; margin-top: 10px; font-size: 14px;">
+                                    <li><i class="fas fa-gas-pump"></i> Fuel: 92%</li>
+                                    <li><i class="fas fa-tools"></i> Maint: Next Month</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> Location: DXB</li>
+                                </ul>
+                                <button class="btn-white" style="padding: 5px 15px; margin-top: 10px; font-size: 12px;"
+                                    onclick="window.location.href='404page.html'">View Log</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-fighter-jet"
+                                    style="font-size: 40px; color: var(--primary-orange); margin-bottom: 15px;"></i>
+                                <h4>Airbus A320</h4>
+                                <p>Reg: VT-INX</p>
+                            </div>
+                            <div class="flip-card-back" style="background: var(--danger-red);">
+                                <h4>Status: Maintenance</h4>
+                                <ul style="list-style: none; padding: 0; margin-top: 10px; font-size: 14px;">
+                                    <li><i class="fas fa-cogs"></i> Engine Check</li>
+                                    <li><i class="fas fa-clock"></i> ETA: 48 Hours</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> Location: DEL</li>
+                                </ul>
+                                <button class="btn-white"
+                                    style="padding: 5px 15px; margin-top: 10px; font-size: 12px; color: var(--danger-red);"
+                                    onclick="window.location.href='404page.html'">View
+                                    Log</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-paper-plane"
+                                    style="font-size: 40px; color: var(--primary-orange); margin-bottom: 15px;"></i>
+                                <h4>Boeing 777</h4>
+                                <p>Reg: VT-B99</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Status: Standby</h4>
+                                <ul style="list-style: none; padding: 0; margin-top: 10px; font-size: 14px;">
+                                    <li><i class="fas fa-gas-pump"></i> Fuel: 100%</li>
+                                    <li><i class="fas fa-check-circle"></i> Cleared to Fly</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> Location: MAA</li>
+                                </ul>
+                                <button class="btn-white" style="padding: 5px 15px; margin-top: 10px; font-size: 12px;"
+                                    onclick="window.location.href='404page.html'">View Log</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Live Crew Roster</h3>
+                <div class="marquee-container anim-item">
+                    <div class="marquee-content">
+
+                        <div class="crew-card">
+                            <img src="./asset/v19.webp" alt="Crew">
+                            <div>
+                                <h4>Capt. Raj Kumar</h4>
+                                <p>Pilot - Flight AI-204</p>
+                            </div>
+                        </div>
+                        <div class="crew-card">
+                            <img src="./asset/w2.webp" alt="Crew">
+                            <div>
+                                <h4>Priya M</h4>
+                                <p>Cabin Crew - AI-204</p>
+                            </div>
+                        </div>
+                        <div class="crew-card">
+                            <img src="./asset/w1.webp" alt="Crew">
+                            <div>
+                                <h4>Capt. Surya</h4>
+                                <p>Pilot - Flight IN-882</p>
+                            </div>
+                        </div>
+                        <div class="crew-card">
+                            <img src="./asset/w3.webp" alt="Crew">
+                            <div>
+                                <h4>Anita S</h4>
+                                <p>Cabin Crew - IN-882</p>
+                            </div>
+                        </div>
+                        <div class="crew-card">
+                            <img src="./asset/v19.webp" alt="Crew">
+                            <div>
+                                <h4>Capt. Raj Kumar</h4>
+                                <p>Pilot - Flight AI-204</p>
+                            </div>
+                        </div>
+                        <div class="crew-card">
+                            <img src="./asset/w2.webp" alt="Crew">
+                            <div>
+                                <h4>Priya M</h4>
+                                <p>Cabin Crew - AI-204</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Air Traffic Control (ATC)</h3>
+                <div class="premium-glass-panel anim-item">
+                    <div class="glass-header">
+                        <div>
+                            <h3 style="color: white; font-size: 22px;"><i class="fas fa-satellite-dish"
+                                    style="animation: pulse 2s infinite;"></i> Global Operations Map</h3>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 14px;">Live radar ping and airspace
+                                monitoring</p>
+                        </div>
+                        <span class="pulse-badge">Live</span>
+                    </div>
+
+                    <div class="glass-grid">
+                        <div class="glass-card">
+                            <h4><i class="fas fa-wind"></i> Airspace Congestion</h4>
+                            <h2>Low</h2>
+                            <p>Smooth operations across all hubs</p>
+                        </div>
+                        <div class="glass-card">
+                            <h4><i class="fas fa-cloud-showers-heavy"></i> Weather Warnings</h4>
+                            <h2>02</h2>
+                            <p>DXB (Fog), LHR (Rain)</p>
+                        </div>
+                        <div class="glass-card">
+                            <h4><i class="fas fa-signal"></i> Communication</h4>
+                            <h2>100%</h2>
+                            <p>All towers fully connected</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-bookings" class="content-section">
+                <h3 style="margin-bottom: 20px; color: var(--text-dark);" class="anim-item">Recent Bookings</h3>
+                <div class="list-view-container anim-item">
+                    <div class="list-header">
+                        <div>PNR</div>
+                        <div>Passenger Name</div>
+                        <div>Flight</div>
+                        <div>Status</div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="pnr-text">X7B9Q2</div>
+                        <div>Surya Prakash</div>
+                        <div>AI-204 (MAA → DEL)</div>
+                        <div><span class="status-badge status-ontime">Confirmed</span></div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="pnr-text">M4V1L8</div>
+                        <div>Karthik Raja</div>
+                        <div>IN-882 (BLR → BOM)</div>
+                        <div><span class="status-badge status-ontime">Confirmed</span></div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="pnr-text">P9K3N1</div>
+                        <div>Divya S</div>
+                        <div>SJ-110 (HYD → MAA)</div>
+                        <div><span class="status-badge status-delayed">Pending Payment</span></div>
+                    </div>
+                </div>
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Priority & VIP Bookings</h3>
+                <div class="vip-ticket-grid anim-item">
+
+                    <div class="vip-ticket-card">
+                        <div class="vip-ticket-left">
+                            <div class="vip-badge"><i class="fas fa-crown"></i> VIP Level 1</div>
+                            <div class="vip-passenger">
+                                <img src="./asset/s1.webp" alt="VIP">
+                                <div>
+                                    <h4>Mr. Arjun Das</h4>
+                                    <p>First Class - AI-204</p>
+                                </div>
+                            </div>
+                            <div class="vip-actions">
+                                <button class="btn-primary" style="padding: 6px 12px; font-size: 12px;"
+                                    onclick="window.location.href='404page.html'"><i class="fas fa-concierge-bell"></i>
+                                    Special Request</button>
+                            </div>
+                        </div>
+                        <div class="vip-ticket-divider"></div>
+                        <div class="vip-ticket-right">
+                            <h2 style="color: var(--primary-orange);">1A</h2>
+                            <p>Seat</p>
+                            <div class="vip-barcode">
+                                <i class="fas fa-barcode"></i>
+                                <span>#VIP-9921</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vip-ticket-card">
+                        <div class="vip-ticket-left">
+                            <div class="vip-badge" style="background: var(--text-dark); color: white;"><i
+                                    class="fas fa-star"></i> Frequent Flyer</div>
+                            <div class="vip-passenger">
+                                <img src="./asset/s3.webp" alt="VIP">
+                                <div>
+                                    <h4>Ms. Meera S</h4>
+                                    <p>Business - IN-882</p>
+                                </div>
+                            </div>
+                            <div class="vip-actions">
+                                <button class="btn-primary" style="padding: 6px 12px; font-size: 12px;"
+                                    onclick="window.location.href='404page.html'"><i class="fas fa-wheelchair"></i>
+                                    Assistance</button>
+                            </div>
+                        </div>
+                        <div class="vip-ticket-divider"></div>
+                        <div class="vip-ticket-right">
+                            <h2 style="color: var(--primary-orange);">4C</h2>
+                            <p>Seat</p>
+                            <div class="vip-barcode">
+                                <i class="fas fa-barcode"></i>
+                                <span>#FF-8834</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Live Booking Pipeline</h3>
+                <div class="pipeline-board anim-item">
+
+                    <div class="pipeline-col">
+                        <div class="pipeline-header">
+                            <h4><span class="dot" style="background: #f59e0b;"></span> Pending Payment</h4>
+                            <span class="count-badge">24</span>
+                        </div>
+                        <div class="pipeline-cards">
+                            <div class="pipe-card">
+                                <h5>PNR: W2A4P</h5>
+                                <p>$450.00 • Expires in 15m</p>
+                            </div>
+                            <div class="pipe-card">
+                                <h5>PNR: K9L1R</h5>
+                                <p>$120.00 • Awaiting Bank OTP</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-col">
+                        <div class="pipeline-header">
+                            <h4><span class="dot" style="background: #10b981;"></span> Confirmed</h4>
+                            <span class="count-badge">142</span>
+                        </div>
+                        <div class="pipeline-cards">
+                            <div class="pipe-card">
+                                <h5>PNR: X7B9Q2</h5>
+                                <p>Surya P. • AI-204</p>
+                                <span class="card-tag">Checked-in</span>
+                            </div>
+                            <div class="pipe-card">
+                                <h5>PNR: M4V1L8</h5>
+                                <p>Karthik R. • IN-882</p>
+                                <span class="card-tag">Web Check-in Pend.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-col">
+                        <div class="pipeline-header">
+                            <h4><span class="dot" style="background: var(--danger-red);"></span> Action Required</h4>
+                            <span class="count-badge">5</span>
+                        </div>
+                        <div class="pipeline-cards">
+                            <div class="pipe-card" style="border-left-color: var(--danger-red);">
+                                <h5>Cancel Req: Z1P8N</h5>
+                                <p>Refund Amount: $320.00</p>
+                                <button class="btn-text"
+                                    style="color: var(--danger-red); font-size: 12px; margin-top: 5px;">Process
+                                    Refund</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Booking Revenue Insights</h3>
+                <div class="bento-grid anim-item">
+
+                    <div class="bento-card bento-large">
+                        <div class="bento-content">
+                            <h4>Total Booking Volume</h4>
+                            <h1 style="font-size: 48px; margin: 15px 0;">$845.2K</h1>
+                            <p style="opacity: 0.8;">+12.5% compared to last week.</p>
+                            <div style="margin-top: 30px;">
+                                <div
+                                    style="display:flex; justify-content:space-between; font-size: 14px; margin-bottom:5px;">
+                                    <span>Website Bookings</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="progress-track" style="background: rgba(255,255,255,0.2);">
+                                    <div class="progress-fill" style="width: 65%; background: white;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chart-line bento-bg-icon"></i>
+                    </div>
+
+                    <div class="bento-card bento-small">
+                        <div class="bento-icon"><i class="fas fa-undo-alt"></i></div>
+                        <div>
+                            <h4>Refund Rate</h4>
+                            <h2 style="color: var(--danger-red);">2.4%</h2>
+                            <p style="font-size: 12px; color: var(--text-gray);">Healthy (Below 5% threshold)</p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card bento-small">
+                        <div class="bento-icon" style="color: #10b981; background: #dcfce7;"><i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h4>Flash Sales Conversion</h4>
+                            <h2 style="color: #10b981;">18.5%</h2>
+                            <p style="font-size: 12px; color: var(--text-gray);">From recent Diwali Promo</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="view-airlines" class="content-section">
+                <h3 style="margin-bottom: 20px; color: var(--text-dark);" class="anim-item">Partner Airlines</h3>
+                <div class="grid-layout">
+
+                    <div class="airline-card anim-item">
+                        <div class="airline-logo"><i class="fas fa-dove"></i></div>
+                        <h3>Air India</h3>
+                        <p style="color: var(--text-gray); font-size: 14px; margin: 10px 0;">Fleet Size: 120 Aircrafts
+                        </p>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">View
+                            Analytics</button>
+                    </div>
+
+                    <div class="airline-card anim-item">
+                        <div class="airline-logo"><i class="fas fa-paper-plane"></i></div>
+                        <h3>IndiGo</h3>
+                        <p style="color: var(--text-gray); font-size: 14px; margin: 10px 0;">Fleet Size: 280 Aircrafts
+                        </p>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">View
+                            Analytics</button>
+                    </div>
+
+                    <div class="airline-card anim-item">
+                        <div class="airline-logo"><i class="fas fa-fighter-jet"></i></div>
+                        <h3>SpiceJet</h3>
+                        <p style="color: var(--text-gray); font-size: 14px; margin: 10px 0;">Fleet Size: 65 Aircrafts
+                        </p>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">View
+                            Analytics</button>
+                    </div>
+
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Airline Performance Index</h3>
+                <div class="leaderboard-container anim-item">
+
+                    <div class="leaderboard-item">
+                        <div class="rank-badge">1</div>
+                        <div class="air-brand">
+                            <div class="icon-box"><i class="fas fa-paper-plane"></i></div>
+                            <div>
+                                <h4>IndiGo</h4>
+                                <p>On-Time Performance</p>
+                            </div>
+                        </div>
+                        <div class="perf-progress">
+                            <div class="prog-info"><span>94.2%</span> <span>Target: 90%</span></div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 94.2%; background: #10b981;"></div>
+                            </div>
+                        </div>
+                        <div class="air-rating">
+                            <i class="fas fa-star"></i> 4.8
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank-badge" style="background: #e2e8f0; color: #475569;">2</div>
+                        <div class="air-brand">
+                            <div class="icon-box"><i class="fas fa-dove"></i></div>
+                            <div>
+                                <h4>Air India</h4>
+                                <p>On-Time Performance</p>
+                            </div>
+                        </div>
+                        <div class="perf-progress">
+                            <div class="prog-info"><span>88.5%</span> <span>Target: 90%</span></div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 88.5%; background: #f59e0b;"></div>
+                            </div>
+                        </div>
+                        <div class="air-rating">
+                            <i class="fas fa-star"></i> 4.2
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank-badge" style="background: #fed7aa; color: #ea580c;">3</div>
+                        <div class="air-brand">
+                            <div class="icon-box"><i class="fas fa-fighter-jet"></i></div>
+                            <div>
+                                <h4>SpiceJet</h4>
+                                <p>On-Time Performance</p>
+                            </div>
+                        </div>
+                        <div class="perf-progress">
+                            <div class="prog-info"><span>76.4%</span> <span>Target: 90%</span></div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 76.4%; background: var(--danger-red);"></div>
+                            </div>
+                        </div>
+                        <div class="air-rating">
+                            <i class="fas fa-star"></i> 3.8
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Active Contracts & SLA</h3>
+                <div class="contracts-grid anim-item">
+
+                    <div class="contract-card">
+                        <div class="contract-top">
+                            <div class="doc-icon"><i class="fas fa-file-contract"></i></div>
+                            <span class="status-badge status-ontime">Active</span>
+                        </div>
+                        <h4>IndiGo - Code Share</h4>
+                        <p>Valid until: <strong>Dec 2027</strong></p>
+                        <div class="contract-footer">
+                            <span>SLA: 99.9%</span>
+                            <button class="btn-text" onclick="window.location.href='404page.html'">View Terms</button>
+                        </div>
+                    </div>
+
+                    <div class="contract-card">
+                        <div class="contract-top">
+                            <div class="doc-icon"><i class="fas fa-file-signature"></i></div>
+                            <span class="status-badge" style="background: #fef3c7; color: #d97706;">Renewing</span>
+                        </div>
+                        <h4>Air India - Fleet Lease</h4>
+                        <p>Valid until: <strong>Aug 2026</strong></p>
+                        <div class="contract-footer">
+                            <span>SLA: 98.5%</span>
+                            <button class="btn-text" onclick="window.location.href='404page.html'">Review</button>
+                        </div>
+                    </div>
+
+                    <div class="contract-card">
+                        <div class="contract-top">
+                            <div class="doc-icon"><i class="fas fa-handshake"></i></div>
+                            <span class="status-badge status-ontime">Active</span>
+                        </div>
+                        <h4>Vistara - Lounge Access</h4>
+                        <p>Valid until: <strong>Mar 2028</strong></p>
+                        <div class="contract-footer">
+                            <span>Premium Tier</span>
+                            <button class="btn-text" onclick="window.location.href='404page.html'">View Terms</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">System Integration Status</h3>
+                <div class="api-health-container anim-item">
+
+                    <div class="api-card">
+                        <div class="api-header">
+                            <h4>Booking API (B2B)</h4>
+                            <div class="pulse-dot green"></div>
+                        </div>
+                        <p>Latency: 45ms</p>
+                        <div class="api-line"></div>
+                        <span class="api-status">Operational</span>
+                    </div>
+
+                    <div class="api-card">
+                        <div class="api-header">
+                            <h4>Luggage Tracking Sync</h4>
+                            <div class="pulse-dot yellow"></div>
+                        </div>
+                        <p>Latency: 320ms</p>
+                        <div class="api-line warning"></div>
+                        <span class="api-status" style="color: #d97706;">Degraded Performance</span>
+                    </div>
+
+                    <div class="api-card">
+                        <div class="api-header">
+                            <h4>Crew Roster Exchange</h4>
+                            <div class="pulse-dot green"></div>
+                        </div>
+                        <p>Latency: 85ms</p>
+                        <div class="api-line"></div>
+                        <span class="api-status">Operational</span>
+                    </div>
+
+                    <div class="api-card">
+                        <div class="api-header">
+                            <h4>Payment Gateway Sync</h4>
+                            <div class="pulse-dot red"></div>
+                        </div>
+                        <p>Connection Lost</p>
+                        <div class="api-line error"></div>
+                        <span class="api-status" style="color: var(--danger-red);">Outage Detected</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="view-settings" class="content-section">
+                <div class="grid-layout">
+                    <div class="flight-card anim-item">
+                        <h3><i class="fas fa-cogs" style="color: var(--primary-orange);"></i> System Preferences</h3>
+                        <p style="margin-top: 10px; color: var(--text-gray);">Manage timezone, currency, and
+                            notification settings for the dashboard.</p>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">Edit Settings</button>
+                    </div>
+                    <div class="flight-card anim-item">
+                        <h3><i class="fas fa-shield-alt" style="color: var(--primary-orange);"></i> Security</h3>
+                        <p style="margin-top: 10px; color: var(--text-gray);">Update password, configure 2FA, and review
+                            access logs.</p>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">Security
+                            Setup</button>
+                    </div>
+                </div>
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Role & Access Management</h3>
+                <div class="role-grid anim-item">
+
+                    <div class="role-card">
+                        <div class="role-info">
+                            <div class="role-icon"><i class="fas fa-user-shield"></i></div>
+                            <div>
+                                <h4>Super Admin</h4>
+                                <p>Full system access & billing</p>
+                            </div>
+                        </div>
+                        <label class="custom-toggle">
+                            <input type="checkbox" checked disabled>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="role-card">
+                        <div class="role-info">
+                            <div class="role-icon" style="color: #0284c7; background: #e0f2fe;"><i
+                                    class="fas fa-user-edit"></i></div>
+                            <div>
+                                <h4>Flight Manager</h4>
+                                <p>Can manage flights & schedule</p>
+                            </div>
+                        </div>
+                        <label class="custom-toggle">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="role-card">
+                        <div class="role-info">
+                            <div class="role-icon" style="color: #166534; background: #dcfce7;"><i
+                                    class="fas fa-headset"></i></div>
+                            <div>
+                                <h4>Customer Support</h4>
+                                <p>Can view & refund bookings</p>
+                            </div>
+                        </div>
+                        <label class="custom-toggle">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Data Storage & Backups</h3>
+                <div class="storage-card anim-item">
+                    <div class="storage-header">
+                        <div>
+                            <h4><i class="fas fa-server" style="color: var(--primary-orange);"></i> Cloud Database
+                                (Region: Asia-South)</h4>
+                            <p style="color: var(--text-gray); font-size: 13px; margin-top: 5px;">Total Capacity: 500 GB
+                            </p>
+                        </div>
+                        <h2 style="color: var(--text-dark);">78% Used</h2>
+                    </div>
+
+                    <div class="storage-bar-container">
+                        <div class="storage-segment" style="width: 50%; background: var(--primary-orange);"
+                            title="User Data"></div>
+                        <div class="storage-segment" style="width: 15%; background: #f59e0b;" title="Flight Logs"></div>
+                        <div class="storage-segment" style="width: 13%; background: #3b82f6;" title="Media Files"></div>
+                    </div>
+
+                    <div class="storage-legend">
+                        <span><i class="fas fa-circle" style="color: var(--primary-orange);"></i> User Data
+                            (250GB)</span>
+                        <span><i class="fas fa-circle" style="color: #f59e0b;"></i> Logs (75GB)</span>
+                        <span><i class="fas fa-circle" style="color: #3b82f6;"></i> Media (65GB)</span>
+                        <span><i class="fas fa-circle" style="color: #e2e8f0;"></i> Free (110GB)</span>
+                    </div>
+
+                    <div class="storage-actions">
+                        <button class="btn-primary" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-cloud-download-alt"></i> Download Backup</button>
+                        <button class="btn-outline" style="border-color: var(--border-color); color: var(--text-dark);"
+                            onclick="window.location.href='404page.html'"><i class="fas fa-trash-alt"></i> Clear
+                            Cache</button>
+                    </div>
+                </div>
+
+                <h3 class="section-title anim-item" style="margin-top: 40px;">Recent Audit Logs</h3>
+                <div class="audit-log-container anim-item">
+
+                    <div class="audit-item warning">
+                        <div class="audit-time">Today, 10:45 AM</div>
+                        <div class="audit-details">
+                            <h4><i class="fas fa-key"></i> Password Changed</h4>
+                            <p>Admin "Surya Prakash" updated the system password.</p>
+                        </div>
+                        <div class="audit-ip">IP: 192.168.1.45</div>
+                    </div>
+
+                    <div class="audit-item success">
+                        <div class="audit-time">Yesterday, 04:30 PM</div>
+                        <div class="audit-details">
+                            <h4><i class="fas fa-database"></i> Manual Backup Triggered</h4>
+                            <p>System database backed up successfully to S3 Bucket.</p>
+                        </div>
+                        <div class="audit-ip">System Auto</div>
+                    </div>
+
+                    <div class="audit-item danger">
+                        <div class="audit-time">12 Jun 2026, 02:15 AM</div>
+                        <div class="audit-details">
+                            <h4><i class="fas fa-ban"></i> Failed Login Attempt</h4>
+                            <p>Multiple failed login attempts detected for user "admin".</p>
+                        </div>
+                        <div class="audit-ip" style="color: var(--danger-red);">IP: 45.33.22.11</div>
+                    </div>
+
+                    <button class="btn-text"
+                        style="width: 100%; text-align: center; margin-top: 10px; color: var(--primary-orange);"
+                        onclick="window.location.href='404page.html'">View
+                        Full Logs</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle('mobile-open');
+                overlay.classList.toggle('show');
+            } else {
+                sidebar.classList.toggle('closed');
+                mainContent.classList.toggle('expanded');
+            }
+        }
+
+        function switchTab(tabId, element, pageTitle) {
+
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.remove('active-section'));
+
+            document.getElementById(tabId).classList.add('active-section');
+
+            const navItems = document.querySelectorAll('.nav-links .nav-item');
+            navItems.forEach(nav => nav.classList.remove('active'));
+
+            element.classList.add('active');
+
+            document.getElementById('dynamic-page-title').innerText = pageTitle;
+
+            if (window.innerWidth <= 768) {
+                toggleSidebar();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const storedEmail = localStorage.getItem('loggedInEmail') || "admin.surya@stackly.com";
+            let extractedName = storedEmail.split('@')[0];
+
+            extractedName = extractedName.replace('.', ' ');
+            extractedName = extractedName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+            document.querySelectorAll(".user-name").forEach(el => el.textContent = extractedName);
+            document.querySelectorAll(".user-email-display").forEach(el => el.textContent = storedEmail);
+            document.getElementById('profilePic').src = `https://ui-avatars.com/api/?name=${extractedName}&background=f97316&color=fff`;
+        });
+    </script>
+</body>
+
+</html>
