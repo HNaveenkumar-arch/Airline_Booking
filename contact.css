@@ -1,0 +1,754 @@
+/* =========================================
+   1. ROOT VARIABLES & GLOBAL STYLES
+   ========================================= */
+:root {
+  --dark-navy: #0f172a;
+  --light-bg: #f8fafc;
+  --white: #ffffff;
+  --text-gray: #475569;
+  --primary-orange: #ff6b35;
+
+  --grad-orange: linear-gradient(135deg, #ff6b35, #ffa270);
+  --glow-orange: rgba(255, 107, 53, 0.4);
+  --grad-blue: linear-gradient(135deg, #2563eb, #60a5fa);
+  --glow-blue: rgba(37, 99, 235, 0.4);
+  --grad-green: linear-gradient(135deg, #059669, #34d399);
+  --glow-green: rgba(5, 150, 105, 0.4);
+  --grad-purple: linear-gradient(135deg, #7c3aed, #a78bfa);
+  --glow-purple: rgba(124, 58, 237, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: var(--light-bg);
+}
+
+/* =========================================
+   2. SCROLL REVEAL ANIMATIONS
+   ========================================= */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   3. GLOBAL SECTION HEADER
+   ========================================= */
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+  position: relative;
+  z-index: 5;
+}
+.section-subtitle {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.section-header h2 {
+  font-size: 2.6rem;
+  color: var(--dark-navy);
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+.header-underline {
+  width: 60px;
+  height: 4px;
+  background: var(--primary-orange);
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+.section-header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-gray);
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.1rem;
+  }
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
+
+/* =========================================
+   4. CONTACT HERO SECTION
+   ========================================= */
+.contact-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 5% 280px 5%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particles-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: floatUp 15s infinite linear;
+}
+.p1 {
+  width: 6px;
+  height: 6px;
+  left: 10%;
+  bottom: -10%;
+  animation-duration: 12s;
+}
+.p2 {
+  width: 10px;
+  height: 10px;
+  left: 40%;
+  bottom: -10%;
+  animation-duration: 18s;
+  animation-delay: 2s;
+}
+.p3 {
+  width: 4px;
+  height: 4px;
+  left: 70%;
+  bottom: -10%;
+  animation-duration: 10s;
+  animation-delay: 5s;
+}
+.p4 {
+  width: 8px;
+  height: 8px;
+  left: 90%;
+  bottom: -10%;
+  animation-duration: 14s;
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.airplane-trail-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.trail-path {
+  stroke-dashoffset: 1000;
+  animation: drawTrail 4s linear infinite;
+}
+@keyframes drawTrail {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.contact-hero-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glass-hero-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 60px 50px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.breadcrumb a,
+.breadcrumb .divider {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.breadcrumb a:hover,
+.breadcrumb .active {
+  color: var(--primary-orange);
+}
+
+.glass-hero-card h1 {
+  font-size: 3.6rem;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.glass-hero-card p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 750px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 15;
+}
+.btn-primary-gradient {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ff6b35, #ff9a76);
+  color: #ffffff;
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.btn-primary-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255, 107, 53, 0.6);
+}
+.btn-glass-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+.btn-glass-outline:hover {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.overlap-airplane-wrapper {
+  position: absolute;
+  bottom: -60px;
+  /* left: 50%; */
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1000px;
+  height: 350px;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 5;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  border: 5px solid #ffffff;
+}
+.hd-airplane-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.overlap-airplane-wrapper:hover .hd-airplane-img {
+  transform: scale(1.05);
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+.hero-wave svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+.hero-wave .shape-fill {
+  fill: var(--light-bg);
+}
+
+@media (max-width: 992px) {
+  .glass-hero-card h1 {
+    font-size: 3rem;
+  }
+  .overlap-airplane-wrapper {
+    width: 90%;
+    height: 280px;
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-section {
+    padding: 120px 5% 200px 5%;
+    min-height: auto;
+  }
+  .glass-hero-card {
+    padding: 40px 20px;
+  }
+  .glass-hero-card h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .btn-primary-gradient,
+  .btn-glass-outline {
+    width: 100%;
+    max-width: 300px;
+  }
+  .overlap-airplane-wrapper {
+    width: 95%;
+    height: 200px;
+    bottom: -30px;
+    border-width: 3px;
+  }
+}
+
+/* =========================================
+   5. COLORFUL SUPPORT CHANNELS
+   ========================================= */
+.support-channels-section {
+  padding: 50px 5% 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+}
+.colorful-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.color-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 40px 30px;
+  overflow: hidden;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 1;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.card-orange {
+  background: var(--grad-orange);
+  box-shadow: 0 10px 25px var(--glow-orange);
+}
+.card-blue {
+  background: var(--grad-blue);
+  box-shadow: 0 10px 25px var(--glow-blue);
+}
+.card-green {
+  background: var(--grad-green);
+  box-shadow: 0 10px 25px var(--glow-green);
+}
+.card-purple {
+  background: var(--grad-purple);
+  box-shadow: 0 10px 25px var(--glow-purple);
+}
+
+.color-card:hover {
+  transform: translateY(-15px);
+}
+.card-orange:hover {
+  box-shadow: 0 25px 45px var(--glow-orange);
+}
+.card-blue:hover {
+  box-shadow: 0 25px 45px var(--glow-blue);
+}
+.card-green:hover {
+  box-shadow: 0 25px 45px var(--glow-green);
+}
+.card-purple:hover {
+  box-shadow: 0 25px 45px var(--glow-purple);
+}
+
+.card-bg-shape {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.color-card:hover .card-bg-shape {
+  transform: scale(3.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  transition: transform 0.4s ease;
+}
+.color-card:hover .icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.color-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+.color-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.color-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transition: gap 0.3s ease;
+}
+.color-card:hover .color-link {
+  gap: 15px;
+}
+
+@media (max-width: 1024px) {
+  .colorful-channels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-channels-section {
+    padding: 120px 5% 80px 5%;
+  }
+  .colorful-channels-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .color-card {
+    padding: 35px 25px;
+  }
+  .card-bg-shape {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+/* =========================================
+   FAQ HORIZONTAL ACCORDION SECTION
+   ========================================= */
+.faq-accordion-section {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--light-bg);
+}
+
+.faq-accordion-container {
+    display: flex;
+    flex-direction: row; /* Horizontal Layout */
+    height: 500px; /* Fixed height for Desktop */
+    gap: 20px;
+    width: 100%;
+}
+
+/* 🟢 THE ACCORDION CARD */
+.faq-card {
+    position: relative;
+    flex: 1; /* Inactive cards take equal small space */
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 🟢 HOVER EFFECT: CARD WIDENS */
+.faq-card:hover, 
+.faq-card:active {
+    flex: 4; /* Active card takes up 4x more space */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Image styling */
+.faq-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.8s ease;
+}
+
+.faq-card:hover .faq-bg-img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* 🟢 GRADIENT OVERLAY & BLUR EFFECT */
+.faq-overlay {
+    position: absolute;
+    inset: 0;
+    /* Dark gradient at bottom, fading to transparent at top */
+    background: linear-gradient(to top, rgba(15,23,42, 0.95) 0%, rgba(15,23,42, 0.5) 50%, transparent 100%);
+    z-index: 1;
+    opacity: 0.85;
+    transition: all 0.5s ease;
+}
+
+/* The magic blur effect applies when active */
+.faq-card:hover .faq-overlay {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: linear-gradient(to top, rgba(15,23,42, 0.98) 0%, rgba(15,23,42, 0.7) 60%, transparent 100%);
+}
+
+/* 🟢 CONTENT LAYOUT */
+.faq-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 35px 30px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Keeps content pushed to the bottom */
+    z-index: 2;
+}
+
+/* Header (Icon + Title) */
+.faq-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.5s ease;
+}
+
+/* Custom colors based on classes */
+.card-orange .faq-icon { background: var(--grad-orange); box-shadow: 0 5px 15px var(--glow-orange); }
+.card-blue .faq-icon { background: var(--grad-blue); box-shadow: 0 5px 15px var(--glow-blue); }
+.card-green .faq-icon { background: var(--grad-green); box-shadow: 0 5px 15px var(--glow-green); }
+.card-purple .faq-icon { background: var(--grad-purple); box-shadow: 0 5px 15px var(--glow-purple); }
+
+.faq-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    color: var(--white);
+    transition: transform 0.4s ease;
+}
+
+.faq-header h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+    white-space: nowrap; /* Prevents text breaking when card is small */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* 🟢 CONTENT SLIDES UPWARD */
+.faq-hidden-desc {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(30px); /* Starts from below */
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.faq-hidden-desc p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+    max-width: 500px; /* Keeps text readable on ultra-wide screens */
+}
+
+/* Trigger animation on hover */
+.faq-card:hover .faq-hidden-desc,
+.faq-card:active .faq-hidden-desc {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0); /* Slides up to normal position */
+    margin-top: 20px;
+}
+
+.faq-card:hover .faq-icon {
+    transform: scale(1.1); /* Icon slightly pops */
+}
+
+/* Action Link */
+.faq-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.card-orange .faq-btn:hover { color: #FFA270; border-color: #FFA270; gap: 15px; }
+.card-blue .faq-btn:hover { color: #60A5FA; border-color: #60A5FA; gap: 15px; }
+.card-green .faq-btn:hover { color: #34D399; border-color: #34D399; gap: 15px; }
+.card-purple .faq-btn:hover { color: #A78BFA; border-color: #A78BFA; gap: 15px; }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Vertical Accordion)
+   ========================================= */
+@media (max-width: 992px) {
+    .faq-accordion-container { height: 600px; }
+    .faq-header h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .faq-accordion-section { padding: 80px 5%; }
+    
+    .faq-accordion-container {
+        flex-direction: column; /* Stacks cards vertically */
+        height: 750px; /* Total height of the stack */
+    }
+
+    .faq-card {
+        flex: 1; /* Equal height when inactive */
+        border-radius: 20px;
+    }
+
+    /* Vertical Expansion */
+    .faq-card:hover, 
+    .faq-card:active {
+        flex: 3; /* Active card expands vertically */
+    }
+
+    .faq-content {
+        padding: 25px 20px;
+    }
+
+    .faq-header h3 { font-size: 1.4rem; }
+
+    .faq-hidden-desc p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .faq-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}

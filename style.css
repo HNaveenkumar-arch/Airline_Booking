@@ -804,7 +804,7 @@
 /* ========================================== */
 
 .destinations-section {
-  padding: 100px 20px;
+  padding: 50px 20px;
   background-color: var(--bg-color);
   position: relative;
 }
@@ -1004,7 +1004,7 @@
    ========================================= */
 
 .experiences-section {
-    padding: 80px 20px;
+    padding: 50px 20px;
     background-color: var(--bg-color);
     max-width: 1200px;
     margin: 0 auto;
@@ -1222,7 +1222,7 @@
    7️⃣ FLIGHT CLASSES SECTION (3D FLIP FIXED)
    ========================================= */
 .flight-classes-section {
-    padding: 100px 20px;
+    padding: 50px 20px;
     background-color: #ffffff; 
     max-width: 1200px;
     margin: 0 auto;
@@ -1490,7 +1490,7 @@
    ========================================= */
 
 .popular-routes-section {
-    padding: 100px 0; 
+    padding: 50px 0; 
     background-color: #0f172a; 
     overflow: hidden;
 }
@@ -1804,7 +1804,7 @@
    ========================================= */
 
 .testimonials-section {
-    padding: 100px 0;
+    padding: 50px 0;
     /* Soft Light Gradient to make Glassmorphism pop */
     background: linear-gradient(135deg, #f8fafc 0%, #ffedd5 100%);
     overflow: hidden; /* Important to hide scrollbars */
@@ -1976,7 +1976,7 @@
    ========================================= */
 
 .editorial-blog-section {
-    padding: 100px 20px;
+    padding: 50px 20px;
     background-color: var(--bg-color); /* Light background */
     max-width: 1200px;
     margin: 0 auto;
@@ -2184,7 +2184,7 @@
 
 .cta-section {
     position: relative;
-    padding: 180px 20px 120px;
+    padding: 80px 20px 10px;
     background-color: #020617; /* Deep Night Sky Blue/Black */
     overflow: hidden;
     display: flex;

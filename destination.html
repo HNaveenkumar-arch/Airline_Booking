@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fixed Fullscreen Mobile Navbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="flights.css">
+    <link rel="stylesheet" href="destination.css">
     <link rel="stylesheet" href="common.css">
 </head>
 
@@ -37,6 +37,857 @@
         </div>
     </nav>
 
+
+    <section class="hero-section">
+        <div class="video-container">
+            <video autoplay loop muted playsinline class="background-video">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="clouds-container">
+            <div class="cloud cloud1">☁️</div>
+            <div class="cloud cloud2">☁️</div>
+            <div class="cloud cloud3">☁️</div>
+        </div>
+
+        <div class="airplane-trail">
+            <div class="trail-line"></div>
+            <span class="airplane">✈️</span>
+        </div>
+
+        <div class="content-container">
+            
+            <div class="breadcrumb">
+                <span>Home</span> <span class="arrow">»</span> <span class="active">Destinations</span>
+            </div>
+
+            <div class="glass-box">
+                <h1 class="hero-title">Discover Extraordinary Places</h1>
+                
+                <p class="hero-subtitle">
+                    Experience a premium travel journey designed just for you. Escape the ordinary, embrace new cultures, and immerse yourself in unforgettable adventures.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Countries</p>
+                    </div>
+                    <div class="stat-item divider">|</div>
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p>Premium Tours</p>
+                    </div>
+                    <div class="stat-item divider">|</div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Expert Guide</p>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button class="primary-btn" id="exploreBtn">Explore Now</button>
+                    <button class="secondary-btn" id="videoBtn">▶ Watch Trailer</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,111.47,192.39,84.13,236.46,64.8,280.96,65.34,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+
+    <section class="top-destinations">
+    <div class="dest-header reveal">
+        <h2 class="section-title">Top <span>Destinations</span></h2>
+        <p class="section-subtitle">Explore our most popular premium getaways with exclusive curated packages</p>
+    </div>
+
+    <div class="destinations-grid">
+        <div class="dest-card large-card reveal">
+            <span class="card-badge">🔥 Best Seller</span>
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Dubai">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 4.9 (2k+ Reviews)</span>
+                    <span>🕒 5 Days / 4 Nights</span>
+                </div>
+                <h3>Dubai, UAE</h3>
+                <p>Experience ultra-luxury architecture, premium desert safaris, and exclusive yacht parties.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$899</span></div>
+                    <button class="card-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dest-card reveal">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paris">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 4.8</span>
+                    <span>🕒 4 Days</span>
+                </div>
+                <h3>Paris, France</h3>
+                <p>The ultimate romantic getaway.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$1,200</span></div>
+                    <button class="card-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dest-card reveal">
+            <span class="card-badge">✨ Trending</span>
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tokyo">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 4.9</span>
+                    <span>🕒 7 Days</span>
+                </div>
+                <h3>Tokyo, Japan</h3>
+                <p>Neon lights & ancient temples.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$1,450</span></div>
+                    <button class="card-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dest-card reveal">
+            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Singapore">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 4.7</span>
+                    <span>🕒 5 Days</span>
+                </div>
+                <h3>Singapore</h3>
+                <p>Futuristic gardens & luxury retail.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$950</span></div>
+                    <button class="card-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dest-card reveal">
+            <span class="card-badge">💑 Couples</span>
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maldives">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 5.0</span>
+                    <span>🕒 6 Days</span>
+                </div>
+                <h3>Maldives</h3>
+                <p>Private water villas & crystal waters.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$2,100</span></div>
+                    <button class="card-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dest-card reveal">
+            <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Santorini">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 4.8</span>
+                    <span>🕒 5 Days</span>
+                </div>
+                <h3>Santorini, Greece</h3>
+                <p>Iconic white cliffs & sunsets.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$1,150</span></div>
+                    <button class="card-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dest-card reveal">
+            <span class="card-badge">🌿 Nature</span>
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bali">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 4.7</span>
+                    <span>🕒 8 Days</span>
+                </div>
+                <h3>Bali, Indonesia</h3>
+                <p>Tropical jungles & peaceful temples.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$750</span></div>
+                    <button class="card-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dest-card reveal">
+            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Swiss Alps">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 4.9</span>
+                    <span>🕒 6 Days</span>
+                </div>
+                <h3>Swiss Alps</h3>
+                <p>Snowy peaks & premium skiing.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$1,800</span></div>
+                    <button class="card-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dest-card reveal">
+            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New York">
+            <div class="gradient-overlay"></div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>⭐ 4.8</span>
+                    <span>🕒 5 Days</span>
+                </div>
+                <h3>New York, USA</h3>
+                <p>The city that never sleeps.</p>
+                <div class="card-footer">
+                    <div class="price">From <span>$1,300</span></div>
+                    <button class="card-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="destination-categories">
+    <div class="category-header reveal">
+        <h2 class="section-title">Explore By <span>Category</span></h2>
+        <p class="section-subtitle">Find your perfect vibe in our curated honeycomb collections</p>
+    </div>
+
+    <div class="honeycomb-container reveal">
+        
+        <!-- Hexagon 1: Beaches -->
+        <div class="hex-wrapper hex1 float-anim">
+            <div class="hex-inner">
+                <div class="hex-front hexagon-shape">
+                    <span class="hex-icon">🏖️</span>
+                    <h3 class="hex-title">Beaches</h3>
+                </div>
+                <div class="hex-back hexagon-shape">
+                    <h3 class="hex-title-back">Beaches</h3>
+                    <p class="hex-desc">Relax on pristine white sands and clear waters.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hexagon 2: Mountains -->
+        <div class="hex-wrapper hex2 float-anim delay-1">
+            <div class="hex-inner">
+                <div class="hex-front hexagon-shape">
+                    <span class="hex-icon">⛰️</span>
+                    <h3 class="hex-title">Mountains</h3>
+                </div>
+                <div class="hex-back hexagon-shape">
+                    <h3 class="hex-title-back">Mountains</h3>
+                    <p class="hex-desc">Reach new heights and breathe the fresh alpine air.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hexagon 3: Cities -->
+        <div class="hex-wrapper hex3 float-anim delay-2">
+            <div class="hex-inner">
+                <div class="hex-front hexagon-shape">
+                    <span class="hex-icon">🏙️</span>
+                    <h3 class="hex-title">Cities</h3>
+                </div>
+                <div class="hex-back hexagon-shape">
+                    <h3 class="hex-title-back">Cities</h3>
+                    <p class="hex-desc">Immerse in culture, nightlife, and modern architecture.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hexagon 4: Adventure -->
+        <div class="hex-wrapper hex4 float-anim delay-3">
+            <div class="hex-inner">
+                <div class="hex-front hexagon-shape">
+                    <span class="hex-icon">🧗</span>
+                    <h3 class="hex-title">Adventure</h3>
+                </div>
+                <div class="hex-back hexagon-shape">
+                    <h3 class="hex-title-back">Adventure</h3>
+                    <p class="hex-desc">Thrilling experiences for the ultimate adrenaline rush.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hexagon 5: Islands -->
+        <div class="hex-wrapper hex5 float-anim delay-1">
+            <div class="hex-inner">
+                <div class="hex-front hexagon-shape">
+                    <span class="hex-icon">🏝️</span>
+                    <h3 class="hex-title">Islands</h3>
+                </div>
+                <div class="hex-back hexagon-shape">
+                    <h3 class="hex-title-back">Islands</h3>
+                    <p class="hex-desc">Exclusive private getaways away from the world.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hexagon 6: Deserts -->
+        <div class="hex-wrapper hex6 float-anim delay-2">
+            <div class="hex-inner">
+                <div class="hex-front hexagon-shape">
+                    <span class="hex-icon">🐪</span>
+                    <h3 class="hex-title">Deserts</h3>
+                </div>
+                <div class="hex-back hexagon-shape">
+                    <h3 class="hex-title-back">Deserts</h3>
+                    <p class="hex-desc">Magical dunes, starry nights, and luxury camps.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="popular-countries">
+    <div class="countries-header reveal">
+        <h2 class="section-title">Popular <span>Countries</span></h2>
+        <p class="section-subtitle">Discover the most visited and breathtaking destinations around the globe</p>
+    </div>
+
+    <div class="sticky-container">
+        <!-- Left Side: Sticky Image (Visible on Desktop) -->
+        <div class="sticky-left">
+            <div class="sticky-image-wrapper">
+                <!-- Default image set to France -->
+                <img id="sticky-img" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Popular Country">
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Right Side: Scrolling Cards -->
+        <div class="scrolling-right">
+            
+            <!-- Card 1: France -->
+            <div class="country-card scroll-card" data-image="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                <div class="mobile-card-img">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="France">
+                </div>
+                <div class="country-info">
+                    <h3>France</h3>
+                    <p>Experience the epitome of romance, art, fashion, and exquisite gastronomy in the heart of Europe. Visit the iconic Eiffel Tower and stroll through timeless streets.</p>
+                    <a href="#" class="explore-link">Explore France <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Card 2: Japan -->
+            <div class="country-card scroll-card" data-image="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                <div class="mobile-card-img">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Japan">
+                </div>
+                <div class="country-info">
+                    <h3>Japan</h3>
+                    <p>A beautiful blend of ancient traditions and futuristic technology. Wander through serene temples, vibrant neon cityscapes, and blooming cherry blossoms.</p>
+                    <a href="#" class="explore-link">Explore Japan <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Card 3: Italy -->
+            <div class="country-card scroll-card" data-image="https://images.unsplash.com/photo-1516483638261-f40af5ba32ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                <div class="mobile-card-img">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f40af5ba32ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Italy">
+                </div>
+                <div class="country-info">
+                    <h3>Italy</h3>
+                    <p>Indulge in rich history, stunning architecture, and the world's best culinary delights. From the canals of Venice to the ruins of Rome.</p>
+                    <a href="#" class="explore-link">Explore Italy <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Card 4: Switzerland -->
+            <div class="country-card scroll-card" data-image="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                <div class="mobile-card-img">
+                    <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Switzerland">
+                </div>
+                <div class="country-info">
+                    <h3>Switzerland</h3>
+                    <p>Breathe in the crisp mountain air surrounded by majestic snow-capped peaks, crystal-clear lakes, and premium ski resorts.</p>
+                    <a href="#" class="explore-link">Explore Switzerland <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Card 5: UAE -->
+            <div class="country-card scroll-card" data-image="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                <div class="mobile-card-img">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="UAE">
+                </div>
+                <div class="country-info">
+                    <h3>UAE</h3>
+                    <p>Experience ultra-luxury, towering skyscrapers, exclusive shopping, and premium desert adventures in a modern oasis.</p>
+                    <a href="#" class="explore-link">Explore UAE <span>→</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==========================================================
+     5️⃣ LUXURY ESCAPES (EXPANDING ACCORDION)
+     ========================================================== -->
+<section class="luxury-escapes-alt">
+    <div class="luxury-header reveal">
+        <h2 class="section-title">Luxury <span>Escapes</span></h2>
+        <p class="section-subtitle">Immerse yourself in the pinnacle of premium travel</p>
+    </div>
+
+    <div class="expanding-container reveal">
+        
+        <!-- Card 1 (Active by default) -->
+        <div class="panel active" style="background-image: url('https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+            <div class="panel-overlay"></div>
+            <div class="panel-content">
+                <h3>Santorini, Greece</h3>
+                <p>Witness iconic sunsets, stay in premium cliffside villas, and enjoy the Mediterranean breeze. Indulge in world-class wine tasting experiences overlooking the caldera. Immerse yourself in the rich history of ancient ruins and vibrant local culture. Your ultimate Greek island escape awaits with unparalleled luxury.</p>
+                <button class="panel-btn">Explore</button>
+            </div>
+            <!-- Small title visible when collapsed -->
+            <h3 class="collapsed-title">Santorini</h3>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+            <div class="panel-overlay"></div>
+            <div class="panel-content">
+                <h3>Bali, Indonesia</h3>
+                <p>Discover the perfect blend of tropical jungles and peaceful spiritual retreats. Experience holistic wellness in world-renowned spa resorts nestled amidst lush rice terraces. Dive into vibrant coral reefs and explore hidden waterfalls. Rejuvenate your mind and soul in this tranquil Indonesian paradise.</p>
+                <button class="panel-btn">Explore</button>
+            </div>
+            <h3 class="collapsed-title">Bali</h3>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1589394815804-964ce0ff96f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+            <div class="panel-overlay"></div>
+            <div class="panel-content">
+                <h3>Bora Bora</h3>
+                <p>Experience the ultimate romantic getaway in luxurious overwater bungalows set in a crystal-clear lagoon. Swim alongside graceful manta rays and colorful marine life. Enjoy private dining experiences under the stars on secluded pristine beaches. Wake up to breathtaking views of Mount Otemanu every single day.</p>
+                <button class="panel-btn">Explore</button>
+            </div>
+            <h3 class="collapsed-title">Bora Bora</h3>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+            <div class="panel-overlay"></div>
+            <div class="panel-content">
+                <h3>Maldives</h3>
+                <p>Escape to exclusive private island getaways surrounded by pristine white-sand beaches and vibrant coral reefs. Unwind in your own lavish water villa with direct and uninterrupted ocean access. Savor exquisite culinary delights prepared by world-class private chefs. Experience the epitome of secluded luxury.</p>
+                <button class="panel-btn">Explore</button>
+            </div>
+            <h3 class="collapsed-title">Maldives</h3>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+            <div class="panel-overlay"></div>
+            <div class="panel-content">
+                <h3>Swiss Alps</h3>
+                <p>Elevate your winter escape with snow-capped peaks and world-class luxury ski resorts. Cozy up in premium chalets offering breathtaking panoramic alpine views. Embark on thrilling outdoor adventures from snowboarding to scenic helicopter tours. Indulge in gourmet Swiss cuisine and relaxing thermal spas.</p>
+                <button class="panel-btn">Explore</button>
+            </div>
+            <h3 class="collapsed-title">Swiss Alps</h3>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="famous-landmarks">
+    <div class="landmarks-header reveal">
+        <h2 class="section-title dark-mode-title">Famous <span>Landmarks</span></h2>
+        <p class="section-subtitle dark-mode-subtitle">Discover the world's most iconic architectural wonders</p>
+    </div>
+
+    <div class="landmarks-grid reveal">
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Eiffel Tower">
+                    <div class="front-overlay"></div>
+                    <h3 class="front-title">Eiffel Tower</h3>
+                </div>
+                <div class="flip-card-back glass-neon">
+                    <h3>Eiffel Tower</h3>
+                    <p>The global cultural icon of France and a masterpiece of 19th-century wrought-iron architecture.</p>
+                    <ul class="highlights">
+                        <li>📍 Paris, France</li>
+                        <li>📏 330m Tall</li>
+                        <li>✨ 20,000 Light Bulbs</li>
+                    </ul>
+                    <button class="neon-btn">View Map</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card delay-1">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burj Khalifa">
+                    <div class="front-overlay"></div>
+                    <h3 class="front-title">Burj Khalifa</h3>
+                </div>
+                <div class="flip-card-back glass-neon">
+                    <h3>Burj Khalifa</h3>
+                    <p>The tallest structure and building in the world, representing ultra-modern luxury.</p>
+                    <ul class="highlights">
+                        <li>📍 Dubai, UAE</li>
+                        <li>📏 828m Tall</li>
+                        <li>🏢 163 Floors</li>
+                    </ul>
+                    <button class="neon-btn">View Map</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card delay-2">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mount Fuji">
+                    <div class="front-overlay"></div>
+                    <h3 class="front-title">Mount Fuji</h3>
+                </div>
+                <div class="flip-card-back glass-neon">
+                    <h3>Mount Fuji</h3>
+                    <p>Japan's highest mountain and a sacred, perfectly symmetrical stratovolcano.</p>
+                    <ul class="highlights">
+                        <li>📍 Honshu, Japan</li>
+                        <li>📏 3,776m Tall</li>
+                        <li>🌸 Active Volcano</li>
+                    </ul>
+                    <button class="neon-btn">View Map</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card delay-3">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Colosseum">
+                    <div class="front-overlay"></div>
+                    <h3 class="front-title">Colosseum</h3>
+                </div>
+                <div class="flip-card-back glass-neon">
+                    <h3>Colosseum</h3>
+                    <p>The largest ancient amphitheatre ever built, holding the majestic history of the Roman Empire.</p>
+                    <ul class="highlights">
+                        <li>📍 Rome, Italy</li>
+                        <li>⏳ Built 80 AD</li>
+                        <li>🏛️ 50k Spectators</li>
+                    </ul>
+                    <button class="neon-btn">View Map</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================================
+     7️⃣ AROUND THE WORLD GALLERY (PREMIUM MASONRY)
+     ========================================================== -->
+<section class="world-gallery">
+    <div class="gallery-header reveal">
+        <h2 class="section-title">Around The <span class="text-gradient">World</span></h2>
+        <p class="section-subtitle">A curated collection of moments from across the globe</p>
+    </div>
+
+    <div class="masonry-grid reveal">
+        
+        <!-- Item 1 -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Nature">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Nature's Wonder</h3>
+                    <p>Discover the untouched beauty of lush green forests, majestic mountains, and serene lakes.</p>
+                    <a href="#" class="gallery-link">View Destination <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" alt="Paris">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Parisian Nights</h3>
+                    <p>Experience the city of love under the twinkling lights of the Eiffel Tower.</p>
+                    <a href="#" class="gallery-link">View Destination <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80" alt="Tokyo">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Tokyo Streets</h3>
+                    <p>Immerse yourself in the vibrant neon lights, rich culture, and bustling energy of Japan.</p>
+                    <a href="#" class="gallery-link">View Destination <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Dubai">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Luxury Dubai</h3>
+                    <p>A perfect blend of modern architecture, luxury shopping, and golden desert safaris.</p>
+                    <a href="#" class="gallery-link">View Destination <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=600&q=80" alt="Alps">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Swiss Peaks</h3>
+                    <p>Ski through the breathtaking snow-capped mountains and enjoy cozy alpine retreats.</p>
+                    <a href="#" class="gallery-link">View Destination <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Bali Escapes</h3>
+                    <p>Relax in private tropical villas, sacred temples, and crystal-clear beaches.</p>
+                    <a href="#" class="gallery-link">View Destination <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================================
+     8️⃣ HIDDEN GEMS (EDITORIAL OFFSET GRID)
+     ========================================================== -->
+<section class="hidden-gems-section">
+    <div class="hg-header scroll-reveal">
+        <h2 class="section-title">Hidden <span class="text-gradient">Gems</span></h2>
+        <p class="section-subtitle">Escape the crowds and discover off-the-beaten-path paradises.</p>
+    </div>
+
+    <div class="hg-grid">
+        
+        <!-- Card 1: Cappadocia -->
+        <div class="hg-item scroll-reveal">
+            <div class="hg-img-wrap">
+                <img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=800&q=80" alt="Cappadocia">
+                <div class="hg-tag">Turkey</div>
+            </div>
+            <div class="hg-info-box">
+                <div class="hg-icon"><i class="fas fa-hot-air-balloon"></i></div>
+                <h3>Cappadocia</h3>
+                <p>Float above fairy chimneys in a hot air balloon at sunrise and explore ancient underground cities.</p>
+                <a href="#" class="hg-link">Explore Place <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Card 2: Hallstatt (Pushed Down in CSS) -->
+        <div class="hg-item hg-stagger scroll-reveal">
+            <div class="hg-img-wrap">
+                <img src="https://images.unsplash.com/photo-1500445032980-ee125a07c139?auto=format&fit=crop&w=800&q=80" alt="Hallstatt">
+                <div class="hg-tag">Austria</div>
+            </div>
+            <div class="hg-info-box">
+                <div class="hg-icon"><i class="fas fa-home"></i></div>
+                <h3>Hallstatt</h3>
+                <p>A fairytale alpine village nestled between towering mountains and a pristine mirror-like lake.</p>
+                <a href="#" class="hg-link">Explore Place <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Card 3: Banff -->
+        <div class="hg-item scroll-reveal">
+            <div class="hg-img-wrap">
+                <img src="https://images.unsplash.com/photo-1549474776-6cb0b7a840e6?auto=format&fit=crop&w=800&q=80" alt="Banff">
+                <div class="hg-tag">Canada</div>
+            </div>
+            <div class="hg-info-box">
+                <div class="hg-icon"><i class="fas fa-tree"></i></div>
+                <h3>Banff</h3>
+                <p>Experience the majestic Canadian Rockies, turquoise glacial lakes, and unmatched wilderness.</p>
+                <a href="#" class="hg-link">Explore Place <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Card 4: Faroe Islands (Pushed Down in CSS) -->
+        <div class="hg-item hg-stagger scroll-reveal">
+            <div class="hg-img-wrap">
+                <img src="https://images.unsplash.com/photo-1513511874441-2c6763a8905b?auto=format&fit=crop&w=800&q=80" alt="Faroe Islands">
+                <div class="hg-tag">Denmark</div>
+            </div>
+            <div class="hg-info-box">
+                <div class="hg-icon"><i class="fas fa-water"></i></div>
+                <h3>Faroe Islands</h3>
+                <p>A rugged, dramatic archipelago featuring steep green cliffs, cascading waterfalls, and mystical landscapes.</p>
+                <a href="#" class="hg-link">Explore Place <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================================
+     9️⃣ SEASONAL DESTINATIONS (STACKED FLOATING CARDS)
+     ========================================================== -->
+<section class="seasonal-section">
+    <div class="seas-header scroll-reveal">
+        <h2 class="section-title">Seasonal <span class="text-gradient">Escapes</span></h2>
+        <p class="section-subtitle">Travel beautifully all year round. Find your perfect seasonal paradise.</p>
+    </div>
+
+    <div class="seas-stack-container scroll-reveal">
+        
+        <!-- Card 1: Spring Escape -->
+        <div class="seas-card">
+            <div class="seas-glow-border"></div>
+            <div class="seas-bg" style="background-image: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="seas-overlay"></div>
+            <div class="seas-content">
+                <div class="seas-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Spring Escape</h3>
+                <p>Cherry blossoms and fresh mountain breezes.</p>
+                <a href="#" class="seas-btn">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Card 2: Summer Paradise -->
+        <div class="seas-card">
+            <div class="seas-glow-border"></div>
+            <div class="seas-bg" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="seas-overlay"></div>
+            <div class="seas-content">
+                <div class="seas-icon"><i class="fas fa-sun"></i></div>
+                <h3>Summer Paradise</h3>
+                <p>Crystal clear waters and sun-kissed white sands.</p>
+                <a href="#" class="seas-btn">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Card 3: Autumn Journey -->
+        <div class="seas-card">
+            <div class="seas-glow-border"></div>
+            <div class="seas-bg" style="background-image: url('https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="seas-overlay"></div>
+            <div class="seas-content">
+                <div class="seas-icon"><i class="fab fa-canadian-maple-leaf"></i></div>
+                <h3>Autumn Journey</h3>
+                <p>Golden foliage and cozy scenic road trips.</p>
+                <a href="#" class="seas-btn">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Card 4: Winter Wonderland -->
+        <div class="seas-card">
+            <div class="seas-glow-border"></div>
+            <div class="seas-bg" style="background-image: url('https://images.unsplash.com/photo-1478265409131-1f65c88f965c?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="seas-overlay"></div>
+            <div class="seas-content">
+                <div class="seas-icon"><i class="fas fa-snowflake"></i></div>
+                <h3>Winter Wonderland</h3>
+                <p>Snow-capped cabins and mesmerizing northern lights.</p>
+                <a href="#" class="seas-btn">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- ==========================================================
+     1️⃣1️⃣ PREMIUM CTA SECTION (AURORA THEME)
+     ========================================================== -->
+<section class="dest-cta-section">
+    <!-- Top Wave Divider (Blends with previous white section) -->
+    <div class="dest-wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+        </svg>
+    </div>
+
+    <!-- Animated Aurora Background -->
+    <div class="aurora-bg">
+        <div class="aurora-blob a1"></div>
+        <div class="aurora-blob a2"></div>
+        <div class="aurora-blob a3"></div>
+    </div>
+
+    <!-- Animated Stars / Particles -->
+    <div class="dest-particles">
+        <div class="dest-star ds1"></div>
+        <div class="dest-star ds2"></div>
+        <div class="dest-star ds3"></div>
+        <div class="dest-star ds4"></div>
+        <div class="dest-star ds5"></div>
+        <div class="dest-star ds6"></div>
+    </div>
+
+    <!-- Floating Airplane Illustration -->
+    <div class="dest-floating-plane">
+        <i class="fas fa-plane"></i>
+    </div>
+
+    <div class="dest-cta-container">
+        <!-- Glassmorphism Card -->
+        <div class="dest-glass-card scroll-reveal">
+            <div class="dest-card-content">
+                <span class="dest-badge">Ready for an adventure?</span>
+                <h2>Find Your Next <br><span class="text-gradient-gold">Favorite Destination</span></h2>
+                <p>Don't just dream about it. Join thousands of premium travelers and start exploring the world's most breathtaking locations today.</p>
+                
+                <!-- Shine Effect Button -->
+                <button class="dest-shine-btn">
+                    Start Booking <i class="fas fa-compass"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -136,6 +987,99 @@
 
 
     <script src="script.js"></script>
+    <script>
+       document.addEventListener("DOMContentLoaded", () => {
+    
+    // Scroll Reveal Animation for Destinations
+    function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+
+        for (let i = 0; i < reveals.length; i++) {
+            const windowHeight = window.innerHeight;
+            const elementTop = reveals[i].getBoundingClientRect().top;
+            const elementVisible = 100; // Trigger point
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    // Trigger on scroll
+    window.addEventListener("scroll", reveal);
+    
+    // Trigger on load for elements already in view
+    reveal();
+
+});
+    
+// --- Sticky Scroll Image Swap Logic ---
+const scrollCards = document.querySelectorAll('.scroll-card');
+const stickyImg = document.getElementById('sticky-img');
+
+// Intersection Observer Setup
+const observerOptions = {
+    root: null,
+    // Trigger when the card reaches the middle 40% of the screen
+    rootMargin: "-30% 0px -30% 0px", 
+    threshold: 0
+};
+
+const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            
+            // 1. Highlight the active card
+            scrollCards.forEach(card => card.classList.remove('active-card'));
+            entry.target.classList.add('active-card');
+
+            // 2. Get the image URL from the data attribute
+            const newImageSrc = entry.target.getAttribute('data-image');
+
+            // 3. Swap the image with a crossfade effect if it's different
+            if (stickyImg.src !== newImageSrc) {
+                // Add fade out class
+                stickyImg.classList.add('fade-out');
+                
+                // Wait for CSS transition (0.5s), then change src and fade back in
+                setTimeout(() => {
+                    stickyImg.src = newImageSrc;
+                    stickyImg.classList.remove('fade-out');
+                }, 400); // 400ms to ensure smooth transition
+            }
+        }
+    });
+}, observerOptions);
+
+// Attach observer to each card
+if (window.innerWidth > 992) { // Only run observer on desktop where sticky exists
+    scrollCards.forEach(card => {
+        cardObserver.observe(card);
+    });
+}
+   
+
+
+// ==========================================================
+// EXPANDING ACCORDION CARDS LOGIC
+// ==========================================================
+document.addEventListener("DOMContentLoaded", () => {
+    const panels = document.querySelectorAll('.panel');
+
+    panels.forEach(panel => {
+        panel.addEventListener('click', () => {
+            // Remove active class from all panels
+            panels.forEach(p => p.classList.remove('active'));
+            
+            // Add active class to the clicked panel
+            panel.classList.add('active');
+        });
+    });
+});
+    
+    
+    
+    </script>
 </body>
 
 </html>

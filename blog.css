@@ -1,0 +1,2440 @@
+:root {
+  --primary-orange: #f97316;
+  --dark-navy: #0f172a;
+  --soft-gray: #64748b;
+  --white: #ffffff;
+  --light-bg: #f8fafc;
+}
+
+/* Header Styles - Global Use */
+.section-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 15px;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--primary-orange), #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* ==========================================================
+   1️⃣ BLOG HERO SECTION & RESPONSIVE SEARCH - FULL STYLES
+   ========================================================== */
+
+.blog-hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0f172a; /* Deep Navy Base */
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* --- 2. Backgrounds & Cinematic Overlay --- */
+.bh-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.bh-overlay {
+  position: absolute;
+  inset: 0;
+  /* Cinematic gradient from dark bottom to transparent top */
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.9) 0%,
+    rgba(15, 23, 42, 0.4) 100%
+  );
+  z-index: 2;
+}
+
+/* --- 3. ✨ AURORA BACKGROUND ANIMATION --- */
+.aurora-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.aurora-blob {
+  position: absolute;
+  filter: blur(80px);
+  opacity: 0.6;
+  border-radius: 50%;
+  animation: auroraMove 15s infinite alternate ease-in-out;
+}
+
+.a1 {
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: rgba(14, 165, 233, 0.4);
+  animation-delay: 0s;
+}
+.a2 {
+  bottom: -20%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: rgba(139, 92, 246, 0.3);
+  animation-delay: -5s;
+}
+.a3 {
+  top: 30%;
+  left: 40%;
+  width: 40vw;
+  height: 40vw;
+  background: rgba(249, 115, 22, 0.25);
+  animation-delay: -10s;
+}
+
+@keyframes auroraMove {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.2) translate(10%, 10%);
+  }
+  100% {
+    transform: scale(0.9) translate(-10%, -5%);
+  }
+}
+
+/* --- 4. ⭐ PARTICLES / PULSATING STARS --- */
+.bh-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bh-star {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: starPulse 3s infinite ease-in-out alternate;
+}
+
+.ds1 {
+  top: 25%;
+  left: 15%;
+  width: 3px;
+  height: 3px;
+  animation-duration: 2s;
+}
+.ds2 {
+  top: 65%;
+  left: 8%;
+  width: 4px;
+  height: 4px;
+  animation-duration: 4s;
+}
+.ds3 {
+  top: 20%;
+  right: 15%;
+  width: 5px;
+  height: 5px;
+  animation-duration: 3.5s;
+}
+.ds4 {
+  top: 75%;
+  right: 20%;
+  width: 2px;
+  height: 2px;
+  animation-duration: 2.5s;
+}
+.ds5 {
+  top: 10%;
+  left: 60%;
+  width: 3px;
+  height: 3px;
+  animation-duration: 3s;
+}
+.ds6 {
+  bottom: 15%;
+  left: 40%;
+  width: 4px;
+  height: 4px;
+  animation-duration: 4s;
+}
+
+@keyframes starPulse {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* --- 5. ✈️ FLOATING AIRPLANE WATERMARK --- */
+.bh-floating-plane {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  font-size: 120px;
+  color: rgba(255, 255, 255, 0.03);
+  z-index: 2;
+  animation: planeHover 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes planeHover {
+  0% {
+    transform: translateY(0) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-15deg);
+  }
+}
+
+/* --- 6. ☁️ FLOATING CLOUDS --- */
+.bh-clouds {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.cloud {
+  position: absolute;
+  filter: brightness(0) invert(1);
+  animation: floatClouds linear infinite;
+}
+.cloud-1 {
+  top: 15%;
+  left: -20%;
+  width: 120px;
+  animation-duration: 40s;
+}
+.cloud-2 {
+  top: 40%;
+  left: -20%;
+  width: 80px;
+  animation-duration: 60s;
+  animation-delay: 15s;
+}
+.cloud-3 {
+  top: 25%;
+  left: -20%;
+  width: 150px;
+  animation-duration: 50s;
+  animation-delay: 5s;
+}
+
+@keyframes floatClouds {
+  0% {
+    transform: translateX(-10vw);
+  }
+  100% {
+    transform: translateX(110vw);
+  }
+}
+
+/* --- 7. Content Container & Glass Card --- */
+.bh-container {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.bh-glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+/* --- 8. Breadcrumbs (Home >> Blog) --- */
+.bh-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bh-breadcrumbs a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.bh-breadcrumbs a:hover {
+  color: #f97316;
+}
+.bh-breadcrumbs .divider {
+  font-size: 10px;
+  color: #94a3b8;
+}
+.bh-breadcrumbs .active {
+  color: #f97316;
+}
+
+/* --- 9. Typography --- */
+.bh-glass-card h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.text-orange-glow {
+  background: linear-gradient(to right, #f97316, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+}
+
+.bh-glass-card p {
+  font-size: 18px;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* --- 10. 🔍 FIXED RESPONSIVE SEARCH BOX --- */
+.bh-search-wrapper {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.bh-search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 40px;
+  overflow: hidden;
+  padding: 5px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.bh-search-box input {
+  flex: 1 1 auto;
+  min-width: 0; /* 🔥 CRITICAL: Prevents input from pushing button out */
+  width: 100%;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  outline: none;
+  background: transparent;
+  border-radius: 40px 0 0 40px;
+}
+
+.bh-search-box button {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  flex-shrink: 0; /* 🔥 CRITICAL: Button never shrinks */
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
+  margin-left: 5px;
+}
+
+.bh-search-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.6);
+}
+
+.bh-search-box button i {
+  transition: transform 0.3s ease;
+}
+
+.bh-search-box button:hover i {
+  transform: rotate(15deg);
+}
+
+/* --- 11. 🔴 ERROR HANDLING STYLES --- */
+.bh-search-box.error-border {
+  border: 2px solid #ff4d4f;
+  box-shadow: 0 5px 15px rgba(255, 77, 79, 0.2);
+}
+
+.bh-error-msg {
+  color: #ff4d4f;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 8px;
+  padding-left: 15px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  visibility: hidden;
+  position: absolute;
+}
+
+.bh-error-msg.show-error {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* --- 12. 🌊 WAVE DIVIDER AT THE BOTTOM --- */
+.bh-wave-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 15;
+}
+
+.bh-wave-bottom svg {
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 80px;
+}
+
+/* --- 13. 📱 MOBILE RESPONSIVENESS --- */
+@media (max-width: 992px) {
+  .bh-glass-card h1 {
+    font-size: 46px;
+  }
+  .bh-glass-card {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-hero-section {
+    height: auto;
+    padding: 150px 0 100px 0;
+  }
+  .bh-glass-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin-top: -30px;
+  }
+  .bh-glass-card h1 {
+    font-size: 36px;
+  }
+  .bh-glass-card p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .bh-wave-bottom svg {
+    height: 40px;
+  }
+  .bh-floating-plane {
+    font-size: 60px;
+    top: 15%;
+    right: 5%;
+    opacity: 0.5;
+  }
+  .bh-breadcrumbs {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+
+  /* Search Box Mobile Fixes */
+  .bh-search-box {
+    border-radius: 20px;
+  }
+  .bh-search-box input {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  .bh-search-box button {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================
+   3️⃣ TRENDING STORIES (INFINITE VERTICAL SLIDER)
+   ========================================================== */
+
+.trending-stories-section {
+  padding: 50px 5%;
+  background-color: #0f172a; /* Deep Navy Background */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow: hidden;
+}
+
+/* --- SPLIT GRID LAYOUT --- */
+.ts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Left Info, Right Slider */
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- LEFT SIDE: INFO --- */
+.text-white {
+  color: #ffffff !important;
+}
+
+.ts-desc {
+  font-size: 18px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 450px;
+}
+
+.ts-main-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #f97316;
+  border: 2px solid #f97316;
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ts-main-btn:hover {
+  background: #f97316;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+}
+
+.ts-main-btn i {
+  transition: transform 0.3s ease;
+}
+
+.ts-main-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* --- RIGHT SIDE: VERTICAL SLIDER --- */
+.ts-slider-wrap {
+  position: relative;
+  height: 600px; /* Fixed height for vertical scrolling */
+  width: 100%;
+  /* overflow: hidden; */
+  padding: 20px 0;
+}
+
+/* Fading effect at top and bottom to make it look cinematic */
+.ts-fade {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 5;
+  pointer-events: none;
+}
+.ts-fade-top {
+  top: 0;
+  background: linear-gradient(to bottom, #0f172a 0%, transparent 100%);
+}
+.ts-fade-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, #0f172a 0%, transparent 100%);
+}
+
+/* The Scrolling Track */
+.ts-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Infinite Scroll Animation */
+  animation: scrollVertical 20s linear infinite;
+}
+
+/* 🔥 Hovering the track pauses the animation */
+.ts-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(0);
+  }
+  /* Moves exactly half the height to create a seamless loop */
+  100% {
+    transform: translateY(calc(-50% - 10px));
+  }
+}
+
+/* --- THE CARD --- */
+.ts-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 95%;
+  margin: 0 auto;
+}
+
+.ts-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ts-card-content {
+  flex: 1;
+}
+
+.ts-tag {
+  display: inline-block;
+  color: #fbbf24;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.ts-card-content h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  transition: color 0.3s;
+}
+
+.ts-card-content p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- 🔥 CARD HOVER EFFECTS --- */
+
+/* Dim all cards slightly when hovering the track */
+.ts-track:hover .ts-card {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+/* Highlight, enlarge, and glow the specific card being hovered */
+.ts-track .ts-card:hover {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1.05) translateX(-10px); /* Enlarge and pull slightly left */
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #f97316; /* Orange border */
+  box-shadow:
+    0 15px 35px rgba(249, 115, 22, 0.15),
+    inset 0 0 15px rgba(249, 115, 22, 0.1);
+  z-index: 10;
+}
+
+.ts-card:hover .ts-card-content h3 {
+  color: #f97316;
+}
+
+/* --- 📱 MOBILE RESPONSIVENESS (Switches to Horizontal Slider) --- */
+@media (max-width: 992px) {
+  .ts-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .ts-desc {
+    margin: 0 auto 30px auto;
+  }
+
+  /* Change slider to horizontal for mobile/tablet */
+  .ts-slider-wrap {
+    height: auto;
+    padding: 20px 0;
+    /* Let it bleed to the edges */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .ts-track {
+    flex-direction: row; /* Horizontal */
+    width: max-content;
+    animation: scrollHorizontal 20s linear infinite;
+    padding: 0 20px;
+  }
+
+  @keyframes scrollHorizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - 10px));
+    }
+  }
+
+  /* Adjust fade masks for horizontal */
+  .ts-fade {
+    width: 60px;
+    height: 100%;
+    top: 0;
+  }
+  .ts-fade-top {
+    left: 0;
+    background: linear-gradient(to right, #0f172a 0%, transparent 100%);
+  }
+  .ts-fade-bottom {
+    right: 0;
+    left: auto;
+    background: linear-gradient(to left, #0f172a 0%, transparent 100%);
+  }
+
+  /* Adjust Card for horizontal layout */
+  .ts-card {
+    width: 320px; /* Fixed width for horizontal cards */
+    flex-direction: column; /* Stack image and text */
+    text-align: left;
+  }
+
+  .ts-img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .ts-track .ts-card:hover {
+    transform: scale(1.05) translateY(-10px); /* Pull up instead of left */
+  }
+}
+
+/* ==========================================================
+   4️⃣ TRAVEL CATEGORIES (HONEYCOMB LAYOUT)
+   ========================================================== */
+
+.travel-categories-section {
+  padding: 50px 5% 80px 5%;
+  background-color: #ffffff; /* Clean white background */
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.tc-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+/* --- THE HONEYCOMB GRID SYSTEM --- */
+.hc-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hc-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Horizontal space between hexagons */
+}
+
+/* Interlocking rows by pulling them up */
+.hc-row-2 {
+  margin-top: -65px; /* Overlaps Row 1 */
+}
+
+.hc-row-3 {
+  margin-top: -65px; /* Overlaps Row 2 */
+}
+
+/* --- THE HEXAGON WRAPPER (For Drop Shadow) --- */
+.hc-wrapper {
+  /* We use a wrapper because clip-path hides box-shadows */
+  filter: drop-shadow(0 15px 25px rgba(15, 23, 42, 0.1));
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- THE HEXAGON CARD (Clip Path) --- */
+.hc-card {
+  width: 240px;
+  height: 275px;
+  /* This creates the perfect pointy-top Hexagon shape */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #0f172a;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Image */
+.hc-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s ease;
+  z-index: 1;
+}
+
+/* Gradient Overlay */
+.hc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.4) 100%
+  );
+  transition: background 0.5s ease;
+  z-index: 2;
+}
+
+/* Content Container */
+.hc-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+  width: 100%;
+}
+
+.hc-icon {
+  font-size: 32px;
+  color: #f97316; /* Orange Icon */
+  margin-bottom: 15px;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hc-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+  transition: transform 0.4s ease;
+}
+
+.hc-text {
+  font-size: 13px;
+  color: #e2e8f0;
+  margin: 10px 0 0 0;
+  line-height: 1.5;
+  /* Hidden by default */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  height: 0; /* Prevents spacing issues when hidden */
+}
+
+/* --- 🔥 HOVER MAGIC --- */
+
+/* 1. Lift card and add Premium Orange Glow */
+.hc-wrapper:hover {
+  transform: translateY(-15px);
+  filter: drop-shadow(0 25px 35px rgba(249, 115, 22, 0.35)); /* Orange Glow */
+  z-index: 10;
+}
+
+/* 2. Zoom Image */
+.hc-wrapper:hover .hc-bg {
+  transform: scale(1.15);
+}
+
+/* 3. Overlay turns Orange Tinted */
+.hc-wrapper:hover .hc-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(249, 115, 22, 0.9) 0%,
+    rgba(249, 115, 22, 0.3) 100%
+  );
+}
+
+/* 4. Icon Rotates in 3D & turns white */
+.hc-wrapper:hover .hc-icon {
+  transform: rotateY(360deg) scale(1.1);
+  color: #ffffff;
+}
+
+/* 5. Title lifts up */
+.hc-wrapper:hover .hc-title {
+  transform: translateY(-5px);
+}
+
+/* 6. Text Fades in */
+.hc-wrapper:hover .hc-text {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+}
+
+/* --- 📱 MOBILE RESPONSIVENESS (100% Adaptive) --- */
+
+@media (max-width: 992px) {
+  .hc-card {
+    width: 200px;
+    height: 230px;
+  }
+  .hc-row-2,
+  .hc-row-3 {
+    margin-top: -55px; /* Adjust overlap for smaller hex */
+  }
+}
+
+@media (max-width: 768px) {
+  .travel-categories-section {
+    padding: 60px 15px;
+  }
+
+  /* Break the fixed honeycomb rows to let them wrap naturally on small screens */
+  .hc-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* standard gap instead of interlocking */
+  }
+
+  .hc-row {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Remove negative margins so they stack cleanly like a grid */
+  .hc-row-2,
+  .hc-row-3 {
+    margin-top: 0;
+  }
+
+  /* Smaller Hexagons for Mobile */
+  .hc-card {
+    width: 140px;
+    height: 160px;
+  }
+
+  .hc-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .hc-title {
+    font-size: 16px;
+  }
+
+  /* Keep text hidden on mobile to avoid overcrowding the small shape */
+  .hc-wrapper:hover .hc-text {
+    display: none;
+  }
+
+  /* Reduce hover lift for touch devices */
+  .hc-wrapper:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* ==========================================================
+   4️⃣ TRAVEL CATEGORIES (3D FLIP CARDS) - FULL CSS
+   ========================================================== */
+
+.category-flip-section {
+  padding: 50px 5%;
+  background-color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow: hidden;
+}
+
+/* --- 🔥 HEADER STYLES (Fixed Colors) --- */
+.cf-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a; /* Deep Navy Blue */
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #f97316, #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Helps gradient show properly */
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #64748b; /* Soft Gray */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- GRID LAYOUT --- */
+.cf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns on Desktop */
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- 3D PERSPECTIVE WRAPPER --- */
+.cf-card-wrapper {
+  perspective: 1000px; /* Gives the 3D depth effect */
+  height: 380px;
+  cursor: pointer;
+}
+
+/* --- THE CARD ITSELF --- */
+.cf-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d; /* Required for 3D flip */
+}
+
+/* 🔥 The Hover / Click Trigger */
+.cf-card-wrapper:hover .cf-card,
+.cf-card-wrapper.flipped .cf-card {
+  transform: rotateY(180deg);
+}
+
+/* --- FRONT & BACK BASE STYLES --- */
+.cf-front,
+.cf-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden; /* Hides the back side when flipped */
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* --- FRONT FACE --- */
+.cf-front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cf-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.9) 0%,
+    rgba(15, 23, 42, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.cf-front-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  transform: translateY(20px);
+}
+
+.cf-front-content i {
+  font-size: 48px;
+  color: #f97316;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 5px 15px rgba(249, 115, 22, 0.4));
+}
+
+.cf-front-content h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* --- BACK FACE --- */
+.cf-back {
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e293b 100%
+  ); /* Deep Navy Gradient */
+  transform: rotateY(180deg); /* Starts flipped around */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cf-back-content {
+  color: #ffffff;
+}
+
+.cf-icon-wrap {
+  width: 60px;
+  height: 60px;
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+}
+
+.cf-icon-wrap i {
+  font-size: 24px;
+  color: #f97316;
+}
+
+.cf-back-content h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+}
+
+.cf-back-content p {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+}
+
+.cf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f97316;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cf-btn:hover {
+  background: #ea580c;
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+  transform: translateY(-2px);
+}
+
+.cf-btn i {
+  transition: transform 0.3s ease;
+}
+
+.cf-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* --- 📱 MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 992px) {
+  .cf-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .category-flip-section {
+    padding: 60px 15px;
+  }
+
+  /* Header Mobile Adjustments */
+  .section-title {
+    font-size: 32px;
+  }
+  .section-subtitle {
+    font-size: 15px;
+  }
+
+  .cf-grid {
+    /* 🔥 Line by Line Layout (1 Column) for Mobile */
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .cf-card-wrapper {
+    height: 320px; /* Slightly shorter for mobile */
+  }
+
+  .cf-front-content h3 {
+    font-size: 24px;
+  }
+
+  .cf-back-content h3 {
+    font-size: 22px;
+  }
+
+  .cf-back-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+:root {
+  --dark-navy: #0f172a;
+  --primary-orange: #ff6b35;
+  --soft-orange: #ffedd5;
+  --text-gray: #475569;
+  --light-bg: #f8fafc;
+  --white: #ffffff;
+  --card-shadow: 0 15px 35px rgba(15, 23, 42, 0.06);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATIONS BASE
+   ========================================= */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   EDITOR'S PICKS SECTION
+   ========================================= */
+.editors-picks-section {
+  padding: 50px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.section-subtitle {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.section-header h2 {
+  font-size: 2.6rem;
+  color: var(--dark-navy);
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.header-underline {
+  width: 60px;
+  height: 4px;
+  background: var(--primary-orange);
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-gray);
+}
+
+.ep-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.ep-destination-card {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--card-shadow);
+}
+
+.ep-destination-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.ep-img-wrapper {
+  flex: 1;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.ep-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ep-destination-card:hover .ep-img-wrapper img {
+  transform: scale(1.06);
+}
+
+.ep-content {
+  flex: 1;
+}
+
+.ep-content .tag {
+  background: var(--soft-orange);
+  color: var(--primary-orange);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.ep-content h3 {
+  font-size: 2.1rem;
+  color: var(--dark-navy);
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ep-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: var(--text-gray);
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-orange);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  transition: var(--transition);
+}
+
+.explore-btn i {
+  transition: transform 0.3s ease;
+}
+
+.explore-btn:hover {
+  color: var(--dark-navy);
+}
+
+.explore-btn:hover i {
+  transform: translateX(8px);
+}
+
+/* =========================================
+   CTA SECTION
+   ========================================= */
+.cta-section {
+  position: relative;
+  background: var(--dark-navy);
+  padding: 80px 5% 80px;
+  text-align: center;
+  overflow: hidden;
+  color: var(--white);
+}
+
+.cta-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.cta-wave svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.cta-wave .shape-fill {
+  fill: var(--light-bg);
+}
+
+.cta-container {
+  position: relative;
+  z-index: 10;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.cta-glowing-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 60px 40px;
+  border-radius: 32px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+}
+
+.cta-icon-wrapper {
+  width: 84px;
+  height: 84px;
+  background: var(--primary-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  font-size: 32px;
+  box-shadow: 0 0 35px rgba(255, 107, 53, 0.45);
+  animation: floatPlane 3.5s ease-in-out infinite;
+}
+
+@keyframes floatPlane {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.cta-glowing-card h2 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.cta-glowing-card p {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cta-shine-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--primary-orange);
+  color: var(--white);
+  padding: 18px 45px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.25);
+}
+
+.cta-shine-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(255, 107, 53, 0.4);
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Main Priority)
+   ========================================= */
+@media (max-width: 992px) {
+  .ep-destination-card,
+  .ep-destination-card.reverse {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .ep-img-wrapper {
+    width: 100%;
+    height: 340px;
+  }
+
+  .ep-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.1rem;
+  }
+  .cta-glowing-card h2 {
+    font-size: 2rem;
+  }
+  .cta-glowing-card {
+    padding: 45px 20px;
+  }
+  .editors-picks-section {
+    padding: 60px 4%;
+  }
+}
+
+/* =========================================
+   POPULAR GUIDES - BENTO GRID SECTION
+   ========================================= */
+.popular-guides-section {
+  padding: 50px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+}
+
+.bento-grid {
+  display: grid;
+  /* 3 Columns Layout for Desktop */
+  grid-template-columns: repeat(3, 1fr);
+  /* Basic row height */
+  grid-auto-rows: 300px;
+  gap: 25px;
+}
+
+/* Bento Grid Spans */
+.bento-card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.bento-card.wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.bento-card.square {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Bento Card Base Styles */
+.bento-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+}
+
+/* Image & Image Zoom Effect */
+.bento-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bento-card:hover .bento-img {
+  transform: scale(1.1); /* Image Zoom on Hover */
+}
+
+/* Blur Overlay Effect */
+.bento-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.4) 50%,
+    transparent 100%
+  );
+  transition: all 0.5s ease;
+}
+
+.bento-card:hover .bento-overlay {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px); /* Blur Overlay on Hover */
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Content Layout inside Card */
+.bento-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  z-index: 2;
+}
+
+.bento-icon {
+  font-size: 2rem;
+  color: var(--primary-orange);
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.bento-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  transition: transform 0.5s ease;
+}
+
+.bento-card.large h3 {
+  font-size: 2.2rem;
+}
+
+/* Content Rises Effect */
+.bento-hidden-text {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bento-hidden-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.bento-card.large .bento-hidden-text p,
+.bento-card.wide .bento-hidden-text p {
+  font-size: 1.05rem; /* Larger text for bigger cards */
+}
+
+.bento-card:hover .bento-hidden-text {
+  max-height: 300px; /* Allows text to expand */
+  opacity: 1;
+  transform: translateY(0); /* Text moves up */
+  margin-top: 10px;
+}
+
+.bento-card:hover h3 {
+  transform: translateY(-5px); /* Title moves slightly up */
+  color: var(--primary-orange);
+}
+
+/* Link Button styling inside grid */
+.bento-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 2px solid var(--primary-orange);
+  padding-bottom: 3px;
+  transition: gap 0.3s ease;
+}
+
+.bento-btn:hover {
+  gap: 12px;
+  color: var(--primary-orange);
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (100% Responsive)
+   ========================================= */
+/* =========================================
+   MOBILE RESPONSIVENESS (Fix for Content Overflow)
+   ========================================= */
+
+/* Tablet View */
+@media (max-width: 992px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 320px; /* Slightly increased height for tablet */
+  }
+
+  .bento-card.large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .bento-card.wide {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+/* Mobile View - 100% Responsive with No Overflow */
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column; /* Stack all cards naturally */
+    gap: 20px;
+  }
+
+  .bento-card {
+    width: 100%;
+    height: auto !important; /* Forces card to grow with content */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Keep the image in the background */
+  .bento-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .bento-overlay {
+    z-index: 1;
+  }
+
+  /* Change content to relative so it pushes the card height down */
+  .bento-content {
+    position: relative;
+    height: auto;
+    padding: 120px 25px 30px 25px; /* Top padding leaves space to see the image */
+    z-index: 2;
+    margin-top: auto; /* Pushes content to the bottom */
+  }
+
+  .bento-hidden-text {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+  }
+
+  /* When clicked/tapped on mobile, the card expands infinitely based on text */
+  .bento-card:hover .bento-hidden-text,
+  .bento-card:active .bento-hidden-text {
+    max-height: 1000px; /* High value to accommodate ANY amount of heavy content */
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 15px;
+  }
+
+  .bento-card:hover,
+  .bento-card:active {
+    padding-bottom: 10px; /* Extra breathing room when expanded */
+  }
+}
+
+/* =========================================
+   DESTINATION STORIES (ACCORDION SECTION)
+   ========================================= */
+.destination-stories-section {
+  padding: 50px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: row; /* Horizontal Layout for Desktop */
+  height: 550px;
+  gap: 15px;
+  width: 100%;
+}
+
+.accordion-card {
+  position: relative;
+  flex: 1; /* Default width for inactive cards */
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  /* Smooth Expansion Animation */
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 🟢 ACTIVE / HOVER STATE (Expands the card) */
+.accordion-card:hover,
+.accordion-card:active {
+  flex: 5; /* Card takes up 5 times more space */
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.4); /* Deep Shadow Depth */
+}
+
+/* Background Image */
+.accordion-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.8s ease;
+}
+
+.accordion-card:hover img {
+  transform: scale(1.08); /* Zoom effect on hover */
+}
+
+/* Gradient Overlay */
+.acc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.4) 40%,
+    transparent 100%
+  );
+  z-index: 1;
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.accordion-card:hover .acc-overlay {
+  opacity: 1; /* Darkens slightly on hover to make text readable */
+}
+
+/* Content Container */
+.acc-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 35px 30px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.acc-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.5s ease;
+}
+
+.acc-icon {
+  width: 45px;
+  height: 45px;
+  background: var(--primary-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.5);
+  flex-shrink: 0;
+}
+
+.acc-header h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  white-space: nowrap; /* Prevents text from breaking */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Hidden Content (Reveals on Hover) */
+.acc-hidden-desc {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.acc-hidden-desc p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin-bottom: 20px;
+  /* Limit width to prevent text stretching too far */
+  max-width: 500px;
+}
+
+/* 🟢 TRIGGERING THE REVEAL */
+.accordion-card:hover .acc-hidden-desc,
+.accordion-card:active .acc-hidden-desc {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 20px;
+}
+
+.acc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-orange);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (100% Overflow Free)
+   ========================================= */
+@media (max-width: 992px) {
+  .accordion-container {
+    height: 600px; /* Adjust height for tablet */
+  }
+  .acc-header h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion-container {
+    flex-direction: column; /* 🟢 Stacks cards vertically */
+    height: 750px; /* Total height of all stacked cards */
+  }
+
+  .accordion-card {
+    flex: 1; /* Inactive cards get equal height */
+    border-radius: 20px;
+  }
+
+  .accordion-card:hover,
+  .accordion-card:active {
+    flex: 4; /* Active card expands vertically, pushing others down */
+  }
+
+  .acc-content {
+    padding: 25px 20px;
+  }
+
+  .acc-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .acc-hidden-desc p {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  /* Smaller icon for mobile */
+  .acc-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   TRAVELER MEMORIES (POLAROID SECTION)
+   ========================================= */
+.traveler-memories-section {
+  padding: 50px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+  overflow: hidden; /* Prevents tilted cards from causing horizontal scroll */
+}
+
+.polaroid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Space between scattered cards */
+  padding: 40px 0 80px 0;
+}
+
+/* Base Polaroid Card Styling */
+.polaroid-card {
+  background: var(--white);
+  width: var(--w); /* Dynamically takes width from inline HTML */
+  padding: 15px 15px 0 15px; /* White border around the image */
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  cursor: pointer;
+
+  /* Applies the custom rotation */
+  transform: rotate(var(--rotation));
+  /* Smooth transition for straightening and scaling */
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+}
+
+/* 🟢 HOVER EFFECTS */
+.polaroid-card:hover {
+  /* Straightens out, scales up, and moves slightly up */
+  transform: translateY(-20px) scale(1.08) rotate(0deg);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25); /* Deep Shadow */
+  z-index: 10; /* Brings active card to the front */
+}
+
+/* Image Wrapper */
+.polaroid-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.polaroid-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.polaroid-card:hover .polaroid-img-wrapper img {
+  transform: scale(1.1); /* Image zooms slightly */
+}
+
+/* 🟢 GLASS BACKGROUND OVERLAY */
+.polaroid-glass-overlay {
+  position: absolute;
+  inset: 0;
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.polaroid-card:hover .polaroid-glass-overlay {
+  opacity: 1; /* Reveals the memory text on hover */
+}
+
+.polaroid-glass-overlay p {
+  font-size: 1.1rem;
+  color: var(--dark-navy);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8); /* Text pop */
+}
+
+.polaroid-glass-overlay .author {
+  font-size: 0.9rem;
+  color: var(--primary-orange);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Polaroid Bottom Caption */
+.polaroid-caption {
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.polaroid-caption h4 {
+  font-family: "Courier New", Courier, monospace; /* Vintage font feel */
+  font-size: 1.4rem;
+  color: var(--dark-navy);
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Cute little Push Pin design */
+.pin {
+  position: absolute;
+  top: -340px; /* Moves pin to the top center of the polaroid */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ef4444; /* Red Pin */
+  font-size: 1.5rem;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  z-index: 5;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (No Overflow Stack)
+   ========================================= */
+@media (max-width: 768px) {
+  .polaroid-gallery {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 40px;
+    padding: 20px 0;
+  }
+
+  .polaroid-card {
+    width: 90% !important; /* Forces cards to fit mobile screen */
+    max-width: 350px;
+    /* Reduce rotation angles drastically on mobile to prevent overflow out of screen bounds */
+    transform: rotate(calc(var(--rotation) * 0.4));
+  }
+
+  /* Adjust hover translation so it doesn't pop out of screen */
+  .polaroid-card:hover {
+    transform: translateY(-10px) scale(1.03) rotate(0deg);
+  }
+
+  .polaroid-img-wrapper {
+    height: 250px; /* Slightly smaller image on mobile */
+  }
+
+  .polaroid-glass-overlay p {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   TRAVEL INSIGHTS (IMAGE BOARDING PASSES)
+   ========================================= */
+.travel-insights-section {
+  padding: 50px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+}
+
+.ticket-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Space between tickets */
+  padding: 20px 0;
+}
+
+/* 🟢 TICKET CARD BASE (3-Part Flexbox) */
+.ticket-card {
+  display: flex;
+  background: var(--white);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden; /* Keeps image inside borders */
+}
+
+.ticket-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(255, 107, 53, 0.15);
+}
+
+/* 🟢 PART 1: THE IMAGE */
+.ticket-image {
+  width: 300px; /* Fixed width for image on desktop */
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.ticket-card:hover .ticket-image img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* 🟢 PART 2: THE HEAVY CONTENT */
+.ticket-content {
+  flex: 1;
+  padding: 40px 40px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ticket-tag {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--primary-orange);
+  padding: 5px 12px;
+  border-radius: 5px;
+  display: inline-table;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.ticket-content h3 {
+  font-size: 1.8rem;
+  color: var(--dark-navy);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.ticket-content p {
+  font-size: 1.05rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Bullet Points Styling */
+.ticket-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.ticket-bullets li {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.ticket-bullets li i {
+  color: var(--primary-orange);
+  margin-top: 3px;
+}
+
+.ticket-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-navy);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+  margin-top: auto; /* Pushes button to bottom if content varies */
+}
+
+.ticket-card:hover .ticket-btn {
+  color: var(--primary-orange);
+  gap: 15px;
+}
+
+/* 🟢 PART 3: THE STUB (Right Side) */
+.ticket-stub {
+  width: 140px; /* Fixed width for the stub */
+  background: var(--dark-navy);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  border-left: 2px dashed rgba(255, 255, 255, 0.4); /* Dashed tear line */
+  transition: background 0.4s ease;
+}
+
+.ticket-card:hover .ticket-stub {
+  background: var(--primary-orange);
+}
+
+.stub-icon {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.ticket-card:hover .stub-icon {
+  transform: scale(1.2) translateY(-5px);
+}
+
+.tip-number {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  transform: rotate(90deg); /* Text rotated downwards */
+  margin: 30px 0;
+  white-space: nowrap;
+}
+
+/* Fake Barcode Design */
+.barcode-lines {
+  width: 30px;
+  height: 60px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ffffff,
+    #ffffff 2px,
+    transparent 2px,
+    transparent 6px,
+    #ffffff 6px,
+    #ffffff 9px,
+    transparent 9px,
+    transparent 12px
+  );
+  opacity: 0.5;
+}
+
+/* 🟢 TICKET CUT-OUTS (Placed on the dashed line) */
+.ticket-card::before,
+.ticket-card::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--light-bg);
+  border-radius: 50%;
+  right: 140px; /* Exactly where the stub starts */
+  transform: translateX(50%);
+  z-index: 5;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-card::before {
+  top: -20px;
+}
+.ticket-card::after {
+  bottom: -20px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Vertical Stack)
+   ========================================= */
+@media (max-width: 992px) {
+  .ticket-image {
+    width: 220px;
+  }
+  .ticket-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack everything vertically on mobile */
+  .ticket-card {
+    flex-direction: column;
+  }
+
+  .ticket-image {
+    width: 100%;
+    height: 250px; /* Fixed height for image on mobile */
+  }
+
+  .ticket-content {
+    padding: 30px 20px;
+  }
+
+  /* Adjust the stub for mobile */
+  .ticket-stub {
+    width: 100%;
+    height: 100px;
+    flex-direction: row; /* Make items horizontal */
+    border-left: none;
+    border-top: 2px dashed rgba(255, 255, 255, 0.4); /* Dashed line moves to top */
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+
+  .tip-number {
+    transform: rotate(0deg); /* Text becomes straight */
+    margin: 0;
+  }
+
+  .barcode-lines {
+    width: 60px;
+    height: 30px;
+    /* Rotate barcode for mobile */
+    background: repeating-linear-gradient(
+      to right,
+      #ffffff,
+      #ffffff 2px,
+      transparent 2px,
+      transparent 6px,
+      #ffffff 6px,
+      #ffffff 9px,
+      transparent 9px,
+      transparent 12px
+    );
+  }
+
+  /* Move Cut-outs to Left and Right sides for mobile */
+  .ticket-card::before,
+  .ticket-card::after {
+    right: auto;
+    bottom: 100px; /* Height of the stub */
+    transform: translateY(50%) translateX(-50%);
+    left: 0;
+  }
+
+  .ticket-card::after {
+    left: auto;
+    right: 0;
+    transform: translateY(50%) translateX(50%);
+  }
+}
