@@ -1486,54 +1486,51 @@
 
 
 /* =========================================
-   9️⃣ POPULAR ROUTES (HORIZONTAL SCROLL)
+   9️⃣ POPULAR ROUTES (GRID RESPONSIVE LAYOUT)
    ========================================= */
 
+/* Use a refined dark blue base */
 .popular-routes-section {
-    padding: 50px 0; 
-    background-color: #0f172a; 
+    padding: 80px 0; 
+    background-color: #0b1120; /* Darker, more premium navy */
     overflow: hidden;
 }
 
 .routes-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     padding: 0 20px;
 }
 
 .light-subtitle {
-    color: #9ca3af; 
+    color: #94a3b8; 
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 10px auto 0;
 }
 
-/* --- HORIZONTAL SCROLL TRACK --- */
-.routes-scroll-container {
-    width: 100%;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; 
-}
-
-.routes-scroll-container::-webkit-scrollbar {
-    display: none;
+/* --- GRID LAYOUT (Replaces Horizontal Scroll) --- */
+.routes-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .routes-track {
-    display: flex;
+    display: grid;
+    /* Auto-fit makes it side-by-side on desktop, stacked on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
     gap: 30px;
-    padding: 20px 40px 60px 40px; 
-    width: max-content;
-    scroll-snap-type: x mandatory;
+    justify-content: center;
 }
 
-/* --- ROUTE CARDS (HEIGHT INCREASED) --- */
+/* --- ROUTE CARDS --- */
 .route-card {
-    width: 400px;
-    height: 520px; /* Increased height for extra content */
+    width: 100%; /* Takes full width of the grid cell */
+    height: 480px; /* Perfectly balanced height */
     position: relative;
     border-radius: 24px;
     overflow: hidden;
-    scroll-snap-align: center;
     background: #1e293b;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     cursor: pointer;
@@ -1552,7 +1549,8 @@
 .route-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.98) 100%);
+    /* Richer gradient for better text readability */
+    background: linear-gradient(to bottom, rgba(11, 17, 32, 0.2) 0%, rgba(11, 17, 32, 0.98) 100%);
     transition: background 0.4s ease;
 }
 
@@ -1560,19 +1558,17 @@
 .route-content {
     position: absolute;
     bottom: 0; left: 0; width: 100%;
-    padding: 35px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     z-index: 2;
 }
 
 /* Dynamic Top Badges */
 .route-badge {
-    position: absolute;
-    top: -160px; /* Pushed up slightly */
-    left: 35px;
-    background: var(--gradient-orange);
+    align-self: flex-start;
+    background: #f97316; /* Primary orange */
     color: white;
     padding: 6px 14px;
     border-radius: 20px;
@@ -1580,11 +1576,13 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: auto; /* Pushes it to the top of the card content */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-.route-badge.popular { background: #3b82f6; } /* Blue */
-.route-badge.luxury { background: #8b5cf6; } /* Purple */
-.route-badge.romantic { background: #ec4899; } /* Pink */
-.route-badge.tropical { background: #10b981; } /* Emerald Green */
+.route-badge.popular { background: #3b82f6; } 
+.route-badge.luxury { background: #8b5cf6; } 
+.route-badge.romantic { background: #ec4899; } 
+.route-badge.tropical { background: #10b981; } 
 
 /* Flexbox for City Layout */
 .route-cities {
@@ -1596,14 +1594,15 @@
 }
 
 .city h4 {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 800;
     margin: 0 0 5px 0;
     letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .city p {
-    font-size: 15px;
+    font-size: 14px;
     color: #cbd5e1;
     margin: 0;
     font-weight: 500;
@@ -1618,30 +1617,29 @@
     display: flex;
     align-items: center;
     flex: 1;
-    margin: 0 20px;
-    position: relative;
-    top: -10px;
+    margin: 0 15px;
 }
 
 .path-line {
     height: 2px;
     flex: 1;
-    background: repeating-linear-gradient(to right, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 5px, transparent 5px, transparent 10px);
+    background: repeating-linear-gradient(to right, rgba(255,255,255,0.3) 0, rgba(255,255,255,0.3) 4px, transparent 4px, transparent 8px);
 }
 
 .path-icon {
-    color: var(--primary-orange);
-    font-size: 20px;
-    margin: 0 10px;
+    color: #f97316;
+    font-size: 18px;
+    margin: 0 8px;
     transition: transform 0.5s ease;
 }
 
-/* --- NEW FLIGHT INFO SECTION --- */
+/* --- FLIGHT INFO SECTION --- */
 .route-info {
     display: flex;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 12px 15px;
@@ -1649,8 +1647,8 @@
 }
 
 .info-item {
-    color: #e2e8f0;
-    font-size: 13px;
+    color: #f1f5f9;
+    font-size: 12px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -1658,8 +1656,8 @@
 }
 
 .info-item i {
-    color: var(--primary-orange);
-    font-size: 14px;
+    color: #f97316;
+    font-size: 13px;
 }
 
 /* Footer (Price & Button) */
@@ -1668,7 +1666,7 @@
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .price-box {
@@ -1690,15 +1688,15 @@
 }
 
 .route-btn {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-orange);
+    color: #f97316;
     text-decoration: none;
     transition: all 0.3s ease;
     border: 1px solid rgba(249, 115, 22, 0.3);
@@ -1707,96 +1705,74 @@
 /* --- PREMIUM HOVER EFFECTS 🔥 --- */
 .route-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary-orange);
-    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.25);
+    border-color: #f97316;
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.2);
 }
 
 .route-card:hover .route-bg {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .route-card:hover .path-icon {
-    transform: translateX(10px) scale(1.2); 
+    transform: translateX(10px) scale(1.1); 
 }
 
 .route-card:hover .route-btn {
-    background: var(--primary-orange);
+    background: #f97316;
     color: white;
     transform: rotate(-45deg); 
 }
 
+/* --- SCROLL ANIMATION EFFECTS --- */
+.scroll-reveal {
+    opacity: 0;
+    animation: fadeUpIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeUpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* =========================================
-   MOBILE RESPONSIVE ENGINE (ONE BY ONE STACK)
+   MOBILE RESPONSIVE ENGINE
    ========================================= */
 @media (max-width: 992px) {
-    .route-card {
-        width: 340px;
-        height: 500px;
-    }
-    .city h4 { font-size: 30px; }
     .route-info {
         flex-direction: column; 
         gap: 8px;
-        padding: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .popular-routes-section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
-
-    /* Stop horizontal scrolling on mobile */
-    .routes-scroll-container {
-        overflow-x: hidden; 
-    }
-
-    /* Stack cards vertically (One by One) */
+    
     .routes-track {
-        display: flex;
-        flex-direction: column; /* This makes it one by one */
-        width: 100%;
-        padding: 0 20px; 
-        gap: 40px; /* Space between each stacked card */
-        scroll-snap-type: none; /* Remove snapping */
+        /* Forces 1 column on mobile screens */
+        grid-template-columns: 1fr; 
+        gap: 25px;
     }
 
-    /* Cards take full width of mobile screen */
     .route-card {
-        width: 100%; 
-        max-width: 100%; /* Adjusts perfectly to any phone size */
-        height: 480px;
-        scroll-snap-align: none; 
-        margin: 0 auto;
+        height: auto;
+        min-height: 460px;
     }
 
+    .city h4 { font-size: 28px; }
+    
     .route-content {
         padding: 25px;
-        gap: 20px;
-    }
-    
-    .route-badge {
-        left: 25px;
-        top: -140px;
-    }
-
-    .city h4 { font-size: 26px; }
-    .city p { font-size: 14px; }
-    .path-icon { font-size: 16px; margin: 0 5px;}
-    
-    .route-info {
-        flex-direction: column; 
-        gap: 10px;
-    }
-    
-    .route-price { font-size: 22px; }
-    
-    .route-btn {
-        width: 45px;
-        height: 45px;
     }
 }
-
 
 
 /* =========================================

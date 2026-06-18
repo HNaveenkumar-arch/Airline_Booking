@@ -1119,10 +1119,12 @@
   padding: 30px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
 }
 
 .cf-back-content {
   color: #ffffff;
+  z-index: 100;
 }
 
 .cf-icon-wrap {
@@ -1559,7 +1561,7 @@
   /* 3 Columns Layout for Desktop */
   grid-template-columns: repeat(3, 1fr);
   /* Basic row height */
-  grid-auto-rows: 300px;
+  grid-auto-rows: 350px;
   gap: 25px;
 }
 
@@ -1623,7 +1625,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -1664,7 +1666,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: #e2e8f0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .bento-card.large .bento-hidden-text p,
@@ -2437,4 +2439,7 @@
     right: 0;
     transform: translateY(50%) translateX(50%);
   }
+}
+.cf-btn{
+  z-index: 100;
 }

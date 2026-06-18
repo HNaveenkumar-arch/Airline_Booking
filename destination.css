@@ -2566,3 +2566,9 @@ body {
     opacity: 0.5; /* Reduce visibility slightly on mobile to avoid text clash */
   }
 }
+
+
+.home{
+  color: white;
+  text-decoration: none;
+}
