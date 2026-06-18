@@ -512,8 +512,8 @@ body {
 
   .topbar {
     height: 60px;
-    padding: 0;
-    justify-content: flex-start;
+    padding: 0 15px 0 0; /* Add right padding so the icon doesn't touch the edge */
+    justify-content: space-between; /* Changed from flex-start to keep left and right items apart */
   }
 
   .topbar-left {
@@ -534,8 +534,13 @@ body {
   #dynamic-page-title {
     display: none;
   }
-  .header-right {
+  /* .header-right {
     display: none;
+  } */
+   .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduced gap for mobile */
   }
 
   .dashboard-body {
@@ -1837,4 +1842,18 @@ body {
     border-radius: 50%; /* Makes it a circle */
     object-fit: cover; /* Prevents the image from stretching */
     border: 2px solid #eaeaea; /* Optional: adds a subtle border */
+}
+
+@media screen and (max-width: 768px) {
+  /* ... your other mobile rules ... */
+
+  /* Hide everything inside .profile EXCEPT the image */
+  .profile > *:not(img) {
+    display: none;
+  }
+
+  /* Remove the gap so there's no invisible extra space */
+  .profile {
+    gap: 0;
+  }
 }

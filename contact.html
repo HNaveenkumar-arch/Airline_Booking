@@ -494,6 +494,7 @@
             });
 
             // Live Lock: Phone field allows ONLY numbers
+            // We also recommend adding maxlength="10" in your HTML <input> tag
             phoneInput.addEventListener("input", function () {
                 this.value = this.value.replace(/[^0-9]/g, "");
             });
@@ -518,9 +519,10 @@
                     isValid = false;
                 }
 
-                // Validate Phone
-                if (phoneInput.value.trim().length < 10) {
-                    showError("phone", "Phone number must be at least 10 digits.");
+                // Validate Phone: STRICTLY 10 DIGITS
+                const phoneRegex = /^\d{10}$/;
+                if (!phoneRegex.test(phoneInput.value.trim())) {
+                    showError("phone", "Phone number must be exactly 10 digits.");
                     isValid = false;
                 }
 
@@ -551,8 +553,10 @@
             // Helper function to show error messages
             function showError(inputId, message) {
                 const errorElement = document.getElementById(inputId + "-error");
-                errorElement.innerText = message;
-                errorElement.style.display = "block";
+                if(errorElement) {
+                   errorElement.innerText = message;
+                   errorElement.style.display = "block";
+                }
             }
         });
 
