@@ -220,6 +220,73 @@
     </section>
 
 
+
+
+    <section class="luxury-contact-info">
+        <div class="aurora-glow aurora-1"></div>
+        <div class="aurora-glow aurora-2"></div>
+        <div class="noise-texture"></div>
+
+        <div class="floating-particle p-1"></div>
+        <div class="floating-particle p-2"></div>
+        <div class="floating-particle p-3"></div>
+
+        <div class="contact-info-container">
+            <div class="info-header scroll-reveal-up">
+                <h2 class="gradient-title">Contact Information</h2>
+                <p class="info-subtitle">We're here to help you with your travel plans and provide assistance whenever
+                    you need it.</p>
+            </div>
+
+            <div class="info-grid">
+
+                <div class="glass-info-card scroll-reveal-up" style="--anim-delay: 0.1s;">
+                    <div class="gradient-top-border"></div>
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Office Address</h3>
+                    <p>Stackly Airlines<br>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem</p>
+                </div>
+
+                <div class="glass-info-card scroll-reveal-up" style="--anim-delay: 0.2s;">
+                    <div class="gradient-top-border"></div>
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>
+                        <a href="mailto:support@skywings.com">support@stackly.com</a><br>
+                        <a href="mailto:booking@skywings.com">booking@stackly.com</a>
+                    </p>
+                </div>
+
+                <div class="glass-info-card scroll-reveal-up" style="--anim-delay: 0.3s;">
+                    <div class="gradient-top-border"></div>
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <h3>Phone Number</h3>
+                    <p>
+                        <a href="tel:+971123456789">+91 9876543210</a><br>
+                        <a href="tel:+971987654321">+91 8765432109</a>
+                    </p>
+                </div>
+
+                <div class="glass-info-card scroll-reveal-up" style="--anim-delay: 0.4s;">
+                    <div class="gradient-top-border"></div>
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Working Hours</h3>
+                    <p>Monday - Sunday<br>24/7 Customer Support</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
     <section class="premium-contact-section">
         <div class="particle particle-1"></div>
         <div class="particle particle-2"></div>
@@ -549,6 +616,34 @@
         function closePopup() {
             document.getElementById('success-popup').classList.remove('active');
         }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollElements = document.querySelectorAll('.scroll-reveal-up');
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend);
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('active');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.1)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+
+            handleScrollAnimation();
+        });
     </script>
 </body>
 

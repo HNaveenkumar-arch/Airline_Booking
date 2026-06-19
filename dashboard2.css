@@ -107,9 +107,6 @@ body {
   color: var(--danger-hover);
 }
 
-/* =========================================
-   MAIN CONTENT & TOPBAR
-   ========================================= */
 .main-content {
   flex-grow: 1;
   margin-left: 260px;
@@ -142,7 +139,6 @@ body {
   gap: 15px;
 }
 
-/* Dashboard Badge Style */
 .dashboard-badge {
   background-color: var(--light-orange);
   color: var(--primary-orange);
@@ -197,9 +193,6 @@ body {
   flex-grow: 1;
 }
 
-/* =========================================
-   ANIMATIONS & TABS
-   ========================================= */
 .content-section {
   display: none;
 }
@@ -247,11 +240,6 @@ body {
   padding-left: 10px;
 }
 
-/* =========================================
-   DIFFERENT DESIGNS FOR SECTIONS
-   ========================================= */
-
-/* Button Styles */
 .btn-primary {
   background: var(--primary-orange);
   color: white;
@@ -303,7 +291,6 @@ body {
   cursor: pointer;
 }
 
-/* Design 1: Welcome Banner */
 .welcome-banner {
   background: linear-gradient(135deg, var(--primary-orange), #ff9040);
   color: white;
@@ -328,7 +315,6 @@ body {
   opacity: 0.2;
 }
 
-/* Design 2: Stats Grid */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -356,7 +342,6 @@ body {
   font-size: 24px;
 }
 
-/* Design 3: Horizontal Offer Card */
 .offer-card {
   background: var(--bg-white);
   padding: 20px;
@@ -392,7 +377,6 @@ body {
   font-size: 14px;
 }
 
-/* Design 4: Detailed Card (Bookings) */
 .detailed-card {
   background: var(--bg-white);
   border-radius: 12px;
@@ -449,7 +433,6 @@ body {
   opacity: 0.5;
 }
 
-/* Design 5: List View Container */
 .list-view-container {
   background: var(--bg-white);
   border-radius: 12px;
@@ -473,7 +456,6 @@ body {
   border-bottom: none;
 }
 
-/* Design 6: Action Grid */
 .action-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -501,7 +483,6 @@ body {
   border-color: var(--primary-orange);
 }
 
-/* Design 7: Search Input Group */
 .search-container {
   background: var(--bg-white);
   padding: 25px;
@@ -525,7 +506,6 @@ body {
   border-color: var(--primary-orange);
 }
 
-/* Design 8: Timeline Tracker */
 .timeline-container {
   margin: 20px 0 40px 10px;
   border-left: 2px solid var(--border-color);
@@ -567,7 +547,6 @@ body {
   color: var(--primary-orange);
 }
 
-/* Design 9: Ticket / Boarding Pass */
 .ticket-card {
   background: var(--bg-white);
   border-radius: 16px;
@@ -637,13 +616,11 @@ body {
   color: var(--text-dark);
 }
 
-/* Design 10: Button Group */
 .button-group {
   display: flex;
   gap: 15px;
 }
 
-/* Design 11: Settings Form */
 .settings-form {
   display: grid;
   grid-template-columns: 1fr;
@@ -670,7 +647,6 @@ body {
   background: var(--bg-white);
 }
 
-/* Design 12: Toggle Switch */
 .toggle-switch {
   width: 45px;
   height: 24px;
@@ -697,7 +673,6 @@ body {
   left: 24px;
 }
 
-/* Mobile Overlay */
 .sidebar-overlay {
   display: none;
   position: fixed;
@@ -709,9 +684,6 @@ body {
   z-index: 999;
 }
 
-/* =========================================
-   100% MOBILE RESPONSIVENESS
-   ========================================= */
 @media screen and (max-width: 768px) {
   .sidebar {
     left: -260px;
@@ -745,7 +717,6 @@ body {
     border-right: 1px solid var(--border-color);
   }
 
-  /* Hide Page title, but keep the Badge */
   #dynamic-page-title {
     display: none;
   }
@@ -804,13 +775,6 @@ body {
   }
 }
 
-/* =========================================
-   NEW CUSTOMER OVERVIEW SECTIONS CSS
-   ========================================= */
-
-/* --------------------------------------
-   DESIGN 1: CUSTOMER MILES CHART
-   -------------------------------------- */
 .miles-chart-card {
   background: var(--bg-white);
   padding: 25px;
@@ -855,25 +819,24 @@ body {
   cursor: pointer;
 }
 
-/* Different Colors for Each Chart Bar */
 .cust-chart-bar-wrapper:nth-child(1) .cust-chart-bar {
   background-color: #3b82f6;
-} /* Blue */
+}
 .cust-chart-bar-wrapper:nth-child(2) .cust-chart-bar {
   background-color: #10b981;
-} /* Green */
+}
 .cust-chart-bar-wrapper:nth-child(3) .cust-chart-bar {
   background-color: #8b5cf6;
-} /* Purple */
+}
 .cust-chart-bar-wrapper:nth-child(4) .cust-chart-bar {
   background-color: var(--primary-orange);
-} /* Orange */
+}
 .cust-chart-bar-wrapper:nth-child(5) .cust-chart-bar {
   background-color: #f43f5e;
-} /* Pink */
+}
 .cust-chart-bar-wrapper:nth-child(6) .cust-chart-bar {
   background-color: #eab308;
-} /* Yellow */
+}
 
 .cust-chart-bar:hover {
   filter: brightness(0.85);
@@ -907,9 +870,6 @@ body {
   font-weight: 600;
 }
 
-/* --------------------------------------
-   DESIGN 2: FREQUENT DESTINATIONS
-   -------------------------------------- */
 .destinations-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -979,9 +939,6 @@ body {
   font-size: 13px;
 }
 
-/* --------------------------------------
-   DESIGN 3: TRAVEL DOCUMENT WALLET
-   -------------------------------------- */
 .wallet-container {
   display: flex;
   flex-direction: column;
@@ -1053,19 +1010,14 @@ body {
   color: var(--primary-orange);
 }
 
-/* =========================================
-   DEDICATED MOBILE RESPONSIVE QUERY
-   (Only for the above 3 sections)
-   ========================================= */
 @media screen and (max-width: 768px) {
-  /* Chart Mobile Fixes */
   .cust-chart-container {
     gap: 5px;
-    height: 150px; /* Reduce height for mobile */
+    height: 150px;
   }
 
   .cust-chart-bar {
-    width: 28px; /* Thinner bars */
+    width: 28px;
   }
 
   .cust-chart-label {
@@ -1078,16 +1030,14 @@ body {
     gap: 10px;
   }
 
-  /* Destinations Mobile Fixes */
   .destinations-grid {
-    grid-template-columns: 1fr; /* Stack images vertically */
+    grid-template-columns: 1fr;
   }
 
   .dest-card {
-    height: 160px; /* Slightly shorter cards on mobile */
+    height: 160px;
   }
 
-  /* Wallet Mobile Fixes */
   .doc-card {
     flex-direction: column;
     align-items: flex-start;
@@ -1107,13 +1057,6 @@ body {
   }
 }
 
-/* =========================================
-   NEW CUSTOMER BOOKING SECTIONS CSS
-   ========================================= */
-
-/* --------------------------------------
-   DESIGN 1: EXCLUSIVE UPGRADES (Image Cards)
-   -------------------------------------- */
 .upgrade-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1184,14 +1127,11 @@ body {
   font-size: 13px;
 }
 
-/* --------------------------------------
-   DESIGN 2: PAYMENT SUMMARY (Receipt Design)
-   -------------------------------------- */
 .receipt-card {
   background: var(--bg-white);
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  max-width: 500px; /* Keep it compact like a real receipt */
+  max-width: 500px;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
 }
@@ -1229,7 +1169,6 @@ body {
   position: relative;
 }
 
-/* Side Cutouts for Receipt Effect */
 .receipt-divider::before,
 .receipt-divider::after {
   content: "";
@@ -1237,7 +1176,7 @@ body {
   top: -10px;
   width: 20px;
   height: 20px;
-  background: var(--bg-body); /* Match the main body background */
+  background: var(--bg-body);
   border-radius: 50%;
   border: 1px solid var(--border-color);
 }
@@ -1276,13 +1215,6 @@ body {
   font-weight: 500;
 }
 
-/* =========================================
-   NEW CUSTOMER FLIGHT STATUS CSS
-   ========================================= */
-
-/* --------------------------------------
-   DESIGN 1: AIRCRAFT & AMENITIES (Split Design)
-   -------------------------------------- */
 .aircraft-card {
   display: flex;
   background: var(--bg-white);
@@ -1354,11 +1286,8 @@ body {
   color: var(--text-gray);
 }
 
-/* --------------------------------------
-   DESIGN 2: LIVE RADAR MAP (Dark Tech Design)
-   -------------------------------------- */
 .live-map-card {
-  background: #1f2937; /* Dark Slate background */
+  background: #1f2937;
   border-radius: 16px;
   padding: 30px;
   position: relative;
@@ -1367,7 +1296,6 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Subtle dot grid overlay for map feel */
 .live-map-card::before {
   content: "";
   position: absolute;
@@ -1425,10 +1353,9 @@ body {
   align-items: center;
 }
 
-/* Moving plane icon */
 .map-plane-icon {
   position: absolute;
-  left: 65%; /* Represents 65% of journey completed */
+  left: 65%;
   transform: translateX(-50%);
   color: white;
   font-size: 28px;
@@ -1474,11 +1401,7 @@ body {
   font-size: 16px;
   color: white;
 }
-/* =========================================
-       FIXED MOBILE RESPONSIVENESS (Flight Status)
-       ========================================= */
 @media screen and (max-width: 768px) {
-  /* Fix for Aircraft Info Image section */
   .aircraft-card {
     flex-direction: column;
   }
@@ -1518,7 +1441,7 @@ body {
   }
 
   .map-stat-box strong {
-    font-size: 13px; /* Text size-a chinnathaakki overlap aagama irukka fix panniruken */
+    font-size: 13px;
   }
 
   .map-stat-box span {
@@ -1527,9 +1450,6 @@ body {
   }
 }
 
-/* --------------------------------------
-   DESIGN 1: TRAVEL INSURANCE (Glow Card)
-   -------------------------------------- */
 .safety-card {
   position: relative;
   background: #1e293b;
@@ -1577,7 +1497,6 @@ body {
   opacity: 0.8;
 }
 
-/* Desktop-la tag and button side-by-side vara */
 .safety-right {
   display: flex;
   align-items: center;
@@ -1591,10 +1510,9 @@ body {
   border-radius: 20px;
   font-size: 12px;
   display: inline-block;
-  white-space: nowrap; /* Text wrap aagama irukka */
+  white-space: nowrap;
 }
 
-/* Button Color and Hover effect */
 .safety-card .btn-text {
   color: var(--primary-orange) !important;
   border-bottom: 1px solid var(--primary-orange) !important;
@@ -1608,9 +1526,6 @@ body {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* --------------------------------------
-   DESIGN 2: LOYALTY HUB (Radial Progress)
-   -------------------------------------- */
 .loyalty-container {
   background: var(--bg-white);
   padding: 25px;
@@ -1639,7 +1554,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0; /* Circle mobile-la amungaama irukka ithu romba mukkiyam */
+  flex-shrink: 0;
 }
 .radial-inner {
   font-weight: bold;
@@ -1677,19 +1592,18 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Mobile Fixes for Passes New Sections */
   .safety-content {
     flex-direction: column;
-    align-items: flex-start; /* Align left */
+    align-items: flex-start;
     gap: 20px;
   }
 
   .safety-left {
-    flex-direction: row; /* Icon and text side-by-side */
+    flex-direction: row;
   }
 
   .safety-right {
-    flex-direction: column; /* Badge and button stack vertically */
+    flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
@@ -1700,7 +1614,7 @@ body {
   }
 
   .loyalty-box {
-    flex-direction: row; /* Circle and text side-by-side */
+    flex-direction: row;
     border-bottom: 1px dashed var(--border-color);
     padding-bottom: 20px;
     margin-bottom: 10px;
@@ -1713,13 +1627,6 @@ body {
   }
 }
 
-/* =========================================
-   NEW CUSTOMER SETTINGS SECTIONS CSS
-   ========================================= */
-
-/* --------------------------------------
-   DESIGN 1: SAVED PAYMENT METHODS (Credit Card)
-   -------------------------------------- */
 .payment-cards-wrapper {
   display: flex;
   gap: 25px;
@@ -1745,7 +1652,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* Glass reflection effect */
 .premium-cc-card::before {
   content: "";
   position: absolute;
@@ -1850,7 +1756,6 @@ body {
   color: white;
 }
 
-/* Add New Card Box */
 .add-new-card {
   background: var(--bg-body);
   border: 2px dashed #cbd5e1;
@@ -1895,9 +1800,6 @@ body {
   font-size: 12px;
 }
 
-/* --------------------------------------
-   DESIGN 2: TRAVEL PREFERENCES
-   -------------------------------------- */
 .preferences-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1952,9 +1854,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* =========================================
-       MOBILE FIXES FOR SETTINGS NEW SECTIONS
-       ========================================= */
   .payment-cards-wrapper {
     flex-direction: column;
     align-items: center;
@@ -1972,7 +1871,7 @@ body {
   }
 
   .cc-delete-btn {
-    opacity: 1; /* Mobile-la hover panna mudiyathu, so eppavume delete button theriya vekirathu nallathu */
+    opacity: 1;
     background: var(--danger-red);
     color: white;
   }
@@ -1982,35 +1881,27 @@ body {
   }
 }
 
-
-/* =========================================
-   SEARCH VALIDATION CSS
-   ========================================= */
 .flight-error-text {
-    color: var(--danger-red);
-    font-size: 13px;
-    font-weight: 500;
-    margin-top: 8px;
-    display: none; /* Default ah hide aagirukkum */
+  color: var(--danger-red);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+  display: none;
 }
 
-/* Input box border red aaga */
 .search-box input.error-border {
-    border-color: var(--danger-red) !important;
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  border-color: var(--danger-red) !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
-
-
 
 .permanent-profile-pic {
-    width: 45px; 
-    height: 45px;
-    border-radius: 50%; /* Makes it a circle */
-    object-fit: cover; /* Prevents the image from stretching */
-    border: 2px solid #eaeaea; /* Optional: adds a subtle border */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eaeaea;
 }
 
-
-.logo{
+.logo {
   width: 138px;
 }
