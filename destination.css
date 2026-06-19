@@ -1,4 +1,3 @@
-
 :root {
   --primary-orange: #ff7a00;
   --white: #ffffff;
@@ -103,7 +102,7 @@ body {
   font-weight: 800;
   margin-bottom: 15px;
   line-height: 1.2;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .hero-subtitle {
@@ -317,13 +316,13 @@ body {
     padding-bottom: 60px;
   }
   .content-container {
-    padding: 10px 15px; 
+    padding: 10px 15px;
   }
   .glass-box {
     padding: 30px 20px;
   }
   .hero-title {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
   }
   .hero-subtitle {
     font-size: 0.95rem;
@@ -336,7 +335,7 @@ body {
   }
 
   .hero-stats {
-    gap: 8px; 
+    gap: 8px;
     margin-bottom: 25px;
   }
   .stat-item h3 {
@@ -350,7 +349,7 @@ body {
   }
 
   .btn-group {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 12px;
     width: 100%;
   }
@@ -376,7 +375,7 @@ body {
 
 .top-destinations {
   padding: 50px 5%;
-  background-color: #fcfcfc; 
+  background-color: #fcfcfc;
   overflow: hidden;
 }
 
@@ -466,7 +465,7 @@ body {
   width: 100%;
   padding: 25px;
   color: var(--white);
-  transform: translateY(65px); 
+  transform: translateY(65px);
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -593,7 +592,7 @@ body {
   .destinations-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 25px; 
+    gap: 25px;
   }
 
   .dest-card {
@@ -622,7 +621,7 @@ body {
   }
 
   .large-card .card-content {
-    padding: 25px 20px !important; 
+    padding: 25px 20px !important;
   }
 
   .card-content h3 {
@@ -636,7 +635,7 @@ body {
   .card-meta {
     opacity: 1;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 8px 20px;
     margin-bottom: 15px;
@@ -665,7 +664,6 @@ body {
     opacity: 1;
   }
 }
-
 
 .destination-categories {
   padding: 50px 5%;
@@ -712,8 +710,8 @@ body {
 .hex-wrapper {
   position: relative;
   height: 250px;
-  perspective: 1000px; 
-  
+  perspective: 1000px;
+
   filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.18));
   cursor: pointer;
   transition: filter 0.4s ease;
@@ -757,7 +755,7 @@ body {
 .hex-back {
   background: var(--primary-orange);
   color: var(--white);
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg);
 }
 
 .hex-icon {
@@ -820,7 +818,7 @@ body {
 
   .honeycomb-container {
     grid-template-columns: 1fr;
-    gap: 25px; 
+    gap: 25px;
     max-width: 280px;
     margin: 0 auto;
     padding-bottom: 20px;
@@ -859,10 +857,9 @@ body {
   }
 }
 
-
 .popular-countries {
   padding: 50px 5%;
-  background-color: #f9f9f9; 
+  background-color: #f9f9f9;
 }
 
 .countries-header {
@@ -876,7 +873,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .sticky-left {
@@ -893,7 +890,7 @@ body {
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   position: relative;
-  background-color: #000; 
+  background-color: #000;
 }
 
 #sticky-img {
@@ -929,7 +926,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   border-left: 5px solid transparent;
   transition: all 0.4s ease;
-  opacity: 1; 
+  opacity: 1;
   transform: translateX(30px);
 }
 
@@ -1003,8 +1000,8 @@ body {
     padding: 25px;
     opacity: 1;
     transform: translateX(0);
-    border-left: none; 
-    border-bottom: 4px solid var(--primary-orange); 
+    border-left: none;
+    border-bottom: 4px solid var(--primary-orange);
   }
 
   .mobile-card-img {
@@ -1031,7 +1028,6 @@ body {
   }
 }
 
-
 .luxury-escapes-alt {
   padding: 50px 5%;
   background-color: var(--white);
@@ -1047,7 +1043,7 @@ body {
   display: flex;
   width: 100%;
   max-width: 1200px;
-  height: 550px; 
+  height: 550px;
   margin: 0 auto;
   gap: 15px;
 }
@@ -1060,7 +1056,7 @@ body {
   border-radius: 40px;
   color: var(--white);
   cursor: pointer;
-  flex: 1; 
+  flex: 1;
   position: relative;
   transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   overflow: hidden;
@@ -1080,7 +1076,7 @@ body {
 }
 
 .panel.active {
-  flex: 6; 
+  flex: 6;
   border-radius: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -1096,7 +1092,7 @@ body {
   right: 40px;
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s ease 0.3s; 
+  transition: all 0.6s ease 0.3s;
   z-index: 2;
 }
 
@@ -1158,7 +1154,7 @@ body {
 }
 
 .panel.active .collapsed-title {
-  opacity: 0; 
+  opacity: 0;
 }
 
 @media (max-width: 992px) {
@@ -1180,7 +1176,7 @@ body {
 
   .expanding-container {
     flex-direction: column;
-    height: 85vh; 
+    height: 85vh;
     gap: 10px;
   }
 
@@ -1190,7 +1186,7 @@ body {
   }
 
   .panel.active {
-    flex: 7; 
+    flex: 7;
     border-radius: 20px;
   }
 
@@ -1209,7 +1205,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 15px;
-    -webkit-line-clamp: 4; 
+    -webkit-line-clamp: 4;
   }
 
   .panel-btn {
@@ -1218,7 +1214,7 @@ body {
   }
 
   .collapsed-title {
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
     left: 50%;
     bottom: 50%;
     transform: translate(-50%, 50%);
@@ -1226,7 +1222,6 @@ body {
     letter-spacing: 1px;
   }
 }
-
 
 .famous-landmarks {
   padding: 50px 5%;
@@ -1257,7 +1252,7 @@ body {
 .flip-card {
   background-color: transparent;
   height: 450px;
-  perspective: 1000px; 
+  perspective: 1000px;
   cursor: pointer;
 }
 
@@ -1321,7 +1316,6 @@ body {
 }
 
 .glass-neon {
-
   background: rgba(30, 30, 30, 0.4);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -1381,7 +1375,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  
+
   box-shadow: 0 0 10px rgba(255, 122, 0, 0.3);
 }
 
@@ -1394,7 +1388,7 @@ body {
 
 @media (max-width: 1024px) {
   .landmarks-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1408,7 +1402,7 @@ body {
   }
 
   .landmarks-grid {
-    grid-template-columns: 1fr; /* 1 Column Line by Line on Mobile */
+    grid-template-columns: 1fr;
     gap: 25px;
   }
 
@@ -1435,13 +1429,9 @@ body {
   }
 }
 
-/* ==========================================================
-   7️⃣ AROUND THE WORLD GALLERY (MASONRY)
-   ========================================================== */
-
 .world-gallery {
   padding: 50px 5%;
-  background-color: #ffffff; /* Clean white background */
+  background-color: #ffffff;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -1468,7 +1458,6 @@ body {
   color: #64748b;
 }
 
-/* --- MASONRY LAYOUT --- */
 .masonry-grid {
   column-count: 3;
   column-gap: 20px;
@@ -1481,11 +1470,11 @@ body {
   margin-bottom: 20px;
   border-radius: 20px;
   overflow: hidden;
-  break-inside: avoid; /* Prevents card from breaking across columns */
+  break-inside: avoid;
   border: 2px solid transparent;
   transition: all 0.4s ease;
   cursor: pointer;
-  background: #000; /* Dark background behind image for better fade */
+  background: #000;
 }
 
 .gallery-item img {
@@ -1495,7 +1484,6 @@ body {
   opacity: 0.9;
 }
 
-/* Shine Effect Base */
 .gallery-item::before {
   content: "";
   position: absolute;
@@ -1515,11 +1503,9 @@ body {
   pointer-events: none;
 }
 
-/* --- THE OVERLAY & CONTENT --- */
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  /* Gradient from dark bottom to transparent top */
   background: linear-gradient(
     to top,
     rgba(15, 23, 42, 0.95) 0%,
@@ -1528,7 +1514,7 @@ body {
   backdrop-filter: blur(0px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Aligns content to bottom */
+  justify-content: flex-end;
   padding: 30px;
   opacity: 0;
   transition: all 0.5s ease;
@@ -1542,7 +1528,7 @@ body {
   margin: 0 0 10px 0;
   transform: translateY(20px);
   opacity: 0;
-  transition: all 0.4s ease 0.1s; /* Starts moving first */
+  transition: all 0.4s ease 0.1s;
 }
 
 .gallery-content p {
@@ -1552,20 +1538,20 @@ body {
   margin: 0 0 15px 0;
   transform: translateY(20px);
   opacity: 0;
-  transition: all 0.4s ease 0.2s; /* Delayed a bit */
+  transition: all 0.4s ease 0.2s;
 }
 
 .gallery-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #f97316; /* Orange text */
+  color: #f97316;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   transform: translateY(20px);
   opacity: 0;
-  transition: all 0.4s ease 0.3s; /* Delayed the most */
+  transition: all 0.4s ease 0.3s;
 }
 
 .gallery-link i {
@@ -1573,33 +1559,31 @@ body {
 }
 
 .gallery-link:hover {
-  color: #fbbf24; /* Turns gold on hover */
+  color: #fbbf24;
 }
 
 .gallery-link:hover i {
   transform: translateX(5px);
 }
 
-/* --- HOVER EFFECTS --- */
 .gallery-item:hover {
-  border-color: rgba(249, 115, 22, 0.5); /* Orange border */
+  border-color: rgba(249, 115, 22, 0.5);
   box-shadow: 0 15px 30px rgba(249, 115, 22, 0.2);
 }
 
 .gallery-item:hover img {
-  transform: scale(1.08); /* Zoom effect */
+  transform: scale(1.08);
 }
 
 .gallery-item:hover::before {
-  left: 100%; /* Shine effect trigger */
+  left: 100%;
 }
 
 .gallery-item:hover .gallery-overlay {
   opacity: 1;
-  backdrop-filter: blur(3px); /* Gentle blur overlay */
+  backdrop-filter: blur(3px);
 }
 
-/* Slide content up on hover */
 .gallery-item:hover .gallery-content h3,
 .gallery-item:hover .gallery-content p,
 .gallery-item:hover .gallery-link {
@@ -1607,7 +1591,6 @@ body {
   opacity: 1;
 }
 
-/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 992px) {
   .masonry-grid {
     column-count: 2;
@@ -1625,7 +1608,6 @@ body {
     column-count: 1;
   }
 
-  /* Ensure overlay and content are ALWAYS visible on mobile */
   .gallery-overlay {
     opacity: 1;
     background: linear-gradient(
@@ -1644,18 +1626,13 @@ body {
   }
 
   .gallery-content p {
-    font-size: 13px; /* Slightly smaller text for mobile */
+    font-size: 13px;
   }
 
-  /* Disable hover animations on mobile to prevent glitches */
   .gallery-item:hover img {
     transform: none;
   }
 }
-
-/* ==========================================================
-   8️⃣ HIDDEN GEMS (EDITORIAL OFFSET GRID)
-   ========================================================== */
 
 .hidden-gems-section {
   padding: 50px 5%;
@@ -1665,10 +1642,9 @@ body {
 
 .hg-header {
   text-align: center;
-  margin-bottom: 80px; /* Extra space for staggered grid */
+  margin-bottom: 80px;
 }
 
-/* --- THE OFFSET GRID --- */
 .hg-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1677,18 +1653,15 @@ body {
   margin: 0 auto;
 }
 
-/* Push every second item down to create the Zig-Zag / Stagger effect */
 .hg-stagger {
   transform: translateY(80px);
 }
 
-/* --- THE INDIVIDUAL ITEM --- */
 .hg-item {
   position: relative;
-  padding-bottom: 50px; /* Space for the overlapping box */
+  padding-bottom: 50px;
 }
 
-/* Image Wrapper */
 .hg-img-wrap {
   width: 85%;
   height: 400px;
@@ -1705,7 +1678,6 @@ body {
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Country Tag on Image */
 .hg-tag {
   position: absolute;
   top: 20px;
@@ -1721,7 +1693,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* --- OVERLAPPING CONTENT BOX --- */
 .hg-info-box {
   position: absolute;
   bottom: 0;
@@ -1779,15 +1750,14 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* --- 🔥 HOVER EFFECTS --- */
 .hg-item:hover .hg-img-wrap img {
-  transform: scale(1.1); /* Image zooms */
+  transform: scale(1.1);
 }
 
 .hg-item:hover .hg-info-box {
-  transform: translateY(-10px); /* Box lifts up */
+  transform: translateY(-10px);
   border-color: rgba(249, 115, 22, 0.2);
-  box-shadow: 0 25px 50px rgba(249, 115, 22, 0.15); /* Orange tinted shadow */
+  box-shadow: 0 25px 50px rgba(249, 115, 22, 0.15);
 }
 
 .hg-item:hover .hg-icon {
@@ -1804,7 +1774,6 @@ body {
   transform: translateX(5px);
 }
 
-/* --- 📱 MOBILE RESPONSIVENESS (100% Adaptive) --- */
 @media (max-width: 992px) {
   .hg-info-box {
     width: 85%;
@@ -1818,44 +1787,37 @@ body {
   }
 
   .hg-grid {
-    grid-template-columns: 1fr; /* Switch to 1 column */
-    gap: 60px; /* Give breathing room between items */
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 
-  /* Remove the stagger on mobile */
   .hg-stagger {
     transform: translateY(0);
   }
 
   .hg-img-wrap {
-    width: 100%; /* Image takes full width */
+    width: 100%;
     height: 300px;
   }
 
   .hg-info-box {
     width: 90%;
-    /* Center the box and pull it up to overlap */
     left: 50%;
     transform: translateX(-50%);
     bottom: -30px;
     padding: 25px 20px;
   }
 
-  /* Adjust hover for mobile touch */
   .hg-item:hover .hg-info-box {
-    transform: translate(-50%, -10px); /* Keep X centering while lifting Y */
+    transform: translate(-50%, -10px);
   }
 }
 
-/* ==========================================================
-   9️⃣ SEASONAL DESTINATIONS (STACKED FLOATING CARDS)
-   ========================================================== */
-
 .seasonal-section {
   padding: 50px 5%;
-  background-color: #f8fafc; /* Very light gray to contrast with white cards */
+  background-color: #f8fafc;
   font-family: "Plus Jakarta Sans", sans-serif;
-  overflow: hidden; /* Prevent horizontal scroll from spreading cards */
+  overflow: hidden;
 }
 
 .seas-header {
@@ -1863,38 +1825,31 @@ body {
   margin-bottom: 80px;
 }
 
-/* --- THE STACK CONTAINER --- */
 .seas-stack-container {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
-  /* Spreads cards out slightly when hovering over the container */
   transition: all 0.5s ease;
 }
 
 .seas-stack-container:hover .seas-card {
-  /* When user hovers over the section, push cards slightly apart so they are easier to see */
   margin-left: -20px;
 }
 
-/* --- THE CARD --- */
 .seas-card {
   position: relative;
   width: 280px;
   height: 420px;
   border-radius: 24px;
-  /* Negative margin creates the overlap effect */
   margin-left: -50px;
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: -10px 10px 30px rgba(15, 23, 42, 0.15); /* Shadow on left side for 3D stack feel */
+  box-shadow: -10px 10px 30px rgba(15, 23, 42, 0.15);
   cursor: pointer;
-  /* Default Z-index logic */
   z-index: 1;
 }
 
-/* Make sure the first card doesn't have a negative left margin */
 .seas-card:first-child {
   margin-left: 0;
 }
@@ -1909,18 +1864,16 @@ body {
   z-index: 4;
 }
 
-/* --- 🔥 HOVER EFFECTS --- */
 .seas-card:hover {
-  transform: translateY(-25px) rotate(2deg); /* Lifts up and tilts slightly */
-  z-index: 10 !important; /* Brings it to the absolute front */
-  box-shadow: 0 30px 60px rgba(249, 115, 22, 0.2); /* Deep orange shadow */
-  margin-right: 30px; /* Pushes the next card away slightly */
+  transform: translateY(-25px) rotate(2deg);
+  z-index: 10 !important;
+  box-shadow: 0 30px 60px rgba(249, 115, 22, 0.2);
+  margin-right: 30px;
 }
 
-/* --- GRADIENT GLOW BORDER (Hidden by default) --- */
 .seas-glow-border {
   position: absolute;
-  inset: -3px; /* Slightly larger than the card */
+  inset: -3px;
   border-radius: 26px;
   background: linear-gradient(135deg, #f97316, #fbbf24, #ec4899);
   z-index: -1;
@@ -1932,7 +1885,6 @@ body {
   opacity: 1;
 }
 
-/* --- BACKGROUND IMAGE & OVERLAY --- */
 .seas-bg {
   position: absolute;
   inset: 0;
@@ -1944,7 +1896,7 @@ body {
 }
 
 .seas-card:hover .seas-bg {
-  transform: scale(1.05); /* Image zoom on hover */
+  transform: scale(1.05);
 }
 
 .seas-overlay {
@@ -1968,7 +1920,6 @@ body {
   );
 }
 
-/* --- CARD CONTENT --- */
 .seas-content {
   position: absolute;
   bottom: 0;
@@ -2015,7 +1966,6 @@ body {
   margin: 0 0 20px 0;
 }
 
-/* Button hidden initially, slides up on hover */
 .seas-btn {
   display: inline-flex;
   align-items: center;
@@ -2046,8 +1996,6 @@ body {
   transform: translateX(5px);
 }
 
-/* --- 📱 MOBILE RESPONSIVENESS (Vertical Stack) --- */
-
 @media (max-width: 992px) {
   .seas-card {
     width: 220px;
@@ -2061,37 +2009,35 @@ body {
   }
 
   .seas-stack-container {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
     align-items: center;
     padding-bottom: 30px;
   }
 
   .seas-stack-container:hover .seas-card {
-    margin-left: 0; /* Reset desktop hover spread */
+    margin-left: 0;
   }
 
   .seas-card {
     width: 90%;
     max-width: 350px;
-    height: 250px; /* Shorter for vertical stacking */
+    height: 250px;
     margin-left: 0;
-    margin-top: -60px; /* Overlap vertically! */
-    box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.1); /* Shadow shifts to top */
+    margin-top: -60px;
+    box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.1);
   }
 
   .seas-card:first-child {
     margin-top: 0;
   }
 
-  /* Push card up slightly on mobile hover/active */
   .seas-card:hover,
   .seas-card:active {
     transform: translateY(-20px);
     margin-right: 0;
-    margin-bottom: 20px; /* Give breathing room to the card below */
+    margin-bottom: 20px;
   }
 
-  /* Force content to show on mobile (since touch doesn't have true hover) */
   .seas-btn {
     opacity: 1;
     transform: translateY(0);
@@ -2118,14 +2064,10 @@ body {
   }
 }
 
-/* ==========================================================
-   1️⃣1️⃣ PREMIUM CTA SECTION (AURORA THEME)
-   ========================================================== */
-
 .dest-cta-section {
   position: relative;
   padding: 100px 20px 80px 20px;
-  background-color: #0f172a; /* Base Deep Navy */
+  background-color: #0f172a;
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow: hidden;
   display: flex;
@@ -2135,10 +2077,9 @@ body {
   z-index: 1;
 }
 
-/* --- WAVE DIVIDER --- */
 .dest-wave {
   position: absolute;
-  top: -1px; /* -1px fixes faint rendering lines */
+  top: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -2152,7 +2093,6 @@ body {
   height: 70px;
 }
 
-/* --- ✨ AURORA BACKGROUND ANIMATION --- */
 .aurora-bg {
   position: absolute;
   inset: 0;
@@ -2168,7 +2108,6 @@ body {
   animation: auroraMove 15s infinite alternate ease-in-out;
 }
 
-/* Teal/Blue Blob */
 .a1 {
   top: -10%;
   left: -10%;
@@ -2179,7 +2118,6 @@ body {
   animation-delay: 0s;
 }
 
-/* Deep Purple Blob */
 .a2 {
   bottom: -20%;
   right: -10%;
@@ -2190,7 +2128,6 @@ body {
   animation-delay: -5s;
 }
 
-/* Orange/Gold Blob */
 .a3 {
   top: 30%;
   left: 40%;
@@ -2213,7 +2150,6 @@ body {
   }
 }
 
-/* --- ⭐ PARTICLES / STARS --- */
 .dest-particles {
   position: absolute;
   inset: 0;
@@ -2283,13 +2219,12 @@ body {
   }
 }
 
-/* --- ✈️ FLOATING AIRPLANE --- */
 .dest-floating-plane {
   position: absolute;
   top: 25%;
   right: 5%;
   font-size: 120px;
-  color: rgba(255, 255, 255, 0.03); /* Large faint watermark icon */
+  color: rgba(255, 255, 255, 0.03);
   z-index: 2;
   animation: planeHover 6s ease-in-out infinite;
   transform-origin: center;
@@ -2307,7 +2242,6 @@ body {
   }
 }
 
-/* --- 💎 GLASSMORPHISM CARD --- */
 .dest-cta-container {
   position: relative;
   z-index: 10;
@@ -2316,7 +2250,7 @@ body {
 }
 
 .dest-glass-card {
-  background: rgba(255, 255, 255, 0.05); /* Highly transparent white */
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 32px;
@@ -2364,7 +2298,6 @@ body {
   margin: 0 auto 40px auto;
 }
 
-/* --- ✨ SHINE EFFECT BUTTON --- */
 .dest-shine-btn {
   position: relative;
   overflow: hidden;
@@ -2388,7 +2321,6 @@ body {
   box-shadow: 0 15px 35px rgba(249, 115, 22, 0.7);
 }
 
-/* The sweeping shine element */
 .dest-shine-btn::before {
   content: "";
   position: absolute;
@@ -2426,7 +2358,6 @@ body {
   transform: translateX(6px) rotate(15deg);
 }
 
-/* --- 📱 MOBILE RESPONSIVENESS --- */
 @media (max-width: 992px) {
   .dest-card-content h2 {
     font-size: 42px;
@@ -2463,12 +2394,11 @@ body {
     font-size: 70px;
     top: 15%;
     right: 5%;
-    opacity: 0.5; /* Reduce visibility slightly on mobile to avoid text clash */
+    opacity: 0.5;
   }
 }
 
-
-.home{
+.home {
   color: white;
   text-decoration: none;
 }

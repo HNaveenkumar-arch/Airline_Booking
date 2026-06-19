@@ -1,10 +1,7 @@
-/* =========================================
-   FLIGHTS PAGE: HERO SECTION
-   ========================================= */
 .flights-hero-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full screen height */
+  height: 100vh;
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -13,7 +10,6 @@
   background-color: #020617;
 }
 
-/* --- BACKGROUND & OVERLAY --- */
 .fh-bg-image {
   position: absolute;
   top: 0;
@@ -49,7 +45,6 @@
   z-index: 2;
 }
 
-/* --- AURORA GRADIENT GLOW --- */
 .fh-aurora {
   position: absolute;
   border-radius: 50%;
@@ -62,7 +57,7 @@
 .fh-orb-1 {
   width: 500px;
   height: 500px;
-  background: rgba(249, 115, 22, 0.3); /* Orange glow */
+  background: rgba(249, 115, 22, 0.3);
   top: -100px;
   left: -100px;
 }
@@ -70,7 +65,7 @@
 .fh-orb-2 {
   width: 600px;
   height: 600px;
-  background: rgba(56, 189, 248, 0.2); /* Soft Blue glow */
+  background: rgba(56, 189, 248, 0.2);
   bottom: -150px;
   right: -100px;
   animation-delay: -3s;
@@ -85,7 +80,6 @@
   }
 }
 
-/* --- PARALLAX CLOUDS --- */
 .fh-clouds-container {
   position: absolute;
   bottom: 0;
@@ -94,7 +88,7 @@
   height: 40%;
   z-index: 4;
   pointer-events: none;
-  opacity: 0.4; /* Soft blending */
+  opacity: 0.4;
 }
 
 .fh-cloud {
@@ -127,7 +121,6 @@
   }
 }
 
-/* --- GLASSMORPHISM CARD --- */
 .fh-content-container {
   position: relative;
   z-index: 10;
@@ -152,7 +145,6 @@
   margin-top: 40px;
 }
 
-/* --- BREADCRUMB --- */
 .fh-breadcrumb {
   display: inline-flex;
   align-items: center;
@@ -184,7 +176,6 @@
   color: var(--primary-orange);
 }
 
-/* --- FLOATING AIRPLANE --- */
 .fh-plane-wrap {
   margin-bottom: 20px;
 }
@@ -206,7 +197,6 @@
   }
 }
 
-/* --- TITLE & SUBTITLE --- */
 .fh-title {
   color: #ffffff;
   font-size: 48px;
@@ -224,7 +214,6 @@
   margin: 0 auto;
 }
 
-/* Text Gradient utility */
 .text-gradient {
   background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   -webkit-background-clip: text;
@@ -232,7 +221,6 @@
   background-clip: text;
 }
 
-/* --- BUTTONS GROUP --- */
 .fh-btn-group {
   display: flex;
   align-items: center;
@@ -254,7 +242,6 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Primary Button (Orange Gradient) */
 .btn-primary {
   background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: #ffffff;
@@ -267,7 +254,6 @@
   box-shadow: 0 15px 35px rgba(249, 115, 22, 0.5);
 }
 
-/* Outline Button (Glassy White) */
 .btn-outline {
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
@@ -282,9 +268,6 @@
   transform: translateY(-4px);
 }
 
-/* =========================================
-   MOBILE RESPONSIVE ENGINE (100% ADAPTIVE)
-   ========================================= */
 @media (max-width: 992px) {
   .fh-title {
     font-size: 40px;
@@ -294,7 +277,7 @@
 @media (max-width: 768px) {
   .flights-hero-section {
     height: auto;
-    padding: 120px 0 80px; /* Space for mobile nav */
+    padding: 120px 0 80px;
   }
 
   .fh-glass-card {
@@ -323,24 +306,20 @@
   }
 
   .fh-btn-group {
-    flex-direction: column; /* Stacks buttons one below another */
+    flex-direction: column;
     gap: 15px;
     margin-top: 25px;
   }
 
   .fh-btn {
-    width: 100%; /* Full width on mobile */
+    width: 100%;
     padding: 15px 20px;
   }
 }
 
-/* =========================================
-   FLIGHTS PAGE: FEATURED DESTINATIONS (DETAILED)
-   ========================================= */
-
 .featured-destinations-section {
   padding: 50px 0;
-  background-color: #f8fafc; /* Clean light background */
+  background-color: #f8fafc;
   overflow: hidden;
 }
 
@@ -356,14 +335,12 @@
   margin-top: 10px;
 }
 
-/* --- INFINITE MARQUEE --- */
 .marquee-wrapper {
   position: relative;
   width: 100%;
   padding: 20px 0;
 }
 
-/* Fade edges */
 .marquee-wrapper::before,
 .marquee-wrapper::after {
   content: "";
@@ -379,7 +356,7 @@
   display: flex;
   width: max-content;
   gap: 30px;
-  animation: marqueeDest 40s linear infinite; /* Slightly slower for readability */
+  animation: marqueeDest 40s linear infinite;
   padding: 10px 0;
 }
 
@@ -396,11 +373,10 @@
   }
 }
 
-/* --- DESTINATION CARDS (TALLER HEIGHT) --- */
 .dest-card-v2 {
   position: relative;
   width: 330px;
-  height: 480px; /* Increased height for extra content */
+  height: 480px;
   border-radius: 24px;
   overflow: hidden;
   cursor: pointer;
@@ -419,7 +395,6 @@
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Gradient covers more area to make large text readable */
 .dest-overlay-v2 {
   position: absolute;
   top: 0;
@@ -436,7 +411,6 @@
   z-index: 1;
 }
 
-/* --- BADGES --- */
 .dest-badge {
   position: absolute;
   top: 20px;
@@ -460,7 +434,6 @@
   background: #10b981;
 }
 
-/* --- HOVER EFFECTS --- */
 .dest-card-v2:hover .dest-bg-v2 {
   transform: scale(1.1);
 }
@@ -474,7 +447,6 @@
   );
 }
 
-/* --- SLIDE-UP CONTENT --- */
 .dest-content-v2 {
   position: absolute;
   bottom: 0;
@@ -486,7 +458,6 @@
 }
 
 .dest-slide-wrap {
-  /* Push content down more because there's more hidden data now */
   transform: translateY(135px);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -505,12 +476,11 @@
   line-height: 1.5;
   margin: 0 0 15px 0;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Truncates long text to 2 lines */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* Hidden Details */
 .dest-hidden-details {
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -568,7 +538,6 @@
   box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
 }
 
-/* On Card Hover -> Push content up and fade in details */
 .dest-card-v2:hover .dest-slide-wrap {
   transform: translateY(0);
 }
@@ -577,9 +546,6 @@
   opacity: 1;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE ENGINE (100% ADAPTIVE)
-   ========================================= */
 @media (max-width: 992px) {
   .dest-card-v2 {
     width: 300px;
@@ -622,19 +588,13 @@
     font-size: 12px;
   }
 
-  /* For Mobile: Reduce transform so at least some text is visible initially */
   .dest-slide-wrap {
     transform: translateY(115px);
   }
 }
 
-/* =========================================
-   FLIGHTS PAGE: MODERN TICKET GRID (ORANGE THEME)
-   ========================================= */
-
 .modern-routes-section {
   padding: 50px 20px;
-  /* Light Orange / Peach Gradient Background */
   background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -648,7 +608,6 @@
   font-size: 42px;
   font-weight: 800;
   margin-bottom: 10px;
-  /* 🔥 Orange Gradient Text Effect */
   background: linear-gradient(to right, #f97316, #c2410c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -662,7 +621,6 @@
   margin: 0 auto;
 }
 
-/* --- GRID LAYOUT --- */
 .mr-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -671,11 +629,10 @@
   margin: 0 auto;
 }
 
-/* --- TICKET CARD DESIGN --- */
 .mr-card {
   background: #ffffff;
   border-radius: 24px;
-  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.05); /* Orange tinted shadow */
+  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.05);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   overflow: hidden;
@@ -685,10 +642,9 @@
 
 .mr-card:hover {
   transform: translateY(-15px);
-  box-shadow: 0 25px 50px rgba(249, 115, 22, 0.15); /* Stronger orange shadow on hover */
+  box-shadow: 0 25px 50px rgba(249, 115, 22, 0.15);
 }
 
-/* Image Header */
 .mr-image {
   height: 220px;
   background-size: cover;
@@ -701,7 +657,7 @@
   top: 20px;
   left: 20px;
   background: rgba(255, 255, 255, 0.9);
-  color: #ea580c; /* Dark Orange */
+  color: #ea580c;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 13px;
@@ -709,14 +665,12 @@
   backdrop-filter: blur(5px);
 }
 
-/* Card Content Area */
 .mr-content {
   padding: 30px;
   position: relative;
   background: #ffffff;
 }
 
-/* The Ticket Cut-out Effect */
 .mr-content::before,
 .mr-content::after {
   content: "";
@@ -724,7 +678,7 @@
   top: -20px;
   width: 40px;
   height: 40px;
-  background: #ffedd5; /* Matches new section background */
+  background: #ffedd5;
   border-radius: 50%;
 }
 
@@ -736,7 +690,6 @@
   right: -20px;
 }
 
-/* Route Information */
 .mr-route {
   display: flex;
   justify-content: space-between;
@@ -751,12 +704,11 @@
 }
 
 .mr-flight-icon {
-  color: #f97316; /* Bright Orange */
+  color: #f97316;
   font-size: 20px;
   position: relative;
 }
 
-/* Dashed line behind the plane icon */
 .mr-flight-icon::before {
   content: "";
   position: absolute;
@@ -784,14 +736,12 @@
   margin-bottom: 25px;
 }
 
-/* Divider */
 .mr-divider {
   border: none;
   border-top: 2px dashed #e2e8f0;
   margin: 20px 0;
 }
 
-/* Footer / Price / Action */
 .mr-footer {
   display: flex;
   justify-content: space-between;
@@ -808,7 +758,7 @@
 }
 
 .mr-airline i {
-  color: #f97316; /* Bright Orange */
+  color: #f97316;
 }
 
 .mr-price-wrap {
@@ -824,12 +774,12 @@
 .mr-price {
   font-size: 24px;
   font-weight: 800;
-  color: #f97316; /* Bright Orange */
+  color: #f97316;
 }
 
 .mr-book-btn {
   width: 100%;
-  background: #f97316; /* Bright Orange Button */
+  background: #f97316;
   color: #ffffff;
   border: none;
   padding: 14px;
@@ -842,12 +792,9 @@
 }
 
 .mr-card:hover .mr-book-btn {
-  background: #ea580c; /* Darker Orange on Hover */
+  background: #ea580c;
 }
 
-/* =========================================
-   MOBILE RESPONSIVENESS
-   ========================================= */
 @media (max-width: 768px) {
   .modern-routes-section {
     padding: 60px 20px;
@@ -865,7 +812,7 @@
 
 .cabin-classes-section {
   padding: 50px 20px;
-  background: #0f172a; /* Deep Premium Navy */
+  background: #0f172a;
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow: hidden;
 }
@@ -878,7 +825,6 @@
 .cc-header h2 {
   font-size: 42px;
   font-weight: 800;
-  /* Orange Gradient Heading */
   background: linear-gradient(to right, #f97316, #fbbf24);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -890,17 +836,15 @@
   font-size: 18px;
 }
 
-/* --- GRID LAYOUT --- */
 .cc-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  perspective: 1000px; /* Crucial for 3D effect */
+  perspective: 1000px;
 }
 
-/* --- FLIP CARD CONTAINER --- */
 .cc-flip-card {
   background-color: transparent;
   height: 400px;
@@ -917,24 +861,21 @@
   transform-style: preserve-3d;
 }
 
-/* Hover activates the flip */
 .cc-flip-card:hover .cc-flip-inner {
   transform: rotateY(180deg);
 }
 
-/* --- FRONT & BACK BASICS --- */
 .cc-front,
 .cc-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 20px;
   overflow: hidden;
 }
 
-/* --- GLASSMORPHISM EFFECT --- */
 .cc-glass {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
@@ -942,7 +883,6 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* --- FRONT CARD DESIGN --- */
 .cc-front {
   background-size: cover;
   background-position: center;
@@ -971,7 +911,6 @@
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* --- BACK CARD DESIGN --- */
 .cc-back {
   background: #1e293b;
   transform: rotateY(180deg);
@@ -984,7 +923,6 @@
   position: relative;
 }
 
-/* 🌟 Gradient Glow Border on Hover */
 .cc-glow-border {
   position: absolute;
   inset: 0;
@@ -1036,7 +974,6 @@
   text-align: center;
 }
 
-/* --- PREMIUM BUTTON DESIGN & HOVER --- */
 .cc-btn {
   width: 100%;
   padding: 14px;
@@ -1047,7 +984,6 @@
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  /* Bouncy transition effect */
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-top: auto;
   display: flex;
@@ -1057,28 +993,22 @@
   z-index: 100;
 }
 
-/* Arrow transition */
 .cc-btn i {
   transition: transform 0.3s ease;
 }
 
-/* 🔥 THE HOVER EFFECT */
 .cc-btn:hover {
   background: linear-gradient(135deg, #f97316, #ea580c);
   color: #ffffff;
   border-color: transparent;
-  /* Stronger Orange Glow */
   box-shadow: 0 10px 25px rgba(249, 115, 22, 0.5);
-  /* Lifts up and slightly scales up */
   transform: translateY(-5px) scale(1.02);
 }
 
-/* Arrow moves right on hover */
 .cc-btn:hover i {
   transform: translateX(6px);
 }
 
-/* --- SCROLL REVEAL ANIMATION CLASSES --- */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(60px);
@@ -1090,7 +1020,6 @@
   transform: translateY(0);
 }
 
-/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
   .cabin-classes-section {
     padding: 60px 20px;
@@ -1103,13 +1032,9 @@
   }
 }
 
-/* =========================================
-   EXCLUSIVE DEALS STYLES
-   ========================================= */
-
 .exclusive-deals-section {
   padding: 50px 20px;
-  background: #0f172a; /* Deep Navy Background */
+  background: #0f172a;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -1132,34 +1057,28 @@
   font-size: 18px;
 }
 
-/* --- GRID --- */
 .ed-grid {
   display: grid;
-  /* 2 columns on desktop, adapts to mobile */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 50px 40px; /* More vertical gap for the overlapping content */
+  gap: 50px 40px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* --- THE CARD --- */
 .ed-card {
   position: relative;
   border-radius: 20px;
   cursor: pointer;
-  /* The floating shadow */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-bottom: 30px; /* Space for the overlapping content box */
+  margin-bottom: 30px;
 }
 
-/* 🔥 The Lift Effect */
 .ed-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 30px 60px rgba(249, 115, 22, 0.15); /* Orange glow shadow */
+  box-shadow: 0 30px 60px rgba(249, 115, 22, 0.15);
 }
 
-/* --- IMAGE LAYER --- */
 .ed-image {
   height: 280px;
   background-size: cover;
@@ -1168,7 +1087,6 @@
   position: relative;
 }
 
-/* Dark overlay on image */
 .ed-image::before {
   content: "";
   position: absolute;
@@ -1196,7 +1114,6 @@
   box-shadow: 0 4px 10px rgba(249, 115, 22, 0.4);
 }
 
-/* --- LAYERED CONTENT BOX (THE STACK EFFECT) --- */
 .ed-content {
   background: #1e293b;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -1205,14 +1122,12 @@
   width: 90%;
   margin: 0 auto;
   position: relative;
-  /* This pulls the content box UP over the image */
   margin-top: -60px;
   z-index: 2;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease;
 }
 
-/* Content box glowing border on hover */
 .ed-card:hover .ed-content {
   border-color: rgba(249, 115, 22, 0.4);
   background: #233045;
@@ -1243,7 +1158,6 @@
   font-size: 16px;
 }
 
-/* --- HIDDEN REVEAL SECTION --- */
 .ed-hidden-reveal {
   max-height: 0;
   opacity: 0;
@@ -1251,16 +1165,15 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 🔥 Opens up on Hover */
 .ed-card:hover .ed-hidden-reveal {
-  max-height: 250px; /* High enough to fit the content */
+  max-height: 250px;
   opacity: 1;
   margin-top: 20px;
 }
 
 .ed-discount-badge {
   display: inline-block;
-  color: #fbbf24; /* Yellow Gold */
+  color: #fbbf24;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -1275,7 +1188,6 @@
   margin-bottom: 20px;
 }
 
-/* Premium Button */
 .ed-btn {
   width: 100%;
   background: linear-gradient(135deg, #f97316, #ea580c);
@@ -1298,7 +1210,6 @@
   transform: scale(1.02);
 }
 
-/* --- SCROLL ANIMATION CLASSES --- */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -1310,10 +1221,6 @@
   transform: translateY(0);
 }
 
-/* --- MOBILE RESPONSIVE --- */
-/* =========================================
-   📱 UPGRADED MOBILE RESPONSIVENESS (100% FIXED)
-   ========================================= */
 @media (max-width: 768px) {
   .exclusive-deals-section {
     padding: 50px 15px;
@@ -1329,29 +1236,27 @@
   }
 
   .ed-grid {
-    /* Force single column to avoid side-scrolling */
     grid-template-columns: 1fr;
-    gap: 60px; /* Extra gap between cards */
+    gap: 60px;
   }
 
   .ed-card {
     margin-bottom: 20px;
   }
 
-  /* Disable hover jump effect on mobile for better touch experience */
   .ed-card:hover {
     transform: none;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   }
 
   .ed-image {
-    height: 240px; /* Slightly shorter image */
+    height: 240px;
   }
 
   .ed-content {
-    width: 95%; /* Make content box fit perfectly */
+    width: 95%;
     padding: 20px 15px;
-    margin-top: -50px; /* Perfect overlap */
+    margin-top: -50px;
   }
 
   .ed-title-wrapper h3 {
@@ -1364,35 +1269,28 @@
     font-size: 14px;
   }
 
-  /* 🔥 MOBILE UX FIX: Show details by default on phones */
   .ed-hidden-reveal {
-    max-height: 300px !important; /* Force open */
+    max-height: 300px !important;
     opacity: 1 !important;
     margin-top: 20px !important;
   }
 
-  /* Larger button for easy tapping */
   .ed-btn {
     padding: 14px;
     font-size: 16px;
   }
 }
 
-/* Extra fix for very small devices (e.g., iPhone SE) */
 @media (max-width: 400px) {
   .ed-content {
     width: 100%;
-    border-radius: 0 0 16px 16px; /* Connect seamlessly to the bottom */
+    border-radius: 0 0 16px 16px;
   }
 }
 
-/* =========================================
-   AIRLINE PARTNERS: CSS STYLES (LIGHT / WHITE THEME)
-========================================= */
-
 .airline-partners-section {
   padding: 50px 20px;
-  background: #ffffff; /* Clean White Background */
+  background: #ffffff;
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow: hidden;
 }
@@ -1405,7 +1303,7 @@
 .ap-header h2 {
   font-size: 38px;
   font-weight: 800;
-  /* Orange Gradient Heading */
+
   background: linear-gradient(to right, #f97316, #ea580c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1413,11 +1311,10 @@
 }
 
 .ap-header p {
-  color: #64748b; /* Darker gray for white background */
+  color: #64748b;
   font-size: 16px;
 }
 
-/* --- SLIDER CONTAINER (Fade Edges) --- */
 .ap-slider-container {
   width: 100%;
   max-width: 1200px;
@@ -1425,15 +1322,12 @@
   position: relative;
 }
 
-/* --- THE MOVING TRACK --- */
 .ap-slider-track {
   display: flex;
   width: max-content;
-  /* The CSS Infinite Animation */
   animation: scrollLogos 25s linear infinite;
 }
 
-/* Pause the animation when mouse hovers */
 .ap-slider-track:hover {
   animation-play-state: paused;
 }
@@ -1441,24 +1335,21 @@
 .ap-logo-set {
   display: flex;
   gap: 30px;
-  padding-right: 30px; /* Space between the two sets */
+  padding-right: 30px;
 }
 
-/* Keyframes for Continuous Scroll */
 @keyframes scrollLogos {
   0% {
     transform: translateX(0);
   }
   100% {
-    /* Translates exactly half the track width (Set 1) to loop perfectly */
     transform: translateX(-50%);
   }
 }
 
-/* --- LIGHT THEME CARDS --- */
 .ap-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0; /* Light gray border */
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 0 40px;
   height: 100px;
@@ -1468,7 +1359,7 @@
   justify-content: center;
   gap: 15px;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.03); /* Soft elegant shadow */
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.03);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -1481,29 +1372,27 @@
 .ap-card span {
   font-size: 20px;
   font-weight: 700;
-  color: #334155; /* Dark navy-gray text */
+  color: #334155;
   letter-spacing: 0.5px;
   transition: all 0.4s ease;
 }
 
-/* 🔥 Hover Zoom & Soft Orange Glow Effect */
 .ap-card:hover {
-  transform: scale(1.1) translateY(-5px); /* Zoom and lift up */
-  background: #fff7ed; /* Very light orange tint background */
-  border-color: #f97316; /* Bright Orange Border */
-  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.15); /* Soft orange drop shadow */
+  transform: scale(1.1) translateY(-5px);
+  background: #fff7ed;
+  border-color: #f97316;
+  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.15);
   z-index: 10;
 }
 
 .ap-card:hover i {
-  color: #f97316; /* Icon turns bright orange */
+  color: #f97316;
 }
 
 .ap-card:hover span {
-  color: #ea580c; /* Text turns darker orange for contrast */
+  color: #ea580c;
 }
 
-/* --- SCROLL ANIMATION CLASSES --- */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -1515,7 +1404,6 @@
   transform: translateY(0);
 }
 
-/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
   .airline-partners-section {
     padding: 50px 10px;
@@ -1545,13 +1433,9 @@
   }
 }
 
-/* =========================================
-   FLIGHT EXPERIENCE GALLERY STYLES (WHITE THEME)
-   ========================================= */
-
 .gallery-section {
   padding: 50px 20px;
-  background: #ffffff; /* Clean White Background */
+  background: #ffffff;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -1563,7 +1447,6 @@
 .gal-header h2 {
   font-size: 42px;
   font-weight: 800;
-  /* Stronger Orange Gradient for White Background */
   background: linear-gradient(to right, #f97316, #ea580c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1571,32 +1454,29 @@
 }
 
 .gal-header p {
-  color: #64748b; /* Darker gray for readability on white */
+  color: #64748b;
   font-size: 18px;
 }
 
-/* --- MASONRY LAYOUT (CSS Column Magic) --- */
 .gal-masonry {
   max-width: 1200px;
   margin: 0 auto;
-  column-count: 3; /* Desktop: 3 Columns */
+  column-count: 3;
   column-gap: 25px;
 }
 
 .gal-item {
-  break-inside: avoid; /* Prevents items from splitting across columns */
+  break-inside: avoid;
   margin-bottom: 25px;
   display: inline-block;
   width: 100%;
 }
 
-/* --- IMAGE & OVERLAY WRAPPER --- */
 .gal-image-wrapper {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  /* Soft elegant shadow for light theme */
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
   transition: all 0.5s ease;
 }
@@ -1605,17 +1485,15 @@
   width: 100%;
   display: block;
   border-radius: 20px;
-  /* Smooth zoom and blur transitions */
+
   transition:
     transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.6s ease;
 }
 
-/* --- THE HOVER OVERLAY --- */
 .gal-overlay {
   position: absolute;
   inset: 0;
-  /* Dark gradient overlay so white text is readable over any image */
   background: linear-gradient(
     to top,
     rgba(15, 23, 42, 0.95) 0%,
@@ -1629,19 +1507,15 @@
   transition: opacity 0.5s ease;
 }
 
-/* --- HOVER EFFECTS TRIGGER --- */
-/* 1. Blur and Zoom the Image */
 .gal-item:hover .gal-image-wrapper img {
   transform: scale(1.1);
   filter: blur(5px);
 }
 
-/* 2. Fade in the Overlay */
 .gal-item:hover .gal-overlay {
   opacity: 1;
 }
 
-/* --- CONTENT ANIMATIONS --- */
 .gal-content h3 {
   color: #ffffff;
   font-size: 24px;
@@ -1649,7 +1523,7 @@
   margin: 0 0 10px 0;
   transform: translateY(20px);
   opacity: 0;
-  transition: all 0.4s ease 0.1s; /* Slight delay */
+  transition: all 0.4s ease 0.1s;
 }
 
 .gal-content p {
@@ -1659,12 +1533,12 @@
   margin-bottom: 20px;
   transform: translateY(20px);
   opacity: 0;
-  transition: all 0.4s ease 0.2s; /* More delay */
+  transition: all 0.4s ease 0.2s;
 }
 
 .gal-btn {
   background: transparent;
-  color: #f97316; /* Orange text */
+  color: #f97316;
   border: 2px solid #f97316;
   padding: 10px 20px;
   border-radius: 30px;
@@ -1674,28 +1548,24 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  /* Starts hidden and pushed down */
   transform: translateY(30px);
   opacity: 0;
-  transition: all 0.4s ease 0.3s; /* Max delay for slide-up effect */
+  transition: all 0.4s ease 0.3s;
 }
 
-/* Hover on Button itself */
 .gal-btn:hover {
   background: #f97316;
   color: #ffffff;
   box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
 }
 
-/* Arrow inside button */
 .gal-btn i {
   transition: transform 0.3s ease;
 }
 .gal-btn:hover i {
-  transform: translateY(-3px) translateX(3px); /* Shoots up and right */
+  transform: translateY(-3px) translateX(3px);
 }
 
-/* 3. Bring content up on Card Hover */
 .gal-item:hover .gal-content h3,
 .gal-item:hover .gal-content p,
 .gal-item:hover .gal-btn {
@@ -1703,13 +1573,9 @@
   opacity: 1;
 }
 
-/* --- MOBILE RESPONSIVENESS (100% Adaptive) --- */
-
-/* --- MOBILE RESPONSIVENESS (100% Adaptive & Fixed Content) --- */
-
 @media (max-width: 992px) {
   .gal-masonry {
-    column-count: 2; /* Switch to 2 columns */
+    column-count: 2;
   }
 }
 
@@ -1721,11 +1587,10 @@
     font-size: 32px;
   }
   .gal-masonry {
-    column-count: 1; /* Switch to 1 column */
+    column-count: 1;
     column-gap: 0;
   }
 
-  /* Overlay always visible on mobile */
   .gal-overlay {
     opacity: 1;
     background: linear-gradient(
@@ -1736,7 +1601,6 @@
     padding: 20px;
   }
 
-  /* Force all content to show on mobile */
   .gal-content h3,
   .gal-content p,
   .gal-btn {
@@ -1744,7 +1608,6 @@
     opacity: 1 !important;
   }
 
-  /* Adjusted sizes to fit perfectly on phone screens */
   .gal-content h3 {
     font-size: 22px;
     margin-bottom: 8px;
@@ -1753,7 +1616,7 @@
   .gal-content p {
     font-size: 14px;
     margin-bottom: 15px;
-    display: block; /* Fixed: Show the paragraph */
+    display: block;
   }
 
   .gal-btn {
@@ -1761,22 +1624,17 @@
     font-size: 13px;
   }
 
-  /* Disable hover zoom/blur on mobile to prevent touch glitches */
   .gal-item:hover .gal-image-wrapper img {
     transform: none;
     filter: none;
   }
 }
 
-/* =========================================
-   LUXURY TRAVEL COLLECTIONS (EDITORIAL ZIG-ZAG)
-   ========================================= */
-
 .luxury-editorial-section {
   padding: 50px 20px;
-  background: #f8fafc; /* Very light cool-gray background */
+  background: #f8fafc;
   font-family: "Plus Jakarta Sans", sans-serif;
-  overflow: hidden; /* Prevents horizontal scroll from overlapping elements */
+  overflow: hidden;
 }
 
 .le-header {
@@ -1803,7 +1661,6 @@
   margin: 0 auto;
 }
 
-/* --- THE ROW LAYOUT --- */
 .le-row {
   display: flex;
   align-items: center;
@@ -1814,7 +1671,6 @@
   margin-bottom: 0;
 }
 
-/* --- IMAGE SECTION --- */
 .le-image {
   width: 60%;
   position: relative;
@@ -1832,16 +1688,14 @@
 }
 
 .le-row:hover .le-image img {
-  transform: scale(1.05); /* Gentle zoom on row hover */
+  transform: scale(1.05);
 }
 
-/* --- CONTENT BOX SECTION --- */
 .le-content {
   width: 45%;
   background: #ffffff;
   padding: 50px;
   border-radius: 24px;
-  /* Pull the box left to overlap the image */
   margin-left: -5%;
   z-index: 2;
   position: relative;
@@ -1857,24 +1711,22 @@
   box-shadow: 0 30px 60px rgba(249, 115, 22, 0.12);
 }
 
-/* --- ZIG-ZAG REVERSE LOGIC --- */
 .le-reverse {
   flex-direction: row-reverse;
 }
 
 .le-reverse .le-content {
   margin-left: 0;
-  margin-right: -5%; /* Pull the box right to overlap the image */
+  margin-right: -5%;
 }
 
-/* --- TEXT & TYPOGRAPHY --- */
 .le-number {
   position: absolute;
   top: -30px;
   right: 20px;
   font-size: 120px;
   font-weight: 900;
-  color: rgba(249, 115, 22, 0.05); /* Faint large number */
+  color: rgba(249, 115, 22, 0.05);
   line-height: 1;
   z-index: -1;
 }
@@ -1908,7 +1760,6 @@
   margin-bottom: 30px;
 }
 
-/* --- BUTTON --- */
 .le-btn {
   display: inline-flex;
   align-items: center;
@@ -1944,7 +1795,6 @@
   transform: translateX(5px);
 }
 
-/* --- SCROLL ANIMATION CLASSES --- */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -1955,8 +1805,6 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-/* --- MOBILE RESPONSIVENESS (100% Adaptive) --- */
 
 @media (max-width: 992px) {
   .le-content {
@@ -1976,7 +1824,6 @@
     font-size: 32px;
   }
 
-  /* Stack everything vertically on mobile */
   .le-row,
   .le-reverse {
     flex-direction: column;
@@ -1989,19 +1836,18 @@
   }
 
   .le-image img {
-    height: 250px; /* Shorter image for mobile */
+    height: 250px;
   }
 
   .le-content {
     width: 90%;
-    /* Overlap vertically instead of horizontally */
     margin: -40px auto 0 auto;
     padding: 30px 20px;
     border-radius: 16px;
   }
 
   .le-reverse .le-content {
-    margin: -40px auto 0 auto; /* Reset reverse margin */
+    margin: -40px auto 0 auto;
   }
 
   .le-number {
@@ -2016,13 +1862,9 @@
   }
 }
 
-/* =========================================
-   TOP INTERNATIONAL CITIES (STICKY SCROLL)
-   ========================================= */
-
 .sticky-cities-section {
   padding: 50px 20px;
-  background: #ffffff; /* Clean White Theme */
+  background: #ffffff;
   font-family: "Plus Jakarta Sans", sans-serif;
   position: relative;
 }
@@ -2046,20 +1888,18 @@
   font-size: 18px;
 }
 
-/* --- THE CONTAINER --- */
 .sc-container {
   display: flex;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: flex-start; /* Crucial for sticky layout */
+  align-items: flex-start;
 }
 
-/* --- LEFT SIDE: STICKY IMAGE --- */
 .sc-left {
   width: 50%;
   position: sticky;
-  top: 100px; /* Sticks 100px from top of viewport */
+  top: 100px;
   height: calc(100vh - 150px);
   max-height: 700px;
   min-height: 500px;
@@ -2080,7 +1920,6 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
-  /* Smooth fade and slow zoom effect */
   transition:
     opacity 0.6s ease-in-out,
     transform 6s linear;
@@ -2088,10 +1927,9 @@
   z-index: 1;
 }
 
-/* The Active Image (Revealed by JS) */
 .sc-img.active {
   opacity: 1;
-  transform: scale(1.05); /* Slight zoom in while active */
+  transform: scale(1.05);
   z-index: 2;
 }
 
@@ -2116,13 +1954,12 @@
   letter-spacing: 1px;
 }
 
-/* --- RIGHT SIDE: SCROLLING CARDS --- */
 .sc-right {
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Space between cards */
-  padding-bottom: 50vh; /* Adds padding at the bottom so the last card can reach the top of the screen */
+  gap: 40px;
+  padding-bottom: 50vh;
 }
 
 .sc-card {
@@ -2134,12 +1971,11 @@
   cursor: pointer;
 }
 
-/* The Active Card Styling */
 .sc-card.active {
   background: #ffffff;
-  border-color: rgba(249, 115, 22, 0.3); /* Orange border */
+  border-color: rgba(249, 115, 22, 0.3);
   box-shadow: 0 20px 40px rgba(249, 115, 22, 0.1);
-  transform: translateX(-10px); /* Pushes slightly towards the image */
+  transform: translateX(-10px);
 }
 
 .sc-card-header {
@@ -2149,33 +1985,29 @@
   margin-bottom: 20px;
 }
 
-/* --- 🔥 UPDATED ICON STYLING (Rotating & Color Change) --- */
 .sc-icon {
   width: 50px;
   height: 50px;
   background: #ffffff;
-  color: #94a3b8; /* Default Grey Color */
+  color: #94a3b8;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
   font-size: 20px;
   box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
-  /* Transition added for smooth rotation and color change */
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* COLOR CHANGE: When card is Active OR Hovered */
 .sc-card.active .sc-icon,
 .sc-card:hover .sc-icon {
-  background: #f97316; /* Bright Orange Background */
-  color: #ffffff; /* White Icon */
-  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3); /* Orange Glow */
+  background: #f97316;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
 }
 
-/* ROTATION EFFECT: Only when Hovered */
 .sc-card:hover .sc-icon {
-  transform: rotate(360deg) scale(1.1); /* Rotates full circle and slightly pops out */
+  transform: rotate(360deg) scale(1.1);
 }
 
 .sc-card-header h3 {
@@ -2192,12 +2024,10 @@
   margin-bottom: 30px;
 }
 
-/* Mobile Image placeholder (Hidden on Desktop) */
 .sc-mobile-img {
   display: none;
 }
 
-/* Premium Button */
 .sc-btn {
   display: inline-flex;
   align-items: center;
@@ -2225,33 +2055,23 @@
   transform: translateX(5px);
 }
 
-/* =========================================
-   🔥 IMAGE ZOOM EFFECTS (Desktop & Mobile)
-   ========================================= */
-
-/* 1. DESKTOP: Periya Sticky Image Zoom Effect */
 .sc-image-container:hover .sc-img.active {
-  transform: scale(1.12); /* Mouse vekkum pothu zoom aagum */
+  transform: scale(1.12);
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* 2. MOBILE: Card-kulla irukka image zoom effect */
 .sc-mobile-img {
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Card mela mouse vekkum pothu (allathu active aagum pothu) zoom aaganum */
 .sc-card:hover .sc-mobile-img,
 .sc-card.active .sc-mobile-img {
   transform: scale(1.1);
 }
 
-/* Zoom aagum pothu image card-a vittu veliya neetama (spill aagama) irukka: */
 .sc-card {
   overflow: hidden;
 }
-
-/* --- 📱 MOBILE RESPONSIVENESS (100% Adaptive) --- */
 
 @media (max-width: 992px) {
   .sc-left {
@@ -2277,20 +2097,18 @@
     gap: 0;
   }
 
-  /* Hide the left sticky panel completely on mobile */
   .sc-left {
     display: none;
   }
 
   .sc-right {
     width: 100%;
-    padding-bottom: 0; /* Remove extra padding needed for sticky scroll */
+    padding-bottom: 0;
   }
 
   .sc-card {
     padding: 20px;
     margin-bottom: 30px;
-    /* Prevent hover/active shift on mobile */
     transform: none !important;
   }
 
@@ -2299,7 +2117,6 @@
     border-color: transparent;
   }
 
-  /* 🔥 Show Image INSIDE the card on Mobile */
   .sc-mobile-img {
     display: block;
     width: 100%;
@@ -2320,19 +2137,14 @@
     font-size: 16px;
   }
 
-  /* Disable rotation on mobile touch to avoid glitchy tap effects */
   .sc-card:hover .sc-icon {
     transform: none;
   }
 }
 
-/* =========================================
-   TRAVELER REVIEWS: 3D STACKED SPOTLIGHT (WHITE THEME)
-   ========================================= */
-
 .reviews-section {
   padding: 50px 20px;
-  background: #ffffff; /* Clean White Background */
+  background: #ffffff;
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow: hidden;
 }
@@ -2345,7 +2157,6 @@
 .rev-header h2 {
   font-size: 42px;
   font-weight: 800;
-  /* Stronger Orange Gradient for White Background */
   background: linear-gradient(to right, #f97316, #ea580c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2353,16 +2164,15 @@
 }
 
 .rev-header p {
-  color: #64748b; /* Darker gray for readability */
+  color: #64748b;
   font-size: 18px;
 }
 
-/* --- THE 3D SLIDER CONTAINER --- */
 .rev-slider-container {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  perspective: 1200px; /* Gives the 3D depth */
+  perspective: 1200px;
 }
 
 .rev-slider {
@@ -2373,22 +2183,18 @@
   align-items: center;
 }
 
-/* --- THE REVIEW CARD BASE (LIGHT THEME) --- */
 .rev-card {
   position: absolute;
   width: 500px;
-  background: #ffffff; /* White card */
-  border: 1px solid #e2e8f0; /* Light gray border */
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 24px;
   padding: 40px;
   cursor: pointer;
   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.06); /* Soft dark shadow */
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.06);
 }
 
-/* --- 3D POSITIONING CLASSES (Controlled by JS) --- */
-
-/* 1. The Hidden Cards */
 .rev-card.hidden {
   transform: translateX(-50%) scale(0.6) translateZ(-200px);
   opacity: 0;
@@ -2397,16 +2203,14 @@
   left: 50%;
 }
 
-/* 2. The Left Card */
 .rev-card.prev {
   transform: translateX(-100%) scale(0.85) translateZ(-100px);
   opacity: 0.6;
   z-index: 2;
   left: 50%;
-  filter: blur(4px); /* Background blur for inactive */
+  filter: blur(4px);
 }
 
-/* 3. The Right Card */
 .rev-card.next {
   transform: translateX(0%) scale(0.85) translateZ(-100px);
   opacity: 0.6;
@@ -2415,20 +2219,16 @@
   filter: blur(4px);
 }
 
-/* 4. The Center Active Card */
 .rev-card.active {
-  transform: translateX(-50%) scale(1.05) translateZ(0); /* Comes forward */
+  transform: translateX(-50%) scale(1.05) translateZ(0);
   opacity: 1;
   z-index: 3;
   left: 50%;
   filter: blur(0);
-  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12); /* Slightly stronger shadow */
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
   background: #ffffff;
 }
 
-/* --- 🔥 THE HOVER EFFECTS ON ACTIVE CARD --- */
-
-/* Gradient Border Glow Setup */
 .rev-card::before {
   content: "";
   position: absolute;
@@ -2446,24 +2246,21 @@
 }
 
 .rev-card.active:hover {
-  /* Slight 3D Rotation */
   transform: translateX(-50%) scale(1.08) rotateX(4deg) rotateY(-4deg);
-  background: #fff7ed; /* Very light orange tint on hover */
-  box-shadow: 0 30px 60px rgba(249, 115, 22, 0.15); /* Soft orange drop shadow */
+  background: #fff7ed;
+  box-shadow: 0 30px 60px rgba(249, 115, 22, 0.15);
 }
 
-/* Show Glowing Border */
 .rev-card.active:hover::before {
   opacity: 1;
 }
 
-/* --- CARD INNER CONTENTS --- */
 .rev-quote {
   position: absolute;
   top: 30px;
   right: 30px;
   font-size: 60px;
-  color: rgba(15, 23, 42, 0.05); /* Faint dark grey quote mark */
+  color: rgba(15, 23, 42, 0.05);
 }
 
 .rev-profile {
@@ -2489,7 +2286,6 @@
   transition: transform 0.5s ease;
 }
 
-/* Profile Image Zoom on Hover */
 .rev-card.active:hover .rev-img {
   border-color: #f97316;
 }
@@ -2498,14 +2294,14 @@
 }
 
 .rev-info h4 {
-  color: #0f172a; /* Dark navy text */
+  color: #0f172a;
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 5px 0;
 }
 
 .rev-info span {
-  color: #64748b; /* Medium grey text */
+  color: #64748b;
   font-size: 13px;
 }
 
@@ -2514,20 +2310,19 @@
 }
 
 .rev-stars i {
-  color: #fbbf24; /* Default yellow */
+  color: #fbbf24;
   font-size: 14px;
   margin-right: 3px;
   transition: all 0.4s ease;
 }
 
-/* Stars Glow on Hover */
 .rev-card.active:hover .rev-stars i {
-  color: #f97316; /* Turns orange */
-  text-shadow: 0 0 8px rgba(249, 115, 22, 0.4); /* Glowing effect */
+  color: #f97316;
+  text-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
 }
 
 .rev-text {
-  color: #475569; /* Dark grey text */
+  color: #475569;
   font-size: 16px;
   line-height: 1.7;
   font-style: italic;
@@ -2537,13 +2332,11 @@
     color 0.4s ease;
 }
 
-/* Text Fades Upward on Hover */
 .rev-card.active:hover .rev-text {
   transform: translateY(-5px);
-  color: #0f172a; /* Turns even darker for emphasis */
+  color: #0f172a;
 }
 
-/* --- NAVIGATION BUTTONS (LIGHT THEME) --- */
 .rev-controls {
   display: flex;
   justify-content: center;
@@ -2565,14 +2358,13 @@
 }
 
 .rev-controls button:hover {
-  background: #f97316; /* Bright orange on hover */
+  background: #f97316;
   border-color: #f97316;
   color: #ffffff;
   box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
   transform: scale(1.1);
 }
 
-/* --- 📱 100% MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
   .reviews-section {
     padding: 60px 15px;
@@ -2583,7 +2375,7 @@
   }
 
   .rev-slider {
-    height: 420px; /* More height for mobile text */
+    height: 420px;
   }
 
   .rev-card {
@@ -2591,14 +2383,13 @@
     padding: 30px;
   }
 
-  /* Adjust 3D Stack for Mobile (Tighter view) */
   .rev-card.active {
     transform: translateX(-50%) scale(1) translateZ(0);
   }
 
   .rev-card.prev {
     transform: translateX(-85%) scale(0.85) translateZ(-100px);
-    opacity: 0.4; /* Make side cards less distracting on mobile */
+    opacity: 0.4;
   }
 
   .rev-card.next {
@@ -2606,20 +2397,14 @@
     opacity: 0.4;
   }
 
-  /* Disable hover 3D rotate on mobile touch */
   .rev-card.active:hover {
     transform: translateX(-50%) scale(1) translateZ(0);
   }
 }
 
-/* =========================================
-   PREMIUM CTA SECTION STYLES
-   ========================================= */
-
 .premium-cta-section {
   position: relative;
   padding: 110px 20px 50px 20px;
-  /* Dark Luxury Gradient (Navy to Deep Midnight Blue) */
   background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow: hidden;
@@ -2629,7 +2414,6 @@
   min-height: 80vh;
 }
 
-/* --- WAVE DIVIDER --- */
 .cta-wave {
   position: absolute;
   top: 0;
@@ -2644,7 +2428,6 @@
   height: 60px;
 }
 
-/* --- ANIMATED STARS / PARTICLES --- */
 .cta-particles {
   position: absolute;
   inset: 0;
@@ -2662,7 +2445,6 @@
   animation: twinkle 3s infinite ease-in-out alternate;
 }
 
-/* Star positions and varied animations */
 .s1 {
   top: 20%;
   left: 15%;
@@ -2717,13 +2499,12 @@
   }
 }
 
-/* --- FLOATING AIRPLANE --- */
 .cta-floating-plane {
   position: absolute;
   top: 15%;
   right: 10%;
   font-size: 80px;
-  color: rgba(255, 255, 255, 0.05); /* Faint watermark style */
+  color: rgba(255, 255, 255, 0.05);
   z-index: 1;
   animation: floatPlane 8s ease-in-out infinite;
   transform-origin: center;
@@ -2741,7 +2522,6 @@
   }
 }
 
-/* --- GLASSMORPHISM CARD --- */
 .cta-container {
   position: relative;
   z-index: 2;
@@ -2761,10 +2541,9 @@
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* Glowing Border Animation */
 .cta-glow-border {
   position: absolute;
-  inset: -2px; /* Slightly larger than card */
+  inset: -2px;
   border-radius: 32px;
   background: linear-gradient(
     45deg,
@@ -2793,7 +2572,6 @@
   }
 }
 
-/* --- CARD CONTENT --- */
 .cta-badge {
   display: inline-block;
   background: rgba(249, 115, 22, 0.1);
@@ -2830,10 +2608,9 @@
   margin: 0 auto 40px auto;
 }
 
-/* --- SHINE EFFECT BUTTON --- */
 .cta-shine-btn {
   position: relative;
-  overflow: hidden; /* Important for shine sweep */
+  overflow: hidden;
   background: linear-gradient(135deg, #f97316, #ea580c);
   color: #ffffff;
   border: none;
@@ -2854,7 +2631,6 @@
   box-shadow: 0 15px 40px rgba(249, 115, 22, 0.6);
 }
 
-/* The Magic Shine Element */
 .cta-shine-btn::before {
   content: "";
   position: absolute;
@@ -2869,7 +2645,7 @@
     transparent
   );
   transform: skewX(-25deg);
-  animation: shineSweep 4s infinite; /* Sweeps every 4 seconds */
+  animation: shineSweep 4s infinite;
 }
 
 @keyframes shineSweep {
@@ -2884,7 +2660,6 @@
   }
 }
 
-/* Scroll Reveal */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -2895,7 +2670,6 @@
   transform: translateY(0);
 }
 
-/* --- 📱 MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
   .premium-cta-section {
     padding: 100px 15px 80px 15px;
@@ -2915,13 +2689,12 @@
   }
 
   .cta-shine-btn {
-    width: 100%; /* Full width on mobile */
+    width: 100%;
     justify-content: center;
     padding: 15px;
     font-size: 16px;
   }
 
-  /* Move plane to a better spot for small screens */
   .cta-floating-plane {
     top: 5%;
     right: 5%;
