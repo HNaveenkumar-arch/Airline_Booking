@@ -8,14 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* Changed to Orange Theme */
-            --primary-orange: #f97316; 
+            --primary-orange: #f97316;
             --hover-orange: #ea580c;
             --error-red: #dc2626;
             --text-dark: #1f2937;
             --text-light: #4b5563;
-            /* Changed to White Theme for container */
-            --bg-container: rgba(255, 255, 255, 0.95); 
+            --bg-container: rgba(255, 255, 255, 0.95);
             --input-bg: #ffffff;
         }
 
@@ -359,7 +357,8 @@
         .create-account a:hover {
             text-decoration: underline;
         }
-        .role{
+
+        .role {
             text-align: start;
             font-weight: bold;
         }
@@ -370,9 +369,11 @@
                 margin: 60px auto 20px auto;
                 width: 95%;
             }
+
             .back-home-btn {
-            position: relative;
+                position: relative;
             }
+
             .header h1 {
                 font-size: 24px;
             }
@@ -475,7 +476,7 @@
             }, 100);
         };
 
-        let currentRole = 'admin'; // Changed default to admin
+        let currentRole = 'admin';
         function setRole(role, btnElement) {
             currentRole = role;
 
@@ -539,9 +540,9 @@
 
             if (isValid) {
                 if (currentRole === 'admin') {
-                    window.location.href = 'dashboard1.html'; // Adjust this URL as needed
+                    window.location.href = 'dashboard1.html';
                 } else if (currentRole === 'customer') {
-                    window.location.href = 'dashboard2.html'; // Adjust this URL as needed
+                    window.location.href = 'dashboard2.html';
                 }
             }
         }

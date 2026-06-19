@@ -37,42 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             /* ----------------------------------------------------
                1. STICKY DESTINATION CARDS OBSERVER
             ---------------------------------------------------- */
-            const destCards = document.querySelectorAll('.dest-card');
-            const stickyImg = document.getElementById('sticky-img');
-
-            // Check if elements exist before running
-            if (destCards.length > 0 && stickyImg) {
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.5
-                };
-
-                const destObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const newImgSrc = entry.target.getAttribute('data-img');
-
-                            if (stickyImg.src !== newImgSrc) {
-                                stickyImg.style.opacity = 0.2;
-                                stickyImg.style.transform = "scale(1.05)";
-
-                                setTimeout(() => {
-                                    stickyImg.src = newImgSrc;
-                                    stickyImg.style.opacity = 1;
-                                    stickyImg.style.transform = "scale(1)";
-                                }, 300);
-                            }
-
-                            destCards.forEach(card => card.classList.remove('active-card'));
-                            entry.target.classList.add('active-card');
-                        }
-                    });
-                }, observerOptions);
-
-                destCards.forEach(card => destObserver.observe(card));
-            }
-
+            
             /* ----------------------------------------------------
                2. SCROLL REVEAL ANIMATION (FOOTER & OTHERS)
             ---------------------------------------------------- */

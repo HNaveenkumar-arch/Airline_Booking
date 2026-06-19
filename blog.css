@@ -6,7 +6,6 @@
   --light-bg: #f8fafc;
 }
 
-/* Header Styles - Global Use */
 .section-title {
   font-size: 42px;
   font-weight: 800;
@@ -21,9 +20,6 @@
   display: inline-block;
 }
 
-/* ==========================================================
-   1️⃣ BLOG HERO SECTION & RESPONSIVE SEARCH - FULL STYLES
-   ========================================================== */
 
 .blog-hero-section {
   position: relative;
@@ -33,11 +29,10 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #0f172a; /* Deep Navy Base */
+  background-color: #0f172a; 
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-/* --- 2. Backgrounds & Cinematic Overlay --- */
 .bh-bg {
   position: absolute;
   inset: 0;
@@ -49,7 +44,6 @@
 .bh-overlay {
   position: absolute;
   inset: 0;
-  /* Cinematic gradient from dark bottom to transparent top */
   background: linear-gradient(
     135deg,
     rgba(15, 23, 42, 0.9) 0%,
@@ -58,7 +52,6 @@
   z-index: 2;
 }
 
-/* --- 3. ✨ AURORA BACKGROUND ANIMATION --- */
 .aurora-bg {
   position: absolute;
   inset: 0;
@@ -111,7 +104,6 @@
   }
 }
 
-/* --- 4. ⭐ PARTICLES / PULSATING STARS --- */
 .bh-particles {
   position: absolute;
   inset: 0;
@@ -181,7 +173,6 @@
   }
 }
 
-/* --- 5. ✈️ FLOATING AIRPLANE WATERMARK --- */
 .bh-floating-plane {
   position: absolute;
   top: 25%;
@@ -205,7 +196,6 @@
   }
 }
 
-/* --- 6. ☁️ FLOATING CLOUDS --- */
 .bh-clouds {
   position: absolute;
   inset: 0;
@@ -249,7 +239,6 @@
   }
 }
 
-/* --- 7. Content Container & Glass Card --- */
 .bh-container {
   position: relative;
   z-index: 10;
@@ -271,7 +260,6 @@
     inset 0 0 20px rgba(255, 255, 255, 0.02);
 }
 
-/* --- 8. Breadcrumbs (Home >> Blog) --- */
 .bh-breadcrumbs {
   display: inline-flex;
   align-items: center;
@@ -302,7 +290,6 @@
   color: #f97316;
 }
 
-/* --- 9. Typography --- */
 .bh-glass-card h1 {
   font-size: 56px;
   font-weight: 800;
@@ -325,7 +312,6 @@
   margin-bottom: 35px;
 }
 
-/* --- 10. 🔍 FIXED RESPONSIVE SEARCH BOX --- */
 .bh-search-wrapper {
   position: relative;
   max-width: 450px;
@@ -348,7 +334,7 @@
 
 .bh-search-box input {
   flex: 1 1 auto;
-  min-width: 0; /* 🔥 CRITICAL: Prevents input from pushing button out */
+  min-width: 0; 
   width: 100%;
   border: none;
   padding: 15px 25px;
@@ -366,7 +352,7 @@
   width: 50px;
   height: 50px;
   min-width: 50px;
-  flex-shrink: 0; /* 🔥 CRITICAL: Button never shrinks */
+  flex-shrink: 0; 
   border-radius: 50%;
   cursor: pointer;
   font-size: 16px;
@@ -391,7 +377,6 @@
   transform: rotate(15deg);
 }
 
-/* --- 11. 🔴 ERROR HANDLING STYLES --- */
 .bh-search-box.error-border {
   border: 2px solid #ff4d4f;
   box-shadow: 0 5px 15px rgba(255, 77, 79, 0.2);
@@ -417,7 +402,6 @@
   visibility: visible;
 }
 
-/* --- 12. 🌊 WAVE DIVIDER AT THE BOTTOM --- */
 .bh-wave-bottom {
   position: absolute;
   bottom: -1px;
@@ -434,7 +418,6 @@
   height: 80px;
 }
 
-/* --- 13. 📱 MOBILE RESPONSIVENESS --- */
 @media (max-width: 992px) {
   .bh-glass-card h1 {
     font-size: 46px;
@@ -475,7 +458,6 @@
     font-size: 12px;
   }
 
-  /* Search Box Mobile Fixes */
   .bh-search-box {
     border-radius: 20px;
   }
@@ -491,28 +473,23 @@
   }
 }
 
-/* ==========================================================
-   3️⃣ TRENDING STORIES (INFINITE VERTICAL SLIDER)
-   ========================================================== */
 
 .trending-stories-section {
   padding: 50px 5%;
-  background-color: #0f172a; /* Deep Navy Background */
+  background-color: #0f172a; 
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow: hidden;
 }
 
-/* --- SPLIT GRID LAYOUT --- */
 .ts-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr; /* Left Info, Right Slider */
+  grid-template-columns: 1fr 1.2fr; 
   gap: 60px;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --- LEFT SIDE: INFO --- */
 .text-white {
   color: #ffffff !important;
 }
@@ -554,16 +531,13 @@
   transform: translateX(5px);
 }
 
-/* --- RIGHT SIDE: VERTICAL SLIDER --- */
 .ts-slider-wrap {
   position: relative;
-  height: 600px; /* Fixed height for vertical scrolling */
+  height: 600px; 
   width: 100%;
-  /* overflow: hidden; */
   padding: 20px 0;
 }
 
-/* Fading effect at top and bottom to make it look cinematic */
 .ts-fade {
   position: absolute;
   left: 0;
@@ -581,16 +555,13 @@
   background: linear-gradient(to top, #0f172a 0%, transparent 100%);
 }
 
-/* The Scrolling Track */
 .ts-track {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* Infinite Scroll Animation */
   animation: scrollVertical 20s linear infinite;
 }
 
-/* 🔥 Hovering the track pauses the animation */
 .ts-track:hover {
   animation-play-state: paused;
 }
@@ -599,13 +570,11 @@
   0% {
     transform: translateY(0);
   }
-  /* Moves exactly half the height to create a seamless loop */
   100% {
     transform: translateY(calc(-50% - 10px));
   }
 }
 
-/* --- THE CARD --- */
 .ts-card {
   display: flex;
   align-items: center;
@@ -658,21 +627,18 @@
   line-height: 1.5;
 }
 
-/* --- 🔥 CARD HOVER EFFECTS --- */
 
-/* Dim all cards slightly when hovering the track */
 .ts-track:hover .ts-card {
   opacity: 0.5;
   filter: blur(2px);
 }
 
-/* Highlight, enlarge, and glow the specific card being hovered */
 .ts-track .ts-card:hover {
   opacity: 1;
   filter: blur(0);
-  transform: scale(1.05) translateX(-10px); /* Enlarge and pull slightly left */
+  transform: scale(1.05) translateX(-10px); 
   background: rgba(255, 255, 255, 0.08);
-  border-color: #f97316; /* Orange border */
+  border-color: #f97316; 
   box-shadow:
     0 15px 35px rgba(249, 115, 22, 0.15),
     inset 0 0 15px rgba(249, 115, 22, 0.1);
@@ -683,7 +649,6 @@
   color: #f97316;
 }
 
-/* --- 📱 MOBILE RESPONSIVENESS (Switches to Horizontal Slider) --- */
 @media (max-width: 992px) {
   .ts-grid {
     grid-template-columns: 1fr;
@@ -695,11 +660,9 @@
     margin: 0 auto 30px auto;
   }
 
-  /* Change slider to horizontal for mobile/tablet */
   .ts-slider-wrap {
     height: auto;
     padding: 20px 0;
-    /* Let it bleed to the edges */
     width: 100vw;
     margin-left: calc(-50vw + 50%);
   }
